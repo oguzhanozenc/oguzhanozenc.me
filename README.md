@@ -1,4 +1,4 @@
-# oguzhanozenc.me - React Portfolio Website
+# oguzhanozenc.me - Portfolio Website Created with React
 
 This repository hosts the source code for my personal portfolio website, showcasing my skills, projects, and creative journey. Created with using HTML, CSS, and React, this website is designed to provide a dynamic and personalized online presence.
 
