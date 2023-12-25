@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.605aaf3c.css",
+    "main.js": "/static/js/main.00d81051.js",
+    "static/media/portfolio1.jpg": "/static/media/portfolio1.7aaabcb36dc94c8cec64.jpg",
+    "static/media/portfolio3.jpg": "/static/media/portfolio3.363251bb0efe4dcb9043.jpg",
+    "static/media/background.png": "/static/media/background.7ee94165c882f036a02e.png",
+    "static/media/cv.pdf": "/static/media/cv.c7eb47c021101860acce.pdf",
+    "static/media/portfolio2.jpg": "/static/media/portfolio2.7763993cf1e5dcaa58ca.jpg",
+    "static/media/me.gif": "/static/media/me.14f4110706641b7bc46a.gif",
+    "static/media/me.jpg": "/static/media/me.2c8a06d9a5dbe4821eac.jpg",
+    "index.html": "/index.html",
+    "main.605aaf3c.css.map": "/static/css/main.605aaf3c.css.map",
+    "main.00d81051.js.map": "/static/js/main.00d81051.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.605aaf3c.css",
+    "static/js/main.00d81051.js"
+  ]
+}
