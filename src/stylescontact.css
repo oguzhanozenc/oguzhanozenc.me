@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  --color-bg: #fff;
+  --color-gray: #fafafa;
+  --color-danger: #ff3b30;
+  --color-yellow: #fc0;
+  --color-success: #34c759;
+  --color-black: #000000;
+  --color-dark: #161617cc;
+  --color-border: #e5e7eb;
+  --color-gradient: linear-gradient(to left, #bdc3c7, #2c3e50);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Geist Mono Variable", monospace;
+}
+
+.contactpage {
+  font-family: "Geist Variable", sans-serif;
+  padding: 10% 10% 10% 30%;
+  line-height: 2rem;
+}
+
+.contactpage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 30px 30px;
+  background-position: 0 0;
+  opacity: 0.25;
+}
+
+.contact--container {
+  margin: 0 auto;
+}
+
+.contactsection {
+  background-size: cover;
+  background: linear-gradient(
+    150deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: max-content;
+  display: grid;
+  grid-template-columns: 37% 62%;
+  gap: 1%;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+}
+
+#mail {
+  transition: all 300ms ease;
+  background-color: var(--color-bg);
+  padding: 0.3rem 0.6rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+}
+
+#mail:hover {
+  background-color: var(--color-yellow);
+  box-shadow: 0.25rem 0.25rem var(--color-success);
+}
+
+h1 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact--img {
+  position: relative;
+}
+
+.contact--img img {
+  background-color: var(--color-gray);
+  border: 1px solid var(--color-border);
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  transform: rotate(-5deg);
+  box-shadow: 0.5rem 0.5rem 0.5rem var(--color-yellow);
+}
+
+.contact--img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact--img:hover img {
+  transform: scale(0.95);
+  transform: rotate(0deg);
+}
+
+.contact--img:hover::before {
+  opacity: 1;
+  animation: shine 0.75s;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+.contact--socialmedia--container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  width: max-content;
+}
+
+.contact--socialmedia--container > div {
+  margin: 0.75rem 0.3rem;
+}
+
+.contact--socialmedia--container a {
+  color: var(--color-black);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  border: 2px solid var(--color-border);
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+}
+
+.contact--socialmedia--container a:hover {
+  transition: color 0.3s ease;
+  box-shadow: 0.2rem 0.2rem var(--color-yellow);
+  background-color: var(--color-border);
+  border: 1px solid black;
+}
+.contact--container a:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 1200px) {
+  .contactpage {
+    width: 100%;
+    margin: 0;
+    padding: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .contactsection {
+    grid-template-columns: auto auto;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+  }
+  .contactsection h1 {
+    justify-content: center;
+  }
+
+  .contact--socialmedia--container {
+    margin: 0 auto;
+  }
+  .contact--img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .contact--container {
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .contactpage {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem;
+  }
+
+  .contactsection {
+    grid-template-columns: auto;
+  }
+  .contact--img {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .contactsection h1 {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+  }
+  .contactsection p {
+    font-size: 0.75rem;
+    width: fit-content;
+
+    justify-content: center;
+  }
+}

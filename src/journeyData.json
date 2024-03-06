@@ -1,0 +1,72 @@
+[
+  {
+    "year": 2024,
+    "title": "Creating My Portfolio Website",
+    "description": [
+      "February 2024 - I decided to create a new portfolio website to showcase my work and document my journey. With this website, my goal is to have a dynamic platform where I can continually update and display what I've learned along the way, kind of like my countless blogs from my childhood. I built it using Vite + React, aiming to reflect my personality, maintain a modern aesthetic and display almost what I learned everything so far. If you're interested, you can follow my journey on the website and contact me at oguzhanozenc10@gmail.com. I would truly appreciate it."
+    ],
+    "image": "./website.JPG"
+  },
+  {
+    "year": 2024,
+    "title": "My journey in 2024.",
+    "description": [
+      "My journey in 2024 is still ongoing. Although I feel like I took one of the biggest risks of my life in 2023, resulting in a mentally and physically challenging journey, I am grateful and proud to have the chance to give it a shot and build my dream life. My #1 priority this year is to find a good junior position that brings me happiness, peace, and contentment, providing a balanced life where I can engage in activities I love, surrounded by good people, with lots of learning opportunities. While I've made significant progress compared to where I began, I am still continuing my journey with React and am excited to explore more learning paths, including the incorporation of AI into my career journey."
+    ],
+    "image": "./2024.jpg"
+  },
+  {
+    "year": 2023,
+    "title": "Continuing the Journey",
+    "description": [
+      "I gathered knowledge from various online sources, like Codecademy, but my understanding of JavaScript still left me unsatisfied. Though I could grasp concepts, starting from scratch and building upon them was a challenge. Then, on a Reddit post, I saw a recommendation to Scrimba, a platform that became a game-changer for me. It offers a project-based learning course but not only that, a built-in code editor that gives you a chance to code by pausing the video and giving you various challenges and mini projects. The instructors, much like those memorable teachers from school that make you love an unexpected lesson. They added humor, motivation, and encouragement to lessons, making learning enjoyable. Thanks to them, I solidified my understanding of many basic concepts and have now moved on to exploring React."
+    ],
+    "image": "./journeycontinues.jpg"
+  },
+  {
+    "year": 2022,
+    "title": "Starting A New Career Chapter: Front-end World",
+    "description": [
+      "I was already trying to lay the groundwork for a career transition in my final year at my previous job, perhaps somewhat unconsciously. However, the serious preparation began after leaving. Early on, I knew I was drawn to the Front-end side, though defining it took some time. This interest originated from the basics of my activities around 5th grade. Fascinated by the user-focused aspects of websites, I emphasized both design and functionality, aligning with my interest in front-end development. After dedicating countless hours to watching videos, I started forming an idea of where to begin and embarked on my journey by learning HTML and CSS. During this period, I also discovered Codecademy, which I genuinely found helpful with its project-based learning approach."
+    ],
+    "image": "./frontend.jpg"
+  },
+  {
+    "year": 2023,
+    "title": "Montenegro Trip & Discovering New Horizons",
+    "description": [
+      "After wrapping up a challenging chapter in my professional life during the summer of 2023, I decided to take a break, unwind, and recharge by visiting Montenegro and Serbia with my cousin. This journey marked my first international experience since the Italy trip in the 3rd grade of high school. Coincidentally, our visit coincided with a festival (best surprise!) and we had an incredible time. It was only after a long time that I realized the joy of living in the moment, possibly influenced by the wonderful culture and welcoming people of Montenegro 😊. This realization led me to believe that a career in the technology world might be more suitable for the life I dream of."
+    ],
+    "image": "./aboutmeimg.jpg"
+  },
+  {
+    "year": 2023,
+    "title": "Career Transition Decision",
+    "description": [
+      "After working 2.5 years as an R&D engineer, I find my job unfulfilling, and realized my passion lay elsewhere. Thus,  I ended my time there in June 2023. I've always been enthusiastic about creativity and technology, dating back to 5th grade when I designed and coded blogs and websites. Despite a promotion opportunity at Arçelik, I chose to pursue my dream career in the dynamic tech world. My time at Arçelik provided vital skills—merging project management, trend analysis, and strategic collaborations—now, transitioning to tech with a solid foundation in sustainable and innovative practices for dynamic projects."
+    ],
+    "image": "./careertransition.jpg"
+  },
+  {
+    "year": 2021,
+    "title": "First Job",
+    "description": [
+      "After graduation, I joined Arçelik Global, a sustainability leader in the durable goods sector. As an R&D Engineer, I contributed to sustainable product development using agile project management. I researched technologies, analyzed market trends, and built collaborative partnerships. This journey also brought me some of my closest friends."
+    ],
+    "image": "./firstjob.jpg"
+  },
+  {
+    "year": 2015,
+    "title": "Started at Istanbul Technical University",
+    "description": [
+      "Studied Engineering at Istanbul Technical University, building a strong engineering foundation. Despite a shift in my career decision, I am hoping the analytical and problem-solving skills and engineering perspective will be valuable assets for a career in tech."
+    ],
+    "image": "./itu.jpg"
+  },
+  {
+    "year": 1996,
+    "title": "Born",
+    "description": ["On the 10th of December."],
+    "image": ""
+  }
+]
