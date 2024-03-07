@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -24,11 +24,22 @@ import "non.geist/mono";
 function AnimatedRoutes({ menuOpen, setMenuOpen }) {
   let location = useLocation();
 
+  useEffect(() => {
+    const htmlElement = document.querySelector("html");
+    const bodyElement = document.querySelector("body");
+
+    if (htmlElement && bodyElement) {
+      htmlElement.classList.toggle("menu-open", menuOpen);
+      bodyElement.classList.toggle("menu-open", menuOpen);
+    }
+  }, [menuOpen]);
+
   const pageStyles = menuOpen
     ? {
-        backgroundColor: "gray",
+        backgroundColor: "transparent",
         filter: "brightness(50%)",
         transition: "all 100ms ease",
+        borderRadius: "0.5rem",
       }
     : {};
 
@@ -44,7 +55,7 @@ function AnimatedRoutes({ menuOpen, setMenuOpen }) {
         >
           <Routes location={location}>
             <Route path="/" element={<MainContent />} />
-            <Route path="/" element={<Skills />} />
+            <Route path="/Skills" element={<Skills />} />
             <Route path="/Portfolio" element={<Portfolio />} />
             <Route path="/Project/:projectIndex" element={<ProjectPage />} />
             <Route path="/About" element={<About />} />

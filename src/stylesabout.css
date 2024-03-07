@@ -30,7 +30,7 @@ body {
   font-family: "Geist Variable", sans-serif;
   margin: 0 10% 10% 30%;
   text-align: justify;
-  padding-top: 10%;
+  padding-top: 20%;
   line-height: 2rem;
 }
 
@@ -67,7 +67,7 @@ body {
 @media only screen and (max-width: 1200px) {
   .aboutsection {
     margin: 0 auto;
-    padding: 2rem;
+    padding: 25% 10%;
   }
   .aboutme--img {
     width: 55%;

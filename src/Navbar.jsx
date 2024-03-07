@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import SocialMedia from "./SocialMedia";
-
 import { NavLink } from "react-router-dom";
 import "./stylesnavbar.css";
 import ME2 from "../public/me2.png";
@@ -11,11 +10,10 @@ import {
   PiPaperPlaneTiltBold,
 } from "react-icons/pi";
 import { FiArrowUpRight } from "react-icons/fi";
-
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { GiJourney } from "react-icons/gi";
 import { BsFileText } from "react-icons/bs";
-import { SiStarship } from "react-icons/si";
+import { RiSpaceShipLine } from "react-icons/ri";
 
 export default function Navbar({ menuOpen, setMenuOpen }) {
   const [activeItem, setActiveItem] = useState("Home");
@@ -57,16 +55,26 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
   }
 
   return (
-    <div>
+    <div key={activeItem}>
       {isMobile && (
-        <div className="hamburger-icon--container">
-          <button className="hamburger-icon" onClick={handleMenuToggle}>
-            <SiStarship id="menuiconitself" />
-          </button>
-        </div>
+        <nav className="smallerscreensizenav">
+          <div className="hamburger-icon--container">
+            <div className="topnavcontainer">
+              <div>
+                <button className="hamburger-icon" onClick={handleMenuToggle}>
+                  <RiSpaceShipLine id="menuiconitself" />
+                </button>
+              </div>
+              <div>
+                <p className={`flip`}>{activeItem}</p>
+              </div>
+            </div>
+          </div>
+        </nav>
       )}
+
       {isMobile && menuOpen && (
-        <nav className={`mobile-menu-open`}>
+        <div className={`mobile-menu-open`}>
           <div id="navbar--top-line" onClick={() => setMenuOpen(false)}>
             <hr />
           </div>
@@ -140,7 +148,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
       )}
       {!isMobile && (
         <nav className="nav bigger-screensize-nav">

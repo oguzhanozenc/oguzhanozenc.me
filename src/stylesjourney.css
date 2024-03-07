@@ -143,29 +143,62 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+  .journeypage {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10%;
+  }
   .journeysection {
     margin: 0 auto;
     width: 100%;
   }
-  .journeypage {
-    margin: 0 auto;
-    width: 100%;
-    padding: 10%;
-  }
   .journey-timeline {
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
+  }
+  .journeyyear {
+    margin-right: 1rem;
+    margin-top: 0;
+  }
+
+  .journey--details {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .roadcontainer {
     margin-right: 2rem;
   }
+  .milestone--img {
+    width: 100%;
+    padding: 0.8rem 0.25rem 0.25rem 0.25rem;
+  }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 500px) {
+  .journeypage {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .journeypage h2 {
+    font-size: 1rem;
+  }
+
+  .journeysection {
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto;
+  }
   .journey--details {
     margin-left: 2rem;
   }
   .journeyyear {
     margin-top: 1rem;
+  }
+  .roadcontainer {
+    margin-right: 1rem;
+  }
+  .milestone--img {
+    margin: 1rem auto;
   }
 }

@@ -27,8 +27,6 @@ body {
 }
 
 .contactpage {
-  font-family: "Geist Variable", sans-serif;
-  padding: 10% 10% 10% 30%;
   line-height: 2rem;
 }
 
@@ -46,27 +44,34 @@ body {
   opacity: 0.25;
 }
 
-.contact--container {
+.contact--text {
   margin: 0 auto;
 }
 
 .contactsection {
+  padding-top: 10%;
+  margin: 0 10% 10% 30%;
+  font-family: "Geist Variable", sans-serif;
+}
+
+.contactcontainer {
+  width: 100%;
   background-size: cover;
+  display: grid;
+  grid-template-columns: 37% 62%;
+  gap: 1%;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
     150deg,
     rgba(250, 250, 250, 1) 0%,
     rgba(255, 255, 255, 1) 50%,
     rgba(255, 255, 255, 0) 100%
   );
-  width: max-content;
-  display: grid;
-  grid-template-columns: 37% 62%;
-  gap: 1%;
   border: 1px solid var(--color-border);
-  border-radius: 0.5rem;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem 1rem;
+  overflow: hidden;
+  padding: 1rem 2rem;
 }
 
 #mail {
@@ -172,29 +177,31 @@ h1 {
   background-color: var(--color-border);
   border: 1px solid black;
 }
-.contact--container a:hover {
+.contact--text a:hover {
   opacity: 0.8;
 }
 
 @media only screen and (max-width: 1200px) {
   .contactpage {
     width: 100%;
-    margin: 0;
-    padding: 10%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
   }
+
   .contactsection {
+    padding: 5%;
+    margin: 0;
+    width: 100%;
+  }
+
+  .contactcontainer {
     grid-template-columns: auto auto;
     text-align: center;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
     width: 100%;
   }
+
   .contactsection h1 {
     justify-content: center;
   }
@@ -204,11 +211,8 @@ h1 {
   }
   .contact--img {
     width: 80%;
+    padding: 1rem 1rem;
     margin: 0 auto;
-  }
-
-  .contact--container {
-    width: fit-content;
   }
 }
 
@@ -216,16 +220,25 @@ h1 {
   .contactpage {
     width: 100%;
     margin: 0 auto;
-    padding: 0.5rem;
+  }
+  .contactsection {
+    padding: 3%;
+    margin: 0;
+    width: 100%;
   }
 
-  .contactsection {
+  .contactcontainer {
     grid-template-columns: auto;
+    width: 100%;
+    margin: 0 auto;
+    width: 100%;
   }
+
   .contact--img {
     width: 60%;
   }
 }
+
 @media only screen and (max-width: 350px) {
   .contactsection h1 {
     font-size: 1.3rem;
@@ -234,8 +247,6 @@ h1 {
   }
   .contactsection p {
     font-size: 0.75rem;
-    width: fit-content;
-
     justify-content: center;
   }
 }
