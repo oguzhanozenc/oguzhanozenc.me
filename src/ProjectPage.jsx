@@ -1,12 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./styles_projectpage.css";
 import projectsData from "./projectsData.json";
 import { useParams, Link } from "react-router-dom";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import "non.geist/mono";
 import "non.geist";
 
@@ -28,6 +26,19 @@ export default function ProjectPage() {
 
   const sliderRef = useRef();
 
+  const [isImageClicked, setIsImageClicked] = useState(false);
+  const [clickedImageIndex, setClickedImageIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+    setIsImageClicked(true);
+    setClickedImageIndex(index);
+  };
+
+  const handleModalClose = () => {
+    setIsImageClicked(false);
+    setClickedImageIndex(null);
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -47,23 +58,23 @@ export default function ProjectPage() {
 
   return (
     <section className="projectpage">
-      <div className="project-top">
-        <div className="topsection">
-          <div>
-            <p id="portfoliolink">
-              <Link to="/portfolio" className="btn">
-                <RiArrowGoBackFill /> Portfolio
+      <section className="projectsection">
+        <div className="project-top">
+          <div className="topsection">
+            <div>
+              <p id="portfoliolink">
+                <Link to="/portfolio" className="links">
+                  <RiArrowGoBackFill /> Portfolio
+                </Link>
+              </p>
+            </div>
+            <p id="nextproject">
+              <Link to={`/project/${nextIndex}`} className="links">
+                Next Project <PiProjectorScreenChart />
               </Link>
             </p>
           </div>
-          <p id="nextproject">
-            <Link to={`/project/${nextIndex}`} className="btn">
-              Next Project <PiProjectorScreenChart />
-            </Link>
-          </p>
         </div>
-      </div>
-      <section className="projectsection">
         <div className="project-container">
           <header className="project-header">
             <div className="project--details box">
@@ -124,8 +135,16 @@ export default function ProjectPage() {
                 className="slider--component"
               >
                 {project.demoData.map((demo, index) => (
-                  <div className="demo--container" key={index}>
-                    <div className="stages box">
+                  <div
+                    className={`demo--container ${
+                      isImageClicked ? "enlarged" : ""
+                    }`}
+                    key={index}
+                  >
+                    <div
+                      className="stages box"
+                      onClick={() => handleImageClick(index)}
+                    >
                       <h3 className="stage">
                         <PiSparkleFill /> {demo.title}
                       </h3>
@@ -155,6 +174,17 @@ export default function ProjectPage() {
                 ))}
               </Slider>
             </div>
+
+            {isImageClicked && (
+              <div className="enlarged-modal" onClick={handleModalClose}>
+                <div className="enlarged-content">
+                  <img
+                    src={project.demoData[clickedImageIndex].screenshot}
+                    alt={`Enlarged Screenshot ${clickedImageIndex + 1}`}
+                  />
+                </div>
+              </div>
+            )}
           </section>
 
           <div className="project-features">

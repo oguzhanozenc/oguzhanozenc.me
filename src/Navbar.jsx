@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SocialMedia from "./SocialMedia";
 import { NavLink } from "react-router-dom";
 import "./stylesnavbar.css";
@@ -18,6 +18,7 @@ import { RiSpaceShipLine } from "react-icons/ri";
 export default function Navbar({ menuOpen, setMenuOpen }) {
   const [activeItem, setActiveItem] = useState("Home");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
+  const menuRef = useRef(null);
 
   function handleNavLinkClick(item) {
     setActiveItem(item);
@@ -50,12 +51,28 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
     };
   }, []);
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    }
+
+    if (menuOpen) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuOpen]);
+
   function handleMenuToggle() {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   }
 
   return (
-    <div key={activeItem}>
+    <div key={activeItem} ref={menuRef}>
       {isMobile && (
         <nav className="smallerscreensizenav">
           <div className="hamburger-icon--container">
