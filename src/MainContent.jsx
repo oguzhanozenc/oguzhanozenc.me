@@ -3,6 +3,7 @@ import Skills from "./Skills";
 import ME from "../public/me.png";
 import { FaRegHandPeace } from "react-icons/fa6";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   return (
@@ -11,12 +12,12 @@ export default function Main() {
         <div className="about--container--img">
           <img src={ME} alt="" />
           <div className="about--container--buttons">
-            <a href="/Contact" className="btn">
+            <Link to="/Contact" className="btn">
               Say Hello! <FaRegHandPeace />
-            </a>
-            <a href="/Portfolio" className="btn">
+            </Link>
+            <Link to="/Portfolio" className="btn">
               See my work! <PiProjectorScreenChartBold />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -33,9 +34,9 @@ export default function Main() {
               opportunities in the tech industry and beyond.
             </p>
 
-            <a href="/About" className="btn" id="moreaboutmebtn">
+            <Link to="/About" className="btn" id="moreaboutmebtn">
               More about me&raquo;
-            </a>
+            </Link>
           </div>
         </div>
       </section>
