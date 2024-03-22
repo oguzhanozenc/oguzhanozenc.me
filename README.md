@@ -22,18 +22,10 @@ Welcome to my dynamic personal portfolio website! This platform serves as a hub 
 - JavaScript (ES6+)
 - React
 
-## Portfolio <a name="portfolio"></a>
-### Latest Project: Personal Portfolio Website
-**Description:** Conceptualized, designed, and developed a dynamic personal portfolio website that captures my journey in front-end development.
+**Description:** Conceptualized, designed, and developed a dynamic personal portfolio website that captures my journey in front-end development. This site captures my continuous journey in front-end development, serving as a personal hub for easy updates, and showcasing projects and skills. I shape and present my unique path in the dynamic world of front-end development through implementing JSONs. I consider it my digital scrapbook, illustrating the evolution of my skills and knowledge in this ever-changing field.
 
 **Demo:** [View Demo](#)  
 **Github:** [Github Repository](#)
-
-#### About
-**My Role:** I was responsible for the entire development lifecycle including conceptualization, design, and development.
-
-**Who is this app for?**  
-This site captures my continuous journey in front-end development, serving as a personal hub for easy updates, and showcasing projects and skills. I shape and present my unique path in the dynamic world of front-end development through implementing JSONs. I consider it my digital scrapbook, illustrating the evolution of my skills and knowledge in this ever-changing field.
 
 #### Tech Stack
 - HTML5
@@ -58,14 +50,3 @@ Feedbacks are appreciated. Have some ideas? Contact us! Here is what we planned 
 1. **Integration with Firebase or Another Backend Service:** Replace or complement JSONs with a backend service like Firebase to manage data more dynamically.
 2. **Interactive Blog Section:** Integrate a blog section where you can share insights, experiences, and thoughts on front-end development.
 
-## More About Me? <a name="more-about-me"></a>
-Feel free to explore more about me and my journey in front-end development!
-
-## My Journey <a name="my-journey"></a>
-Discover my professional and personal journey in front-end development.
-
-## Contact <a name="contact"></a>
-Feel free to reach out for any questions or feedback regarding my portfolio project. You can contact me at [oguzhanozenc10@gmail.com](mailto:oguzhanozenc10@gmail.com).
-
-## Resume <a name="resume"></a>
-Explore my resume online.
