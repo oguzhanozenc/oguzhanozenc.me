@@ -16,7 +16,7 @@
 ## Home <a name="home"></a>
 Welcome to my dynamic personal portfolio website! This platform serves as a hub for showcasing my journey in front-end development. Feel free to explore and learn more about my skills, projects, and experiences.
 
-## Skills <a name="skills"></a>
+#### Tech Stack
 - HTML5
 - CSS3
 - JavaScript (ES6+)
