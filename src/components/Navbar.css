@@ -1,24 +1,20 @@
-/* Reset and Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Color Variables */
 :root {
   --color-bg: #fff;
   --color-gray: #fafafa;
   --color-border: #e5e7eb;
 }
 
-/* Navbar Container */
 .nav--navbar {
   width: 95%;
   margin: 0 auto;
 }
 
-/* Hamburger Icon */
 .hamburger-icon {
   z-index: 10;
   background: transparent;
@@ -32,14 +28,13 @@
   align-items: center;
 }
 
-/* Top Navigation Container */
 .topnavcontainer {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin: 0 1rem;
 }
 
-/* Animated Flip Text */
 .flip {
   animation: flipAnimation 0.5s ease;
 }
@@ -53,16 +48,18 @@
   }
 }
 
-/* Hamburger Icon Container */
 .hamburger-icon--container {
   position: relative;
-  border-bottom: 1px solid var(--color-border);
+  background: rgb(229, 231, 235, 0.5);
+  box-shadow: 0 3px 15px #0003;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 1rem 0.5rem;
   width: 100%;
   z-index: 9;
   padding: 0.7rem 0;
 }
 
-/* Avatar Section */
 .avatar {
   display: flex;
   justify-content: flex-start;
@@ -76,7 +73,6 @@
   background-color: var(--color-border);
 }
 
-/* Avatar Image */
 .navbar--image {
   width: 3rem;
   height: auto;
@@ -84,7 +80,6 @@
   border: 1px solid var(--color-border);
 }
 
-/* Navbar Info Text */
 .navbar--infotext {
   width: 100%;
   display: flex;
@@ -97,7 +92,6 @@
   margin: 0.5rem 0;
 }
 
-/* Navbar Top Line */
 #navbar--top-line {
   width: 5rem;
   height: 0.5rem;
@@ -106,7 +100,6 @@
   margin: 1rem auto;
 }
 
-/* Mobile Menu Open */
 .mobile-menu-open {
   position: fixed;
   bottom: 0;
@@ -128,7 +121,6 @@
   }
 }
 
-/* Navbar List */
 .navbar--list {
   display: flex;
   flex-direction: column;
@@ -136,7 +128,6 @@
   margin-top: 1rem;
 }
 
-/* Navbar List Items */
 .navbar--list li {
   padding: 0.5rem 1rem;
   margin-bottom: 0.25rem;
@@ -145,19 +136,12 @@
   transition: background-color 0.3s ease;
 }
 
-/* Active Navigation Item */
 .active-nav,
 .navbar--list li a:active:hover {
   color: var(--color-bg);
   background-color: #000;
 }
 
-/* Hover Effect on Navbar Items */
 .navbar--list li:hover {
   background-color: #bdbfc2;
-}
-
-/* Social Media Container */
-.socialmedia--container {
-  display: none; /* Consider removing if not used */
 }

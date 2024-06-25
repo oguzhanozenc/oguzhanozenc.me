@@ -1,0 +1,152 @@
+main,
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 10%;
+}
+
+main > section,
+.container > section {
+  padding: 1.5rem;
+  height: max-content;
+  border-radius: 3.5rem;
+}
+
+#heythere {
+  color: var(--color-danger);
+  font-weight: bold;
+  margin-bottom: 0;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+}
+
+#myname {
+  font-size: 2.5rem;
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 1rem 1rem 1rem 0;
+  font-weight: 800;
+  margin: 0.5rem;
+  margin-left: 0;
+}
+
+#mytitles {
+  margin-top: 0;
+  font-weight: medium;
+}
+
+#aboutmeparagraph {
+  text-align: justify;
+}
+
+.about--container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  place-items: center;
+  margin-left: 2rem;
+  margin: 0;
+}
+
+.about--container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about--container,
+.container {
+  padding-top: 5rem;
+  width: 100%;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.about--container--text {
+  width: 80%;
+}
+
+.about--container--img {
+  width: 100%;
+  padding-bottom: 1rem;
+  margin-left: 5%;
+}
+
+.about--container--img img {
+  width: 100%;
+  height: auto;
+  border-radius: 3.5rem 3.5rem 0 0;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 5%, rgb(0, 0, 0) 40%);
+  margin: 0;
+}
+
+.about--container--buttons {
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.btn {
+  padding: 0.5rem 0.8rem;
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  transition: all 300ms ease;
+  height: max-content;
+  border: 1px solid var(--color-dark);
+}
+
+.btn:hover {
+  background: var(--color-black);
+  box-shadow: 3px 3px var(--color-yellow);
+  color: var(--color-bg);
+}
+@media only screen and (max-width: 1200px) {
+  main {
+    background-size: 100% 100%;
+    margin: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main,
+  .container {
+    padding-top: 10%;
+  }
+
+  main > section {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+  }
+  .about--container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 29% 68%;
+    gap: 3%;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about--container--buttons {
+    display: none;
+  }
+  .about--container--text {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .about--container--img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .about--container {
+    grid-template-columns: 45% 55%;
+  }
+}

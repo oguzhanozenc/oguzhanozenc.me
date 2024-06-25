@@ -1,0 +1,186 @@
+.skills {
+  margin-left: 2rem;
+  padding-bottom: 5rem;
+}
+
+.sectionheading {
+  font-size: 1rem;
+  padding: 0.25rem 0.8rem;
+  border: 1px solid var(--color-black);
+  border-radius: 2rem;
+  display: inline-flex;
+  margin: 1rem;
+}
+
+.sectionheading:hover {
+  background-color: var(--color-black);
+  color: var(--color-bg);
+}
+
+.skillscontainer {
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: stretch;
+  gap: 5%;
+  margin: 0 auto;
+}
+
+.frontend > div:hover,
+.designskills > div:hover {
+  background-color: var(--color-gray);
+  box-shadow: 3px 3px var(--color-yellow);
+  transition: all 300ms ease;
+}
+
+.frontend,
+.designskills {
+  display: grid;
+  line-height: 1.5rem;
+  justify-content: center;
+}
+
+.frontend {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.designskills {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.frontend > div,
+.designskills > div {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem;
+  margin: 0.2rem;
+  font-size: 1.5rem;
+  color: var(--color-black);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.frontend > div:hover,
+.designskills > div:hover {
+  opacity: 0.8;
+}
+
+.frontend > div > p,
+.designskills > div > p {
+  font-size: 0.9rem;
+}
+
+.frontend > div > small,
+.designskills > div > small {
+  font-size: 0.7rem;
+}
+
+.skills > h3 {
+  color: #34c759;
+  width: fit-content;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+  background-color: var(--color-bg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .skills {
+    margin: 0 auto;
+  }
+
+  .skillscontainer {
+    grid-template-columns: auto auto;
+    gap: 2%;
+    justify-content: center;
+  }
+
+  .frontend,
+  .designskills {
+    margin: 0;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .frontend > div > p,
+  .designskills > div > p {
+    font-size: 0.6rem;
+  }
+
+  .frontend > div > small,
+  .designskills > div > small {
+    font-size: 0.45rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .skillscontainer {
+    grid-template-columns: auto auto;
+    gap: 2%;
+    margin: 0 auto;
+  }
+
+  .frontend,
+  .designskills {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    width: 95%;
+  }
+
+  .frontend > div,
+  .designskills > div {
+    display: flex;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .skillscontainer {
+    grid-template-columns: auto;
+    gap: 2%;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .frontend,
+  .designskills {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    width: 80%;
+  }
+
+  .frontend > div,
+  .designskills > div {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .frontend,
+  .designskills {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .frontend p,
+  .designskills p {
+    font-size: 0.5rem;
+  }
+}

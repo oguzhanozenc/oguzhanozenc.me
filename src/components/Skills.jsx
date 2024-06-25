@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Skills.css";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { LiaCss3 } from "react-icons/lia";
 import { RiJavascriptLine } from "react-icons/ri";

@@ -1,5 +1,6 @@
 import React from "react";
-import Skills from "./Skills";
+import "./Header.css";
+
 import ME from "/me.png";
 import { FaRegHandPeace } from "react-icons/fa6";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
@@ -39,7 +40,6 @@ export default function Header() {
           </div>
         </div>
       </section>
-      <Skills />
     </main>
   );
 }
