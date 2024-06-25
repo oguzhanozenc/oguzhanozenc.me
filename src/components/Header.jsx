@@ -11,10 +11,10 @@ export default function Header() {
         <div className="about--container--img">
           <img src={ME} alt="" />
           <div className="about--container--buttons">
-            <a href="/Contact" className="btn">
+            <a href="#contact" className="btn">
               Say Hello! <FaRegHandPeace />
             </a>
-            <a href="/Portfolio" className="btn">
+            <a href="#portfolio" className="btn">
               See my work! <PiProjectorScreenChartBold />
             </a>
           </div>

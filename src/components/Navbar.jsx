@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import SocialMedia from "./SocialMedia";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css";
 import ME2 from "/me2.png";
 import {
   PiMagicWand,
@@ -14,10 +12,11 @@ import { HiOutlineSparkles } from "react-icons/hi2";
 import { GiJourney } from "react-icons/gi";
 import { BsFileText } from "react-icons/bs";
 import { RiSpaceShipLine } from "react-icons/ri";
+import "./Navbar.css";
 
-export default function Navbar({ menuOpen, setMenuOpen }) {
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
 
   function handleNavLinkClick(item) {
     setActiveItem(item);
@@ -34,21 +33,8 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
       });
     }
 
-    setMenuOpen(false);
+    setMenuOpen(false); // Close the menu after clicking a link
   }
-
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth <= 1200);
-      setMenuOpen(false);
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   function handleMenuToggle() {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
@@ -56,31 +42,33 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
 
   return (
     <div key={activeItem}>
-      {isMobile && (
-        <nav className="smallerscreensizenav">
-          <div className="hamburger-icon--container">
-            <div className="topnavcontainer">
-              <div>
-                <button className="hamburger-icon" onClick={handleMenuToggle}>
-                  <RiSpaceShipLine id="menuiconitself" />
-                </button>
-              </div>
-              <div>
-                <p className={`flip`}>{activeItem}</p>
-              </div>
+      <nav className="smallerscreensizenav">
+        {/* Hamburger Menu Icon */}
+        <div className="hamburger-icon--container">
+          <div className="topnavcontainer">
+            <div>
+              <button className="hamburger-icon" onClick={handleMenuToggle}>
+                <RiSpaceShipLine id="menuiconitself" />
+              </button>
+            </div>
+            <div>
+              <p className={`flip`}>{activeItem}</p>
             </div>
           </div>
-        </nav>
-      )}
+        </div>
+      </nav>
 
-      {isMobile && menuOpen && (
-        <div className={`mobile-menu-open`}>
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="mobile-menu-open">
           <div id="navbar--top-line" onClick={() => setMenuOpen(false)}>
             <hr />
           </div>
 
           <div>
+            {/* Navbar List */}
             <ul className="navbar--list">
+              {/* Avatar and Info */}
               <div className="avatar">
                 <div className="navbar--icon">
                   <img src={ME2} alt="Profile" className="navbar--image" />
@@ -90,6 +78,8 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
                   <small>Front-end Developer</small>
                 </div>
               </div>
+
+              {/* Nav Links */}
               <li className={activeItem === "Home" ? "active-nav" : ""}>
                 <NavLink to="/" onClick={() => handleNavLinkClick("Home")}>
                   <HiOutlineSparkles /> Home
@@ -149,88 +139,6 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
             </ul>
           </div>
         </div>
-      )}
-      {!isMobile && (
-        <nav className="nav bigger-screensize-nav">
-          <div>
-            <div className="nav--navbar">
-              <ul className="navbar--list">
-                <div className="avatar">
-                  <div className="navbar--icon">
-                    <img src={ME2} alt="Profile" className="navbar--image" />
-                  </div>
-                  <div className="navbar--infotext">
-                    <p>Oğuzhan Özenç</p>
-                    <small>Front-end Developer</small>
-                  </div>
-                </div>
-                <li className={activeItem === "Home" ? "active-nav" : ""}>
-                  <NavLink to="/" onClick={() => handleNavLinkClick("Home")}>
-                    <HiOutlineSparkles /> Home
-                  </NavLink>
-                </li>
-
-                <li className={activeItem === "Skills" ? "active-nav" : ""}>
-                  <NavLink
-                    to="/#skills"
-                    onClick={() => handleNavLinkClick("Skills")}
-                  >
-                    <PiMagicWand /> Skills
-                  </NavLink>
-                </li>
-
-                <li className={activeItem === "Portfolio" ? "active-nav" : ""}>
-                  <NavLink
-                    to="/Portfolio"
-                    onClick={() => handleNavLinkClick("Portfolio")}
-                  >
-                    <PiProjectorScreenChart /> Portfolio
-                  </NavLink>
-                </li>
-
-                <li className={activeItem === "About" ? "active-nav" : ""}>
-                  <NavLink
-                    to="/About"
-                    onClick={() => handleNavLinkClick("About")}
-                  >
-                    <PiPersonSimpleRunBold /> More About Me?
-                  </NavLink>
-                </li>
-                <li className={activeItem === "Journey" ? "active-nav" : ""}>
-                  <NavLink
-                    to="/Journey"
-                    onClick={() => handleNavLinkClick("Journey")}
-                  >
-                    <GiJourney /> My Journey
-                  </NavLink>
-                </li>
-                <li className={activeItem === "Contact" ? "active-nav" : ""}>
-                  <NavLink
-                    to="/Contact"
-                    onClick={() => handleNavLinkClick("Contact")}
-                  >
-                    <PiPaperPlaneTiltBold /> Contact
-                  </NavLink>
-                </li>
-                <li className={activeItem === "Resume" ? "active-nav" : ""}>
-                  <a
-                    href="/Oğuzhan Özenç_2024_Resume_en_website.pdf"
-                    onClick={() => handleNavLinkClick("Resume")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <BsFileText /> Resume
-                    <FiArrowUpRight />
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div id="seperator">
-              <hr />
-            </div>
-            <SocialMedia />
-          </div>
-        </nav>
       )}
     </div>
   );
