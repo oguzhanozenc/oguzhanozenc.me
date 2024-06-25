@@ -63,10 +63,6 @@ export default function Navbar() {
         </div>
 
         <div className="nav-link">
-          <Link to="/about">About</Link>
-        </div>
-
-        <div className="nav-link">
           <Link to="/journey">Journey</Link>
         </div>
 
