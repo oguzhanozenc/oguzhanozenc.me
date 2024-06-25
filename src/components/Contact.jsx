@@ -1,5 +1,5 @@
 import React from "react";
-import "./stylescontact.css";
+import "./Contact.css";
 
 import { FiGithub } from "react-icons/fi";
 import { PiSpotifyLogoBold } from "react-icons/pi";

@@ -8,15 +8,15 @@ import {
 } from "react-router-dom";
 import { Transition } from "react-transition-group";
 
-import UpButton from "./UpButton";
-import Navbar from "./Navbar";
-import MainContent from "./MainContent";
-import Skills from "./Skills";
-import Portfolio from "./Portfolio";
-import ProjectPage from "./ProjectPage";
-import About from "./About";
-import Journey from "./Journey";
-import Contact from "./Contact";
+import UpButton from "./components/UpButton";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Skills from "./components/Skills";
+import Portfolio from "./components/Portfolio";
+import ProjectPage from "./components/ProjectPage";
+import About from "./components/About";
+import Journey from "./components/Journey";
+import Contact from "./components/Contact";
 
 import "non.geist";
 import "non.geist/mono";
@@ -54,7 +54,7 @@ function AnimatedRoutes({ menuOpen, setMenuOpen }) {
           }}
         >
           <Routes location={location}>
-            <Route path="/" element={<MainContent />} />
+            <Route path="/" element={<Header />} />
             <Route path="/Skills" element={<Skills />} />
             <Route path="/Portfolio" element={<Portfolio />} />
             <Route path="/Project/:projectIndex" element={<ProjectPage />} />

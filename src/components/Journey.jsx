@@ -1,10 +1,11 @@
 import React from "react";
+import "./Journey.css";
 
-import "./stylesjourney.css";
-import journeyData from "./journeyData.json";
-import { LuSparkles } from "react-icons/lu";
 import "non.geist/mono";
 import "non.geist";
+
+import journeyData from "./journeyData.json";
+import { LuSparkles } from "react-icons/lu";
 
 export default function Journey() {
   const JourneyTimeline = ({ journeyData }) => {

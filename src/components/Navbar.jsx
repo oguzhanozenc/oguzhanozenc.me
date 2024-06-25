@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import SocialMedia from "./SocialMedia";
 import { NavLink } from "react-router-dom";
-import "./stylesnavbar.css";
-import ME2 from "../public/me2.png";
+import "./Navbar.css";
+import ME2 from "/me2.png";
 import {
   PiMagicWand,
   PiProjectorScreenChart,

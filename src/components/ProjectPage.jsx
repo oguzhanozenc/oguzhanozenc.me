@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./styles_projectpage.css";
+import "./ProjectPage.css";
 import projectsData from "./projectsData.json";
 import { useParams, Link } from "react-router-dom";
 

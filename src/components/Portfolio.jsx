@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { PiProjectorScreenChart } from "react-icons/pi";
 import { TbHandClick } from "react-icons/tb";
 import projectsData from "./projectsData.json";
-import "./stylesportfolio.css";
+import "./Portfolio.css";
 
 export default function Portfolio() {
   return (
