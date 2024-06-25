@@ -23,12 +23,7 @@ export default function Home() {
           onSectionChange={handleSectionChange}
         />
       </Section>
-      <Section key="skills-section">
-        <Skills
-          defaultSection={section}
-          onSectionChange={handleSectionChange}
-        />
-      </Section>
+
       <Section key="portfolio-section">
         <Portfolio
           defaultSection={section}

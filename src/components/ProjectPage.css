@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-header {
+.project-container header {
   display: grid;
   grid-template-columns: 70% 30%;
   justify-content: center;
@@ -386,7 +386,7 @@ h2 {
     grid-template-columns: auto auto;
   }
 
-  header {
+  .project-container header {
     grid-template-columns: auto;
     gap: 3%;
     width: 90%;
