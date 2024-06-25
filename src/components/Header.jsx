@@ -29,11 +29,11 @@ export default function Header() {
                 </a>
               </p>{" "}
               <div className="headercontainer-buttons">
+                <a href="#recentprojects" className="btn">
+                  See my work! <PiProjectorScreenChartBold />
+                </a>{" "}
                 <a href="#contact" className="btn">
                   Say Hello! <FaRegHandPeace />
-                </a>
-                <a href="#portfolio" className="btn">
-                  See my work! <PiProjectorScreenChartBold />
                 </a>
               </div>
             </div>

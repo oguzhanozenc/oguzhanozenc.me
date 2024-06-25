@@ -16,7 +16,8 @@ export default function Testimonials() {
                 <img src={testimonial.image} alt={testimonial.name} />
               </div>{" "}
               <div>
-                <small className="testimonial-name">{testimonial.name}</small>
+                <p className="testimonial-name">{testimonial.name}</p>
+                <small className="testimonial-title">{testimonial.title}</small>
               </div>
             </div>
           </div>

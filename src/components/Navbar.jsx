@@ -55,7 +55,7 @@ export default function Navbar() {
             className="nav-link"
             onClick={(e) => {
               e.preventDefault();
-              handleNavClick("portfolio");
+              handleNavClick("recentprojects");
             }}
           >
             Projects

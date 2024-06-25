@@ -38,11 +38,25 @@
   justify-content: flex-end;
   align-items: center;
   padding: 0.5rem;
+  text-align: left;
 }
 
 .testimonial-img img {
-  width: 2rem;
+  width: 2.5rem;
   height: auto;
   margin: 0 0.25rem;
   border-radius: 50%;
+}
+
+.testimonial-name {
+  font-size: 0.85rem;
+  padding: 0;
+  margin: 0;
+}
+
+.testimonial-title {
+  font-size: 0.75rem;
+  filter: brightness(0.8);
+  padding: 0;
+  margin: 0;
 }

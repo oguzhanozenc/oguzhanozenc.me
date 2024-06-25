@@ -1,5 +1,8 @@
 .contactpage {
   line-height: 2rem;
+  width: 80%;
+  margin: 10% auto;
+  padding: 10%;
 }
 
 .contact--text {
@@ -7,13 +10,9 @@
 }
 
 .contactsection {
-  padding: 10%;
-  width: 80%;
-  margin: 10% auto;
 }
 
 .contactcontainer {
-  width: 100%;
   background-size: cover;
   display: grid;
   grid-template-columns: 37% 62%;
@@ -21,42 +20,34 @@
   border-radius: 0.5rem;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    150deg,
-    rgba(250, 250, 250, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  border: 1px solid var(--color-border);
+  background: rgba(16, 16, 16, 0.2);
+  color: lch(58.2 7.7 259);
+  background-size: cover;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 100px rgba(94, 69, 255, 0.2);
+  border: 1px solid rgba(94, 69, 255, 0.4);
   overflow: hidden;
-  padding: 1rem 2rem;
+  padding: 2rem;
+  color: #fff;
 }
 
 #mail {
   transition: all 300ms ease;
-  background-color: var(--color-bg);
   padding: 0.3rem 0.6rem;
-  border-radius: 1rem;
-  border: 1px solid black;
+  border-radius: 0.25rem;
+  background: rgba(200, 35, 215);
 }
 
 #mail:hover {
-  background-color: var(--color-yellow);
-  box-shadow: 0.25rem 0.25rem var(--color-success);
+  background: rgba(94, 69, 255, 0.5);
+  color: #fff;
 }
 
-h1 {
-  font-size: 2rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.contact--img {
+.contact-img {
   position: relative;
 }
 
-.contact--img img {
+.contact-img img {
   background-color: var(--color-gray);
   border: 1px solid var(--color-border);
   width: 100%;
@@ -74,7 +65,7 @@ h1 {
   box-shadow: 0.5rem 0.5rem 0.5rem var(--color-yellow);
 }
 
-.contact--img::before {
+.contact-img::before {
   content: "";
   position: absolute;
   top: 0;
@@ -93,12 +84,12 @@ h1 {
   transition: opacity 0.3s ease-in-out;
 }
 
-.contact--img:hover img {
+.contact-img:hover img {
   transform: scale(0.95);
   transform: rotate(0deg);
 }
 
-.contact--img:hover::before {
+.contact-img:hover::before {
   opacity: 1;
   animation: shine 0.75s;
 }
@@ -121,19 +112,15 @@ h1 {
 }
 
 .contact--socialmedia--container a {
-  color: var(--color-black);
   font-size: 1.2rem;
   transition: color 0.3s ease;
-  border: 2px solid var(--color-border);
+
   padding: 0.8rem;
   border-radius: 0.3rem;
 }
 
 .contact--socialmedia--container a:hover {
   transition: color 0.3s ease;
-  box-shadow: 0.2rem 0.2rem var(--color-yellow);
-  background-color: var(--color-border);
-  border: 1px solid black;
 }
 .contact--text a:hover {
   opacity: 0.8;
@@ -167,7 +154,7 @@ h1 {
   .contact--socialmedia--container {
     margin: 0 auto;
   }
-  .contact--img {
+  .contact-img {
     width: 80%;
     padding: 1rem 1rem;
     margin: 0 auto;
@@ -192,7 +179,7 @@ h1 {
     width: 100%;
   }
 
-  .contact--img {
+  .contact-img {
     width: 60%;
   }
 }

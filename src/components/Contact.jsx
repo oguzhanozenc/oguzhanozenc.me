@@ -8,21 +8,21 @@ import { PiTelegramLogoBold } from "react-icons/pi";
 import { HiOutlineMail } from "react-icons/hi";
 
 import { PiReadCvLogoBold } from "react-icons/pi";
-import { FaLink } from "react-icons/fa6";
+
 import { FaArrowTurnDown } from "react-icons/fa6";
 
 export default function Contact() {
   return (
     <section className="contactpage" id="contact">
+      <h2 className="section-title" id="contact-title">
+        Let's Connect!
+      </h2>
       <section className="contactsection" id="contactsection">
         <div className="contactcontainer">
-          <div className="contact--img">
+          <div className="contact-img">
             <img src="./contactimg.png" alt="" />
           </div>
           <div className="contact--text">
-            <h1>
-              <FaLink /> Let's Connect!
-            </h1>
             <p>
               Feel free to reach out through my email at <FaArrowTurnDown />
               <br />
