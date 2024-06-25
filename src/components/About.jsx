@@ -10,7 +10,7 @@ export default function About() {
           <img src="./aboutmeimg.jpg" alt="" />
         </div>
         <div className="aboutme--text">
-          <h1>About</h1>
+          <h1 className="section-title">About</h1>
           <p>
             Hey there! My name is Oğuzhan. I'm an enthusiastic front-end
             developer from Istanbul Turkey, with a passion for merging

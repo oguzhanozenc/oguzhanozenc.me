@@ -1,30 +1,3 @@
-* {
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  color: inherit;
-  border: none;
-  --color-bg: #fff;
-  --color-gray: #fafafa;
-  --color-danger: #ff3b30;
-  --color-yellow: #fc0;
-  --color-success: #34c759;
-  --color-black: #000000;
-  --color-dark: #161617cc;
-  --color-border: #e5e7eb;
-  --color-gradient: linear-gradient(to left, #bdc3c7, #2c3e50);
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0 auto;
-}
-
 .projectpage {
   display: flex;
   flex-direction: column;

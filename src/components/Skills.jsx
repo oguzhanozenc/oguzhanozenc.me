@@ -15,62 +15,39 @@ import { PiMagicWand } from "react-icons/pi";
 export default function Skills() {
   return (
     <section className="skills" id="skills">
-      <h2 className="sectionheading">
-        <PiMagicWand /> Skills
-      </h2>
       <div className="skillscontainer">
-        <div className="frontend">
-          <h3>Front-end</h3>
-          <div>
-            <AiOutlineHtml5 />
-            <p>HTML</p>
-          </div>
-          <div>
-            <LiaCss3 />
-            <p>CSS</p>
-          </div>
-          <div>
-            <RiJavascriptLine />
-            <p>JavaScript</p>
-          </div>
-          <div>
-            <IoLogoReact />
-            <p>React</p>
-          </div>
-          <div>
-            <RiBootstrapLine />
-            <p>Bootstrap</p>
-          </div>
-          <div>
-            <LiaSass />
-            <p>Sass</p>
-          </div>
-          <div>
-            <GiJourney />
-          </div>
+        <div>
+          <AiOutlineHtml5 />
+          <p>HTML</p>
         </div>
-
-        <div className="designskills">
-          <h3>Design</h3>
-          <div>
-            <FaFigma />
-            <p>Figma</p>
-          </div>
-          <div>
-            <HiOutlineRectangleGroup />
-            <p>Responsive Design</p>
-          </div>
-          <div>
-            <IoSparklesOutline />
-            <p>UI/UX Design</p>
-            <small>Basics</small>
-          </div>
-          <div>
-            <PiMagicWand />
-            <p>Graphic Design</p>
-            <small>Adobe CC</small>
-          </div>
+        <div>
+          <LiaCss3 />
+          <p>CSS</p>
         </div>
+        <div>
+          <RiJavascriptLine />
+          <p>JavaScript</p>
+        </div>
+        <div>
+          <IoLogoReact />
+          <p>React</p>
+        </div>
+        <div>
+          <RiBootstrapLine />
+          <p>Bootstrap</p>
+        </div>
+        <div>
+          <IoSparklesOutline />
+          <p>UI/UX Design</p>
+        </div>{" "}
+        <div>
+          <HiOutlineRectangleGroup />
+          <p>Responsive Design</p>
+        </div>{" "}
+        <div>
+          <FaFigma />
+          <p>Figma</p>
+        </div>{" "}
       </div>
     </section>
   );

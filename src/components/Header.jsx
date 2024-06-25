@@ -25,13 +25,13 @@ export default function Header() {
           <div>
             <p id="heythere"> Hey there!👋 I'm</p>
             <h1 id="myname">Oğuzhan Özenç</h1>
-            <h4 id="mytitles">Developer, Designer & Dreamer</h4>
             <p id="aboutmeparagraph">
-              As a front-end developer passionate about blending creativity and
-              tech, I have always been curious about participating in projects
-              that tell stories and creating something impactful. Software
-              development allows me to turn ideas into reality, and I find the
-              journey from concept to application incredibly rewarding.{" "}
+              I'm a front-end developer who finds the journey from concept to
+              application incredibly rewarding. Personally, I've always been
+              fascinated by projects that tell stories, helping people share
+              their stories, and create impactful experiences. Software
+              development allows me to turn ideas into reality, which is why I
+              enjoy focusing on improving my skills in the front-end world.
             </p>
 
             <a href="/About" className="btn" id="moreaboutmebtn">

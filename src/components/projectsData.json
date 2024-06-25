@@ -3,6 +3,7 @@
     {
       "title": "Personal Portfolio Website",
       "image": "portfolio1.gif",
+      "featuredText": "A dynamic personal portfolio website that showcases and captures my front-end development journey",
       "description": "Conceptualized, designed, and developed a dynamic personal portfolio website that showcases and captures my front-end development journey.",
       "features": [
         {
@@ -38,7 +39,7 @@
           "description": "Designed and implemented modular React components for a scalable and maintainable codebase."
         }
       ],
-      "techStack": ["HTML5", "CSS3", "JavaScript (ES6+)", "React"],
+      "techStack": ["React"],
       "projectStructure": [
         "App.jsx",
         "about.jsx",
@@ -160,6 +161,7 @@
     {
       "title": "Quik - Instant Delivery App",
       "image": "/quik2.gif",
+      "featuredText": "A web application designed to provide users with a quick and personalized instant delivery experience.",
       "description": "Quik is a web application designed to provide users with a quick and personalized instant delivery experience.",
       "features": [
         {
@@ -273,6 +275,7 @@
     {
       "title": "Cinemate - Movie Watchlist App",
       "image": "cinemate2.gif",
+      "featuredText": "A web app for movie enthusiasts to explore, track, and manage their favorite movies.",
       "description": "A web app for movie enthusiasts to explore, track, and manage their favorite movies.",
       "features": [
         {
@@ -401,119 +404,6 @@
         "thankYouMessage": "Thank you for exploring Cinemate - Your Movie Watchlist App!",
         "githubLink": "https://github.com/oguzhanozenc/cinemate-movie-watchlist-app",
         "demoLink": "https://cinemate-movie-watchlist-app.netlify.app/"
-      }
-    },
-
-    {
-      "title": "In development! | What to Cook? - Meal Planning App",
-      "image": "whattocook.gif",
-      "description": "'What to Cook?' is a meal planning app currently in development. Simplify your daily cooking decisions by effortlessly logging groceries and receiving personalized meal suggestions. Plan efficiently, prevent food waste, and enjoy stress-free weekdays with a user-friendly interface. Stay tuned for the ultimate meal planning companion!",
-      "features": [
-        {
-          "title": "Inventory Logging",
-          "description": "Effortlessly log all your groceries into the app, making it easy to keep track of your available items."
-        },
-        {
-          "title": "Dynamic Meal Suggestions",
-          "description": "Get personalized meal suggestions based on the groceries in your inventory. No more wondering what to cook!"
-        },
-        {
-          "title": "Weekly Meal Planning",
-          "description": "Plan your weekly meals in advance, making weekdays stress-free. 'What to Cook?' helps you organize your meals efficiently."
-        },
-        {
-          "title": "Prevent Food Waste",
-          "description": "By planning your meals and utilizing what you have, 'What to Cook?' aids in preventing your groceries from going to waste."
-        },
-        {
-          "title": "User-friendly Interface",
-          "description": "Enjoy a user-friendly interface that makes logging, planning, and navigating the app a breeze."
-        },
-        {
-          "title": "Responsive Design",
-          "description": "Access 'What to Cook?' seamlessly across different devices, ensuring a consistent and enjoyable user experience."
-        }
-      ],
-      "techStack": ["HTML5", "CSS3", "JavaScript (ES6+)"],
-      "projectStructure": ["index.html", "style.css", "script.js", "data.json"],
-      "userFlow": [
-        "Inventory Logging",
-        "View Inventory",
-        "Meal Suggestions",
-        "Weekly Meal Planning",
-        "Prevent Food Waste"
-      ],
-      "projectLink": "./Project_Fourth",
-      "projectPage": {
-        "overview": "Tired of the daily struggle to decide what to cook? 'What to Cook?' is your upcoming solution to meal planning headaches. This inventory app lets you log your groceries and plan your weekly meals effortlessly. Simply log your groceries, view what you have in your inventory, and let the app suggest meal options based on your available items. Plan your weekly meals in advance, preventing your groceries from going to waste. 'What to Cook?' offers a seamless experience, ensuring you have what you need when you need it!",
-
-        "titleAndDescription": {
-          "title": "In development! - What to Cook?",
-          "description": "'What to Cook?' is a meal planning app designed to simplify your daily cooking decisions. Log your groceries, view your inventory, and get personalized meal suggestions based on what you have!"
-        },
-        "demoData": [
-          {
-            "title": "Stage 1: Inventory Logging",
-            "description": [
-              "Effortlessly log all your groceries into the app, making it easy to keep track of your available items.",
-              "A straightforward process that sets the foundation for efficient meal planning."
-            ],
-            "screenshot": "/whattocook.gif"
-          },
-          {
-            "title": "Stage 2: Dynamic Meal Suggestions",
-            "description": [
-              "Get personalized meal suggestions based on the groceries in your inventory. No more wondering what to cook!",
-              "The app uses your available items to recommend delicious and convenient meal options."
-            ],
-            "screenshot": "/whattocook.gif"
-          },
-          {
-            "title": "Stage 3: Weekly Meal Planning",
-            "description": [
-              "Plan your weekly meals in advance, making weekdays stress-free. 'What to Cook?' helps you organize your meals efficiently.",
-              "Simply select items from your inventory, and the app assists in creating a well-planned meal schedule."
-            ],
-            "screenshot": "/whattocook.gif"
-          }
-        ],
-        "technologiesUsed": ["HTML5", "CSS3", "JavaScript (ES6+)"],
-        "challengesAndSolutions": [
-          {
-            "challenge": "",
-            "challengeDescription": "will be updated."
-          }
-        ],
-        "projectLink": "./Project_Fourth",
-        "myRole": "As the sole developer of 'What to Cook?', I am responsible for the conceptualization, design, and development of the entire application.",
-        "upcomingFeatures": {
-          "heading": "What Awaits?",
-          "features": [
-            {
-              "title": "Enhanced Inventory Management",
-              "explanation": "Take control of your inventory with additional features for efficient grocery logging and management."
-            },
-            {
-              "title": "Meal Suggestions Upgrade",
-              "explanation": "Experience an upgraded meal suggestions system with more personalized and diverse options."
-            },
-            {
-              "title": "User Accounts, Interactive Lists",
-              "explanation": "Unlock the full potential of 'What to Cook?' by creating user accounts, enabling personalized experiences and enhanced features. Share your lists with your partner and friends."
-            },
-            {
-              "title": "Community Recipes",
-              "explanation": "Explore and share recipes within the 'What to Cook?' community. Discover new culinary delights and inspire others with your creations."
-            },
-            {
-              "title": "Mobile App Integration",
-              "explanation": "Stay connected to your meal plans on the go with upcoming mobile app integration, ensuring a seamless experience across devices."
-            }
-          ],
-          "closingStatement": "'What to Cook?' is not just a meal planning app; it's your personalized kitchen companion, evolving to meet your culinary needs. Have ideas or feedback? Contact us! 🍲📱"
-        },
-        "contactOrFeedbackSection": "Feel free to reach out for any questions or feedback regarding 'What to Cook?'. You can contact me at oguzhanozenc10@gmail.com",
-        "thankYouMessage": "Thank you for exploring 'What to Cook? - Meal Planning App!'"
       }
     }
   ]
