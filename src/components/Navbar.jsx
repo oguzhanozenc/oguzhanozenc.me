@@ -9,14 +9,6 @@ export default function Navbar() {
   const isHomePage = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const scrollThreshold = 100;
-      setIsScrolled(scrollTop > scrollThreshold);
-    };
-  }, []);
-
   const handleNavClick = (hash) => {
     if (!isHomePage) {
       navigate(`/#${hash}`);
@@ -59,7 +51,7 @@ export default function Navbar() {
 
         <div>
           <a
-            href="#portfolio"
+            href="#recentprojects"
             className="nav-link"
             onClick={(e) => {
               e.preventDefault();
@@ -70,30 +62,12 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div>
-          <a
-            href="#about"
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("about");
-            }}
-          >
-            About
-          </a>
+        <div className="nav-link">
+          <Link to="/about">About</Link>
         </div>
 
-        <div>
-          <a
-            href="#journey"
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("journey");
-            }}
-          >
-            Journey
-          </a>
+        <div className="nav-link">
+          <Link to="/journey">Journey</Link>
         </div>
 
         <div className="nav-link">

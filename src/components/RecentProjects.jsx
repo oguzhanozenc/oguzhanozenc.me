@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { PiProjectorScreenChart } from "react-icons/pi";
-import { IoHandRightSharp as TbHandClick } from "react-icons/io5";
 import projectsData from "./projectsData.json";
-import "./Portfolio.css";
+import "./RecentProjects.css";
 
-export default function Portfolio() {
+export default function RecentProjects() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   function handleMouseEnter(index) {
@@ -17,7 +15,7 @@ export default function Portfolio() {
   }
 
   return (
-    <section className="container" id="portfolio">
+    <section className="container" id="recentprojects">
       <h2 className="section-title" id="portfolioheading">
         Recent Projects
       </h2>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Skills from "./Skills";
-import Portfolio from "./Portfolio";
+import RecentProjects from "./RecentProjects";
+import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 
 const Section = ({ children }) => {
@@ -24,12 +25,20 @@ export default function Home() {
         />
       </Section>
 
-      <Section key="portfolio-section">
-        <Portfolio
+      <Section key="projects-section">
+        <RecentProjects
           defaultSection={section}
           onSectionChange={handleSectionChange}
         />
       </Section>
+
+      <Section key="projects-section">
+        <Testimonials
+          defaultSection={section}
+          onSectionChange={handleSectionChange}
+        />
+      </Section>
+
       <Section key="contact-section">
         <Contact
           defaultSection={section}
