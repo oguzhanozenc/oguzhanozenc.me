@@ -31,23 +31,10 @@ body {
   overflow-x: hidden;
   margin: 0;
   width: 100%;
-  background: linear-gradient(
-    0deg,
-    #161a1d 0%,
-    #161c21 40%,
-    #16212c 60%,
-    #16222c 70%,
-    #161c21 90%,
-    #161a1d 100%
-  );
+  background-color: hsl(230, 29%, 6%);
   background-repeat: no-repeat;
   color: lch(58.2 7.7 259);
   background-size: cover;
-}
-
-.btn,
-a {
-  color: #fff;
 }
 
 @media only screen and (max-width: 1200px) {

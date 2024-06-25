@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 18%;
-  font-family: "Geist Variable", sans-serif;
+
   padding-bottom: 5rem;
 }
 
@@ -21,7 +21,6 @@
 }
 
 .projectsection {
-  font-family: "Geist Variable", sans-serif;
   text-align: justify;
   margin: 5% 10% 0% 10%;
   line-height: 2rem;
@@ -75,11 +74,6 @@ header {
   background: var(--color-gray);
   box-shadow: 0.5rem 0.5rem var(--color-yellow);
   transition: all 300ms ease;
-}
-
-header > div > a {
-  font-family: "Geist Mono Variable", monospace;
-  font-weight: bold;
 }
 
 .link--icon {
