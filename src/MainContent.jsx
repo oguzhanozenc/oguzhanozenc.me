@@ -25,13 +25,7 @@ export default function Main() {
             <p id="heythere"> Hey there!👋 I'm</p>
             <h1 id="myname">Oğuzhan Özenç</h1>
             <h4 id="mytitles">Developer, Designer & Dreamer</h4>
-            <p id="aboutmeparagraph">
-              I'm a front-end developer passionate about blending creativity and
-              tech. Drawing inspiration from the unique journeys of individuals,
-              I am excited about contributing to projects that help them share
-              their stories. I'm looking forward to exploring career
-              opportunities in the tech industry and beyond.
-            </p>
+            <p id="aboutmeparagraph">Hellooo</p>
 
             <a href="/About" className="btn" id="moreaboutmebtn">
               More about me&raquo;
