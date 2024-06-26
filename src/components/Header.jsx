@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import Skills from "./Skills";
-import logo from "/logo-white.png";
+import logo from "/logohorizontal-white.png";
 import { FaRegHandPeace } from "react-icons/fa6";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
 
@@ -10,13 +10,12 @@ export default function Header() {
     <header>
       <section className="header" id="home">
         <div className="header-container">
-          <div className="header-img">
-            <img src={logo} alt="Logo" />
-          </div>
           <div className="headercontainer-text">
             <div className="headercontent">
               <p id="heythere">Hey there!👋 I'm</p>
-              <p id="myname">Oguzhan Ozenc</p>
+              <div className="header-img">
+                <img src={logo} alt="Logo" />
+              </div>
               <p className="header-about">
                 I'm a front-end developer who finds the journey from concept to
                 application incredibly rewarding. I've always been fascinated by
