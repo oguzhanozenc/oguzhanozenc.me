@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiOutlineMail } from "react-icons/hi";
 import { PiTelegramLogoBold, PiPhoneCall } from "react-icons/pi";
@@ -8,25 +8,6 @@ import { RiTwitterXLine } from "react-icons/ri";
 import "./Footer.css";
 
 export default function Footer() {
-  const slogans = [
-    "Securitas Catenae Truncorum!",
-    "multidimensional blocksec engineering.",
-    "interplanetary crypto defenders.",
-    "boutique blockchain security solutions.",
-    "inventing the future of blockchain security.",
-  ];
-
-  const [currentSlogan, setCurrentSlogan] = useState("");
-
-  useEffect(() => {
-    const generateSlogan = () => {
-      const randomIndex = Math.floor(Math.random() * slogans.length);
-      return slogans[randomIndex];
-    };
-    const slogan = generateSlogan();
-    setCurrentSlogan(slogan);
-  }, []);
-
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
@@ -46,41 +27,21 @@ export default function Footer() {
     <footer>
       <section className="footer--container">
         <div className="footer-card">
-          <div id="footerlogo">
-            <div id="footerlogo--img">
-              <Link to="/">
-                <img src="/navbarlogo.png" alt="" />
-              </Link>
-            </div>
-            <div id="slogan">
-              <p>{currentSlogan}</p>
-            </div>
+          <div className="footerlogo">
+            <Link to="/">
+              <img src="/logohorizontal-white.png" alt="Oguzhan Ozenc Logo" />
+            </Link>
           </div>
-          <div className="social-media">
-            <div className="mailandphone">
-              <div>
-                <small>
-                  <a href="mailto:info@offbeatsecurity.xyz">
-                    <HiOutlineMail /> info@offbeatsecurity.xyz
-                  </a>
-                </small>
-              </div>
-              <div>
-                <small>
-                  <a
-                    href="tel:+13072019499"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <PiPhoneCall /> +1-307-201-9499
-                  </a>
-                </small>
-              </div>
+          <div>
+            <div className="mailadress">
+              <a href="mailto:oguzhanozenc10@gmail.com">
+                <HiOutlineMail /> oguzhanozenc10@gmail.com
+              </a>
             </div>
-            <div className="footer-socialmediacontainer">
+            <div className="social-media">
               <div>
                 <a
-                  href="https://t.me/devtooligan"
+                  href="https://t.me/oguzhanozenc"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -89,7 +50,7 @@ export default function Footer() {
               </div>
               <div>
                 <a
-                  href="https://x.com/OffbeatSecurity"
+                  href="https://x.com/oguzhanozencdev"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -98,7 +59,7 @@ export default function Footer() {
               </div>
               <div>
                 <a
-                  href="https://github.com/offbeatsecurity"
+                  href="https://github.com/oguzhanozenc"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -108,10 +69,15 @@ export default function Footer() {
             </div>
           </div>
         </div>
+
         <div className="footer-permalinks">
           <div>
             {isHomePage ? (
-              <a href="#home" className="nav-link heading-item">
+              <a
+                href="#home"
+                className="footer-link heading-item"
+                onClick={() => handleNavClick("home")}
+              >
                 Home
               </a>
             ) : (
@@ -123,63 +89,37 @@ export default function Footer() {
 
           <div>
             <a
-              href="#about"
-              className="nav-link"
-              onClick={() => handleNavClick("about")}
+              href="#recentprojects"
+              className="footer-link"
+              onClick={() => handleNavClick("recentprojects")}
             >
-              About
+              Projects
             </a>
           </div>
 
-          <div>
-            <a
-              href="#people"
-              className="nav-link"
-              onClick={() => handleNavClick("people")}
-            >
-              Our People
-            </a>
+          <div className="footer-link">
+            <Link to="/journey">Journey</Link>
           </div>
 
-          <div>
-            <a
-              href="#foundations"
-              className="nav-link"
-              onClick={() => handleNavClick("foundations")}
-            >
-              Foundations
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="#approach"
-              className="nav-link"
-              onClick={() => handleNavClick("approach")}
-            >
-              Our Approach
-            </a>
+          <div className="footer-link">
+            <Link to="/blog">Blog</Link>
           </div>
 
           <div>
             <a
               href="#contact"
-              className="nav-link"
+              className="footer-link"
               onClick={() => handleNavClick("contact")}
             >
               Contact
             </a>
           </div>
-
-          <div>
-            <Link to="/blog">Blog</Link>
-          </div>
         </div>
       </section>
       <div id="copyright">
         <p>
-          &copy; {new Date().getFullYear()} Offbeat Security. All Rights
-          Reserved.
+          &copy; Designed and developed by Oguzhan Ozenc,{" "}
+          {new Date().getFullYear()}.
         </p>
       </div>
     </footer>
