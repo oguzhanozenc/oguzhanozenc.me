@@ -29,7 +29,10 @@ export default function Footer() {
         <div className="footer-card">
           <div className="footerlogo">
             <Link to="/">
-              <img src="/logohorizontal-white.png" alt="Oguzhan Ozenc Logo" />
+              <img
+                src="/logoshorthorizontal-white.png"
+                alt="Oguzhan Ozenc Logo"
+              />
             </Link>
           </div>
           <div>

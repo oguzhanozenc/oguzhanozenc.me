@@ -92,6 +92,7 @@
   object-fit: cover;
   transition: transform 0.3s ease, clip-path 0.3s ease;
   clip-path: inset(0 0 50% 0);
+  opacity: 0.7;
 }
 
 .project-img {
@@ -106,4 +107,5 @@
 .project--item.hovered .portfolioitem--img {
   clip-path: inset(0 0 0 0);
   transform: translateY(-50%);
+  opacity: 1;
 }
