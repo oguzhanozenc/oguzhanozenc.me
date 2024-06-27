@@ -45,7 +45,7 @@ export default function ProjectPage() {
               <p>{project.titleAndDescription.description}</p>
               <div className="project-links">
                 <a className="btn" href={project.demoLink}>
-                  Demo <FiArrowUpRight />
+                  Project Link <FiArrowUpRight />
                 </a>
                 <a className="btn" href={project.githubLink}>
                   Github <FiArrowUpRight />

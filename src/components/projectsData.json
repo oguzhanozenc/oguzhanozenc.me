@@ -1,6 +1,165 @@
 {
   "projects": [
     {
+      "title": "Offbeat Security",
+      "image": "offbeatsecurity.png",
+      "featuredText": "A blockchain security business focusing to partnering with complex blockchain builder systems providing security solutions.",
+      "description": "Offbeat Security is a blockchain security business aiming to partner with builders of complex blockchain systems providing bespoke security solutions.",
+      "features": [
+        {
+          "title": "Dynamic User Interface",
+          "description": "Developed a dynamic and responsive user interface using React, ensuring a seamless navigation experience with React Router."
+        },
+        {
+          "title": "Animation and Interaction",
+          "description": "Integrated animation effects with react-awesome-reveal and created a responsive slider with react-slick for a visually engaging user experience."
+        },
+        {
+          "title": "Efficient Content Management",
+          "description": "Customized Netlify (Decap) CMS for efficient content management and seamless deployment, enhancing user engagement with dynamic blog posts."
+        },
+        {
+          "title": "Window-like View",
+          "description": "Implemented a window-like view for content-heavy sections to enhance user experience and engagement."
+        },
+        {
+          "title": "Approach Section Design",
+          "description": "Designed the Approach section with different windows, scrolling effects, and a polaroid-style layout with animations to effectively tell a story."
+        },
+        {
+          "title": "Project Management",
+          "description": "Managed the entire project lifecycle, from initial concept through to deployment, ensuring timely delivery and client satisfaction."
+        },
+        {
+          "title": "Subscription Feature",
+          "description": "Added a subscription feature with Mailchimp, later switched to Substack for better user engagement."
+        },
+        {
+          "title": "Our People Section",
+          "description": "Added an 'Our People' section to showcase staff, with each profile linking to their corresponding about section."
+        }
+      ],
+      "techStack": [
+        "React",
+        "React Router",
+        "react-awesome-reveal",
+        "react-slick",
+        "Netlify (Decap) CMS",
+        "WordPress API",
+        "CSS",
+        "HTML"
+      ],
+      "projectStructure": [
+        "App.jsx",
+        "Home.jsx",
+        "About.jsx",
+        "Contact.jsx",
+        "Approach.jsx",
+        "Blog.jsx",
+        "BlogPost.jsx",
+        "People.jsx",
+        "Subscription.jsx",
+        "styles.css",
+        "animations.css"
+      ],
+      "userFlow": [
+        "Home",
+        "About",
+        "Approach",
+        "Blog",
+        "People",
+        "Subscription",
+        "Contact"
+      ],
+      "projectLink": "./Project_OffbeatSecurity",
+      "projectPage": {
+        "overview": "Offbeat Security is at the forefront of blockchain security, providing a web application that combines dynamic content, efficient content management, and a user-friendly interface to ensure top-notch security services. The project involved a complete lifecycle management from conceptualization to deployment, focusing on engaging user experiences and efficient content management.",
+        "titleAndDescription": {
+          "title": "Offbeat Security",
+          "description": "A cutting-edge blockchain security business providing dynamic, responsive, and user-friendly web applications."
+        },
+        "demoData": [
+          {
+            "title": "Stage 1: Dynamic UI",
+            "description": [
+              "The first stage involved developing a dynamic and responsive user interface using React, ensuring a seamless navigation experience with React Router."
+            ],
+            "screenshot": "/offbeatsecurity.png"
+          },
+          {
+            "title": "Stage 2: Animation and Interaction",
+            "description": [
+              "Incorporated animation effects with react-awesome-reveal and created a responsive slider with react-slick for a visually engaging user experience."
+            ],
+            "screenshot": "/offbeatsecurity.png"
+          },
+          {
+            "title": "Stage 3: Content Management",
+            "description": [
+              "Customized Netlify (Decap) CMS for efficient content management and seamless deployment, enhancing user engagement with dynamic blog posts."
+            ],
+            "screenshot": "/offbeatsecurity.png"
+          },
+          {
+            "title": "Stage 4: Window-like View",
+            "description": [
+              "Implemented a window-like view for content-heavy sections to enhance user experience and engagement."
+            ],
+            "screenshot": "/offbeatsecurity.png"
+          }
+        ],
+        "technologiesUsed": [
+          "React",
+          "React Router",
+          "react-awesome-reveal",
+          "react-slick",
+          "Netlify (Decap) CMS",
+          "WordPress API",
+          "CSS",
+          "HTML"
+        ],
+        "challengesAndSolutions": [
+          {
+            "challenge": "Dynamic Content Updates",
+            "challengeDescription": "Managing dynamic content updates efficiently and ensuring seamless integration.",
+            "solution": "Customized Netlify (Decap) CMS",
+            "solutionDescription": "Implemented and customized Netlify (Decap) CMS to handle dynamic content updates seamlessly."
+          },
+          {
+            "challenge": "Animation Integration",
+            "challengeDescription": "Integrating smooth and engaging animations without compromising performance.",
+            "solution": "React Animation Libraries",
+            "solutionDescription": "Used react-awesome-reveal and react-slick to create engaging animations and responsive sliders."
+          },
+          {
+            "challenge": "Project Lifecycle Management",
+            "challengeDescription": "Ensuring timely delivery and client satisfaction throughout the project lifecycle.",
+            "solution": "Agile Methodology",
+            "solutionDescription": "Adopted agile methodologies to manage the project lifecycle efficiently, ensuring timely delivery and client satisfaction."
+          }
+        ],
+        "projectLink": "./Project_OffbeatSecurity",
+        "myRole": "I spearheaded the front-end and full-stack development for the launch of Offbeat Security, managing the entire project lifecycle from initial concept to deployment.",
+        "upcomingFeatures": {
+          "heading": "What's next?",
+          "features": [
+            {
+              "title": "Advanced Analytics Integration",
+              "explanation": "Integrate advanced analytics tools to provide deeper insights into user behavior and application performance."
+            },
+            {
+              "title": "Enhanced Security Features",
+              "explanation": "Develop and integrate additional security features to further enhance the blockchain security offerings."
+            }
+          ],
+          "openingStatement": "Feedbacks are appreciated. Have some ideas? Contact us!"
+        },
+        "contactOrFeedbackSection": "Feel free to reach out for any questions or feedback regarding Offbeat Security. You can contact me at your_email@example.com",
+        "githubLink": "https://github.com/yourusername/OffbeatSecurity",
+        "demoLink": "https://offbeatsecurity.xyz/"
+      }
+    },
+    {
       "title": "Personal Portfolio Website",
       "image": "portfolio1.gif",
       "featuredText": "A dynamic personal portfolio website that showcases and captures my front-end development journey",

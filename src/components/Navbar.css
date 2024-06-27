@@ -10,12 +10,12 @@
   left: 0;
   right: 0;
   z-index: 100;
-  transition: background-color 0.3s ease, transform 0.5s ease;
+  transition: background-color 0.3s ease;
   font-size: 0.875rem;
 }
 
-.navbar.open {
-  background-color: rgba(0, 0, 0, 0.9);
+.navbar.transparent {
+  background-color: transparent;
 }
 
 .navbarlogo {
@@ -35,6 +35,7 @@
   align-items: center;
   width: 1.8rem;
   height: auto;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 5%, rgb(0, 0, 0) 40%);
   margin: 0 auto;
   padding: 0.25rem;
 }
@@ -42,7 +43,6 @@
 .navbarmenu {
   display: flex;
   align-items: center;
-  transition: all 0.5s ease;
 }
 
 .navbarmenu.open {
@@ -54,15 +54,6 @@
   background-color: #333;
   width: 100%;
   text-align: center;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.navbarmenu:not(.open) {
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .nav-link {
@@ -89,7 +80,7 @@
   height: 1.5rem;
   position: relative;
   transform: rotate(0deg);
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
@@ -103,7 +94,8 @@
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.25s ease,
+    transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .hamburger-icon span:nth-child(1) {
