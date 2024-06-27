@@ -181,16 +181,47 @@ ul li {
   margin: 0;
 }
 
-.upcoming-features {
-  line-height: 2;
+@media only screen and (max-width: 1250px) {
+  .demo {
+    padding: 1rem 0.25rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .projectpage {
+    padding: 2%;
+  }
+
+  .project-overview {
+    grid-template-columns: 1fr;
+  }
+
   .project-header {
     flex-direction: column;
   }
 
   .project-overview {
     flex-direction: column;
+  }
+
+  .demo {
+    padding: 1rem 0.25rem;
+  }
+
+  .stages {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .description--stages {
+    padding: 0;
+  }
+
+  .react-tabs__tab-panel {
+    padding: 0;
+  }
+
+  .project-features ul {
+    grid-template-columns: 1fr 1fr;
   }
 }

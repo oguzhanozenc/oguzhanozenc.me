@@ -112,3 +112,13 @@ header::before {
   margin-left: 0.2rem;
   color: #fff;
 }
+
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 2rem 0.5rem;
+  }
+
+  .headercontent {
+    width: 100%;
+  }
+}

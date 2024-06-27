@@ -109,3 +109,19 @@
   transform: translateY(-50%);
   opacity: 1;
 }
+
+@media (max-width: 1024px) {
+  .portfolio--container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project--item {
+    margin: 1rem auto;
+  }
+
+  .project--details {
+    padding: 0.5rem;
+  }
+}

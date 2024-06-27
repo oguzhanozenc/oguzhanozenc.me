@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { BiSolidMessage } from "react-icons/bi";
 
@@ -7,9 +7,10 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavClick = (hash) => {
+  const handleNavClick = (hash, e) => {
+    e.preventDefault();
     if (!isHomePage) {
       navigate(`/#${hash}`);
     } else {
@@ -18,27 +19,29 @@ export default function Navbar() {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
+    setIsOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? "scrolled" : "transparent"}`}>
-      <div className="navbarlogo" key="navbarlogo">
-        {!isScrolled && (
-          <Link to="/" key="navbarlink">
+    <nav className={`navbar ${isOpen ? "open" : ""}`}>
+      <div className="navbarlogo">
+        {!isOpen && (
+          <Link to="/">
             <img src="/logo-white.png" alt="Logo" />
           </Link>
         )}
       </div>
-      <div className="navbarmenu">
+      <div className={`navbarmenu ${isOpen ? "open" : ""}`}>
         <div>
           {isHomePage ? (
             <a
               href="#home"
               className="nav-link"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick("home");
-              }}
+              onClick={(e) => handleNavClick("home", e)}
             >
               Home
             </a>
@@ -48,39 +51,36 @@ export default function Navbar() {
             </Link>
           )}
         </div>
-
         <div>
           <a
             href="#recentprojects"
             className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("recentprojects");
-            }}
+            onClick={(e) => handleNavClick("recentprojects", e)}
           >
             Projects
           </a>
         </div>
-
         <div className="nav-link">
           <Link to="/journey">Journey</Link>
         </div>
-
         <div className="nav-link">
           <Link to="/blog">Blog</Link>
         </div>
-
-        <div id="contactbtn" className="navbutton nav--contactbtn">
+        <div className="navbutton nav--contactbtn">
           <a
             href="#contact"
             className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("contact");
-            }}
+            onClick={(e) => handleNavClick("contact", e)}
           >
             Contact <BiSolidMessage />
           </a>
+        </div>
+      </div>
+      <div className="hamburger-menu" onClick={toggleMenu}>
+        <div className={`hamburger-icon ${isOpen ? "open" : ""}`}>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </nav>

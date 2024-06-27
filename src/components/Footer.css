@@ -104,3 +104,35 @@ footer {
   font-size: 0.7rem;
   color: #f0f0f0;
 }
+
+@media (max-width: 1024px) {
+  footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .footer-permalinks {
+    display: flex;
+  }
+
+  .footer-permalinks a {
+    margin: 1rem 0.5rem;
+  }
+
+  .footer--container > div {
+    margin: 0 0.5rem;
+  }
+
+  .footer-card {
+    padding: 1rem;
+  }
+}

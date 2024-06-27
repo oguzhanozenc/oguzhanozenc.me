@@ -79,7 +79,7 @@ export default function ProjectPage() {
             <Tabs>
               <TabList>
                 {project.demoData.map((demo, index) => (
-                  <Tab key={index}>{demo.title}</Tab>
+                  <Tab key={index}>Stage {index + 1}</Tab>
                 ))}
               </TabList>
 
@@ -146,14 +146,14 @@ export default function ProjectPage() {
 
           <h2 className="section-title">{project.upcomingFeatures.heading}</h2>
           <section className="upcoming-features box">
-            <strong>{project.upcomingFeatures.openingStatement}</strong>
-            <ul>
+            <div>
               {project.upcomingFeatures.features.map((feature, index) => (
-                <li key={index}>
-                  <strong>{feature.title}:</strong> {feature.explanation}
-                </li>
+                <div key={index}>
+                  <h4>{feature.title}:</h4>
+                  <p>{feature.explanation}</p>
+                </div>
               ))}
-            </ul>
+            </div>{" "}
           </section>
 
           <h2 className="section-title">Contact or Feedback Section</h2>

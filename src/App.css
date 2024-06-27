@@ -60,4 +60,8 @@ body {
     width: 100%;
     margin: 0 auto;
   }
+
+  .section-title {
+    font-size: 2rem;
+  }
 }

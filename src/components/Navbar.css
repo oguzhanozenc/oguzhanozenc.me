@@ -18,24 +18,6 @@
   background-color: transparent;
 }
 
-.navbarmenu {
-  display: flex;
-  align-items: center;
-}
-
-.nav-link {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: all 300ms ease;
-  padding: 0 0.25rem;
-}
-
-.nav-link:hover {
-  color: #fff;
-}
-
 .navbarlogo {
   width: 3rem;
   height: 3rem;
@@ -47,10 +29,6 @@
   border-radius: 0.75rem;
   box-shadow: 0 -4px 100px rgba(200, 35, 215, 0.5);
   transition: all 300ms ease;
-}
-
-.navbarlogo:hover {
-  box-shadow: 0 4px 60px rgba(200, 35, 215, 0.5);
 }
 
 .navbarlogo img {
@@ -65,12 +43,101 @@
   padding: 0.25rem;
 }
 
-.navbutton {
+.navbarmenu {
   display: flex;
   align-items: center;
 }
 
-#contactbtn a {
+.navbarmenu.open {
   display: flex;
-  gap: 0.1rem;
+  flex-direction: column;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  background-color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.hamburger-menu {
+  display: none; /* Hide hamburger menu by default for larger screens */
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 0.2rem;
+  width: 100%;
+  background: #fff;
+  border-radius: 0.25rem;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: opacity 0.25s ease,
+    transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-icon span:nth-child(2),
+.hamburger-icon span:nth-child(3) {
+  top: 50%;
+}
+
+.hamburger-icon span:nth-child(4) {
+  top: 100%;
+}
+
+.hamburger-icon.open span:nth-child(1),
+.hamburger-icon.open span:nth-child(4) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  transform: translateY(-0.5rem) rotate(45deg);
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  transform: translateY(0.5rem) rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+  .navbarmenu {
+    display: none;
+  }
+
+  .navbarmenu.open {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+    z-index: 101;
+  }
 }

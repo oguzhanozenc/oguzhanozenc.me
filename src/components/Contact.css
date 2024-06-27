@@ -92,3 +92,10 @@
   font-size: 1.2rem;
   margin-bottom: 1.2rem;
 }
+
+@media (max-width: 1024px) {
+  .contact-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
