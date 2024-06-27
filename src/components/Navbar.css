@@ -22,10 +22,12 @@
   width: 3rem;
   height: 3rem;
   transition: all 300ms ease;
+  filter: brightness(0.7);
 }
 
 .navbarlogo:hover {
   margin-left: -0.25rem;
+  filter: brightness(1);
 }
 
 .navbarlogo img {

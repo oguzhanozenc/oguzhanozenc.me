@@ -21,9 +21,8 @@ export default function RecentProjects() {
       </h2>
       <div className="portfolio--container">
         {projectsData.projects.map((project, index) => (
-          <Link to={`/project/${index}`}>
+          <Link to={`/project/${index}`} key={index}>
             <div
-              key={index}
               className={`project--item ${
                 hoveredIndex === index ? "hovered" : ""
               }`}
@@ -40,7 +39,7 @@ export default function RecentProjects() {
                 <div className="portfolioitem--img">
                   <img
                     src={project.image}
-                    alt={project.name}
+                    alt={project.title}
                     className="project-img"
                   />
                 </div>

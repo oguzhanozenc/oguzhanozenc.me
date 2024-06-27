@@ -4,19 +4,18 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-import { PiProjectorScreenChart } from "react-icons/pi";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { FiArrowUpRight } from "react-icons/fi";
-import { PiSparkleFill, PiStarFourFill } from "react-icons/pi";
+import { PiStarFourFill } from "react-icons/pi";
 import { TbTopologyComplex } from "react-icons/tb";
-import { FaCheck } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 export default function ProjectPage() {
   const { projectIndex } = useParams();
   const currentIndex = parseInt(projectIndex, 10);
   const nextIndex = (currentIndex + 1) % projectsData.projects.length;
-  const project = projectsData.projects[currentIndex].projectPage;
+  const project = projectsData.projects[currentIndex];
 
   const navigate = useNavigate();
 
@@ -31,7 +30,7 @@ export default function ProjectPage() {
           </p>
           <p id="nextproject">
             <Link to={`/project/${nextIndex}`} className="btn">
-              Next Project <PiProjectorScreenChart />
+              Next Project <FiArrowUpRight />
             </Link>
           </p>
         </div>
@@ -41,8 +40,8 @@ export default function ProjectPage() {
         <div className="project-container">
           <div className="project-header">
             <div className="project--details box">
-              <h1>{project.titleAndDescription.title}</h1>
-              <p>{project.titleAndDescription.description}</p>
+              <h1>{project.title}</h1>
+              <p>{project.description}</p>
               <div className="project-links">
                 <a className="btn" href={project.demoLink}>
                   Project Link <FiArrowUpRight />
@@ -66,7 +65,7 @@ export default function ProjectPage() {
               <div className="project-tech-stack">
                 <p>Stack:</p>
                 <ul>
-                  {project.technologiesUsed.map((tech, index) => (
+                  {project.techStack.map((tech, index) => (
                     <li key={index}>{tech}</li>
                   ))}
                 </ul>
@@ -110,14 +109,12 @@ export default function ProjectPage() {
           <div className="project-features">
             <h2 className="section-title">Features</h2>
             <ul>
-              {projectsData.projects[currentIndex].features.map(
-                (feature, index) => (
-                  <li key={index} className="box">
-                    <h3>{feature.title}</h3>
-                    <small>{feature.description}</small>
-                  </li>
-                )
-              )}
+              {project.features.map((feature, index) => (
+                <li key={index} className="box">
+                  <h3>{feature.title}</h3>
+                  <small>{feature.description}</small>
+                </li>
+              ))}
             </ul>
           </div>
 
