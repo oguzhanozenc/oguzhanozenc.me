@@ -29,11 +29,9 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${isOpen ? "open" : ""}`}>
       <div className="navbarlogo">
-        {!isOpen && (
-          <Link to="/">
-            <img src="/logo-white.png" alt="Logo" />
-          </Link>
-        )}
+        <Link to="/">
+          <img src="/logo-white.png" alt="Logo" />
+        </Link>
       </div>
       <div className={`navbarmenu ${isOpen ? "open" : ""}`}>
         <div>
