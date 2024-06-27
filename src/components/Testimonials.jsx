@@ -1,5 +1,6 @@
 import testimonialsData from "./testimonialsData.json";
 import "./Testimonials.css";
+import { MdOutlineStarPurple500 } from "react-icons/md";
 
 export default function Testimonials() {
   return (
@@ -7,7 +8,27 @@ export default function Testimonials() {
       <h2 className="section-title" id="testimonialsheading">
         Testimonials
       </h2>
+
       <div className="testimonials-container">
+        <div className="rating-container testimonial-item">
+          <a href="https://www.fiverr.com/oguzhanozenc" target="_blank">
+            <div className="rating">
+              <div>
+                <p>5.0 </p>
+              </div>
+              <div className="stars">
+                <MdOutlineStarPurple500 />
+                <MdOutlineStarPurple500 />
+                <MdOutlineStarPurple500 />
+                <MdOutlineStarPurple500 />
+                <MdOutlineStarPurple500 />
+              </div>{" "}
+              <div className="explanation">
+                <small>Based on Freelancer Platform Reviews</small>
+              </div>
+            </div>
+          </a>
+        </div>
         {testimonialsData.testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-item">
             <div className="testimonial-content">❝{testimonial.comment}❞</div>

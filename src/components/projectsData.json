@@ -22,10 +22,7 @@
           "title": "More About Me & My Journey",
           "description": "Providing areas for detailed insights into personal life and personality by creating 'Journey' and 'More About Me' sections to summarize, capture, and highlight both career and personal updates."
         },
-        {
-          "title": "User-friendly Navigation",
-          "description": "Implemented React Router for seamless navigation between different sections and used features like 'useParams' and 'Link' for a seamless and user-friendly experience."
-        },
+
         {
           "title": "Dynamic Content Updates and Adaptability",
           "description": "Allows seamless additions or modifications to projects, skills, and experiences through adaptation of JSONs."
@@ -109,7 +106,7 @@
             "screenshot": "/portfolio4.gif"
           }
         ],
-        "technologiesUsed": ["HTML5", "CSS3", "JavaScript (ES6+)", "React"],
+        "technologiesUsed": ["React"],
         "challengesAndSolutions": [
           {
             "challenge": "Dynamic Content Updates",

@@ -12,15 +12,17 @@ import ScrollToSection from "./components/ScrollToSection";
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToSection /> <Navbar />
+      <ScrollToSection />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} index />
-        <Route path="/:projectpage" element={<ProjectPage />} />
-        <Route path="about" element={<About />} />
-        <Route path="journey" element={<Journey />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:projectIndex" element={<ProjectPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/journey" element={<Journey />} />
       </Routes>
       <Footer />
     </BrowserRouter>
   );
 }
+
 export default App;

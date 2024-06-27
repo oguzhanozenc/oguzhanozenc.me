@@ -1,15 +1,52 @@
-.testimonials-container {
-  display: flex;
-  flex-direction: row;
+.rating-container {
+  padding: 1rem;
+  width: fit-content;
+  height: fit-content;
+  transition: all 0.3s ease;
+  margin: 3rem auto;
+}
+
+.rating-container:hover {
+  filter: brightness(1.5);
+}
+
+.rating {
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: fit-content;
   margin: 0 auto;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.stars {
+  color: rgba(200, 35, 215, 0.5);
+}
+
+.rating > div p {
+  font-size: 1.875rem;
+  margin: 0;
+  padding: 0;
+}
+
+.explanation {
+  grid-column: span 2;
+  font-size: 0.875rem;
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: stretch;
+  width: 60%;
+  margin: 2rem auto;
+  gap: 2rem;
 }
 
 .testimonial-item {
-  width: 33%;
-  height: auto;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -24,6 +61,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 1px 100px rgba(94, 69, 255, 0.2);
   border: 1px solid rgba(94, 69, 255, 0.4);
+  font-size: 0.9rem;
 }
 
 .testimonial-item:hover {
@@ -31,7 +69,7 @@
 }
 
 .testimonial-content {
-  padding: 0.5rem 1rem;
+  padding: 1rem 0.5rem;
   line-height: 1.875;
   font-size: 0.875rem;
   text-align: justify;
@@ -41,7 +79,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0.5rem;
   text-align: left;
 }
 
