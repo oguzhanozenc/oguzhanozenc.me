@@ -44,6 +44,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .project-tech-stack ul {
   display: flex;
   flex-direction: row;
@@ -191,7 +192,7 @@ ul li {
     padding: 1rem 0.25rem;
   }
   .project--details {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
   }
 }
 
@@ -231,5 +232,19 @@ ul li {
 
   .project-features ul {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .project-tech-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .project-tech-stack ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.85rem;
+    gap: 1%;
   }
 }
