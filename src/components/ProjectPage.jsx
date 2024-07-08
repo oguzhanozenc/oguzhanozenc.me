@@ -1,4 +1,4 @@
-import "./ProjectPage.css";
+import "../css/ProjectPage.css";
 import projectsData from "./projectsData.json";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Contact.css";
+import "../css/Contact.css";
 import SocialMedia from "./SocialMedia";
 import { RiArrowGoBackLine } from "react-icons/ri";
 

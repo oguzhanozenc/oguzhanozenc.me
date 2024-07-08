@@ -27,7 +27,7 @@
   width: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2%;
+  gap: 3%;
   justify-content: center;
   align-items: stretch;
   margin: 0 auto;
@@ -45,19 +45,20 @@
   text-align: center;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.2);
+  background: hsl(230, 29%, 6%);
   color: lch(58.2 7.7 259);
   background-size: cover;
   transition: all 0.3s ease;
   overflow: hidden;
   box-shadow: 0 1px 100px rgba(94, 69, 255, 0.2);
-  border: 1px solid rgba(94, 69, 255, 0.4);
+  border: 1px solid rgba(94, 69, 255, 1);
+  margin: 0.5rem 0;
 }
 
 .project--item:hover {
   transform: translateY(-5px);
-  border-color: rgba(200, 35, 215, 0.5);
-  box-shadow: 0 1px 100px rgba(94, 69, 255, 0.3);
+  border-color: rgba(200, 35, 215);
+  box-shadow: 0 1px 100px rgba(200, 35, 215, 0.4);
 }
 
 .portfolio-projecttitle {
@@ -80,6 +81,7 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
 .project--item.hovered .project--description {

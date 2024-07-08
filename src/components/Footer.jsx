@@ -5,7 +5,7 @@ import { PiTelegramLogoBold, PiPhoneCall } from "react-icons/pi";
 import { FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
 
-import "./Footer.css";
+import "../css/Footer.css";
 
 export default function Footer() {
   const location = useLocation();
@@ -29,10 +29,7 @@ export default function Footer() {
         <div className="footer-card">
           <div className="footerlogo">
             <Link to="/">
-              <img
-                src="/logoshorthorizontal-white.png"
-                alt="Oguzhan Ozenc Logo"
-              />
+              <img src="/logo.png" alt="Oguzhan Ozenc Logo" />
             </Link>
           </div>
           <div>

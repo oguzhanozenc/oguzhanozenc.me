@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./Navbar.css";
-import { BiSolidMessage } from "react-icons/bi";
+import "../css/Navbar.css";
+import { RiHomeSmile2Line } from "react-icons/ri";
+import { IoLayersOutline } from "react-icons/io5";
+import { TbMap2 } from "react-icons/tb";
+import { TbMessageChatbot } from "react-icons/tb";
+import { RiArrowRightLine } from "react-icons/ri";
 
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
+
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredIcon, setHoveredIcon] = useState(null);
 
   const handleNavClick = (hash, e) => {
     e.preventDefault();
@@ -22,63 +28,128 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
-  const toggleMenu = () => {
+  const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className={`navbar ${isOpen ? "open" : ""}`}>
-      <div className="navbarlogo">
-        <Link to="/">
-          <img src="/logo-white.png" alt="Logo" />
-        </Link>
-      </div>
+    <nav className="navbar">
       <div className={`navbarmenu ${isOpen ? "open" : ""}`}>
-        <div>
+        <div className="navbarlogo">
           {isHomePage ? (
             <a
               href="#home"
               className="nav-link"
               onClick={(e) => handleNavClick("home", e)}
             >
-              Home
+              <img src="./logo.png" alt="" />
             </a>
           ) : (
             <Link to="/" className="nav-link">
-              Home
+              <img src="./logo.png" alt="" />
             </Link>
           )}
         </div>
         <div>
+          <button className="navbarbtn" onClick={handleToggle}>
+            <RiArrowRightLine />
+          </button>
+        </div>
+        <div
+          className="nav-link"
+          onMouseEnter={() => setHoveredIcon("home")}
+          onMouseLeave={() => setHoveredIcon(null)}
+        >
+          {isHomePage ? (
+            <a
+              href="#home"
+              className="nav-link"
+              onClick={(e) => handleNavClick("home", e)}
+            >
+              {isOpen ? (
+                <>
+                  <RiHomeSmile2Line /> Home
+                </>
+              ) : (
+                <RiHomeSmile2Line />
+              )}
+              {hoveredIcon === "home" && !isOpen && (
+                <span className="nav-text">Home</span>
+              )}
+            </a>
+          ) : (
+            <Link to="/" className="nav-link">
+              <RiHomeSmile2Line />
+              {hoveredIcon === "home" && !isOpen && (
+                <span className="nav-text">Home</span>
+              )}
+            </Link>
+          )}
+        </div>
+        <div
+          className="nav-link"
+          onMouseEnter={() => setHoveredIcon("projects")}
+          onMouseLeave={() => setHoveredIcon(null)}
+        >
           <a
             href="#recentprojects"
             className="nav-link"
             onClick={(e) => handleNavClick("recentprojects", e)}
           >
-            Projects
+            {isOpen ? (
+              <>
+                <IoLayersOutline /> Projects
+              </>
+            ) : (
+              <IoLayersOutline />
+            )}
+            {hoveredIcon === "projects" && !isOpen && (
+              <span className="nav-text">Projects</span>
+            )}
           </a>
         </div>
-        <div className="nav-link">
-          <Link to="/journey">Journey</Link>
+        <div
+          className="nav-link"
+          onMouseEnter={() => setHoveredIcon("journey")}
+          onMouseLeave={() => setHoveredIcon(null)}
+        >
+          <Link to="/journey">
+            {isOpen ? (
+              <>
+                <TbMap2 />
+                Journey
+              </>
+            ) : (
+              <TbMap2 />
+            )}
+            {hoveredIcon === "journey" && !isOpen && (
+              <span className="nav-text">Journey</span>
+            )}
+          </Link>
         </div>
-        <div className="nav-link">
-          <Link to="/blog">Blog</Link>
-        </div>
-        <div className="navbutton nav--contactbtn">
+        <div
+          className="nav-link"
+          onMouseEnter={() => setHoveredIcon("contact")}
+          onMouseLeave={() => setHoveredIcon(null)}
+        >
           <a
             href="#contact"
             className="nav-link"
             onClick={(e) => handleNavClick("contact", e)}
           >
-            Contact <BiSolidMessage />
+            {isOpen ? (
+              <>
+                <TbMessageChatbot />
+                Contact
+              </>
+            ) : (
+              <TbMessageChatbot />
+            )}
+
+            {hoveredIcon === "contact" && !isOpen && (
+              <span className="nav-text">Contact</span>
+            )}
           </a>
-        </div>
-      </div>
-      <div className="hamburger-menu" onClick={toggleMenu}>
-        <div className={`hamburger-icon ${isOpen ? "open" : ""}`}>
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
       </div>
     </nav>

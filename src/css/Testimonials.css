@@ -55,7 +55,6 @@
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.2);
   color: lch(58.2 7.7 259);
   background-size: cover;
   transition: all 0.3s ease;
@@ -65,7 +64,7 @@
 }
 
 .testimonial-item:hover {
-  color: #fff;
+  color: #000;
 }
 
 .testimonial-content {

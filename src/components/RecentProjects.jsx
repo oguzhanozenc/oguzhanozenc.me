@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import projectsData from "./projectsData.json";
-import "./RecentProjects.css";
+import "../css/RecentProjects.css";
 
 export default function RecentProjects() {
   const [hoveredIndex, setHoveredIndex] = useState(null);

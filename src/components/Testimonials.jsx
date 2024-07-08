@@ -1,5 +1,5 @@
 import testimonialsData from "./testimonialsData.json";
-import "./Testimonials.css";
+import "../css/Testimonials.css";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
 export default function Testimonials() {

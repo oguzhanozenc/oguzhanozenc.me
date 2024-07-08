@@ -1,8 +1,5 @@
 import React from "react";
-import "./Journey.css";
-
-import "non.geist/mono";
-import "non.geist";
+import "../css/Journey.css";
 
 import journeyData from "./journeyData.json";
 import { LuSparkles } from "react-icons/lu";
@@ -29,13 +26,6 @@ export default function Journey() {
                 <p>{milestone.description}</p>
 
                 <div className="milestone--img">
-                  <div className="window-container">
-                    <div className="window-controls">
-                      <div className="window-control"></div>
-                      <div className="window-control yellow"></div>
-                      <div className="window-control green"></div>
-                    </div>
-                  </div>
                   <img src={milestone.image} alt="" />
                 </div>
               </div>

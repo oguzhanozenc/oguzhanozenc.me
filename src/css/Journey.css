@@ -1,11 +1,11 @@
 .journeypage {
   box-sizing: border-box;
   font-family: "Geist Mono Variable", monospace;
+  padding: 5% 10%;
+  margin: 0 auto;
 }
 
 .journeysection {
-  width: 70%;
-  margin: 0 10% 0 20%;
   text-align: start;
 }
 
@@ -26,10 +26,8 @@
 
 .milestone--img {
   margin: 3rem 0;
-  padding: 1.2rem 1rem 1rem 1rem;
-  border: 1px solid var(--color-border);
+
   border-radius: 0.8rem;
-  background: var(--color-gray);
 }
 
 .milestone--img img {
@@ -80,6 +78,11 @@
 
 .journey--details h3 {
   margin: 0.5rem 0;
+  color: #fff;
+}
+
+.journey--details p {
+  color: #dddddd;
 }
 
 .window-container {
@@ -95,23 +98,6 @@
   z-index: 9;
   margin-bottom: 0.3rem;
   margin-top: -0.8rem;
-}
-
-.window-control {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: var(--color-danger);
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.yellow {
-  background-color: var(--color-yellow);
-}
-
-.green {
-  background-color: var(--color-success);
 }
 
 @media only screen and (max-width: 1200px) {
