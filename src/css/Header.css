@@ -1,7 +1,8 @@
 header {
   position: relative;
-  width: 100%;
-  padding: 10%;
+  width: 90%;
+  padding: 10% 0;
+  margin: 10%;
 }
 
 .mac-window {
@@ -46,7 +47,7 @@ header {
 .header {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 

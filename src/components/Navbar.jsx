@@ -13,7 +13,7 @@ export default function Navbar() {
   const isHomePage = location.pathname === "/";
 
   const [isOpen, setIsOpen] = useState(false);
-  const [hoveredIcon, setHoveredIcon] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleNavClick = (hash, e) => {
     e.preventDefault();
@@ -55,103 +55,87 @@ export default function Navbar() {
             <RiArrowRightLine />
           </button>
         </div>
-        <div
-          className="nav-link"
-          onMouseEnter={() => setHoveredIcon("home")}
-          onMouseLeave={() => setHoveredIcon(null)}
-        >
-          {isHomePage ? (
-            <a
-              href="#home"
-              className="nav-link"
-              onClick={(e) => handleNavClick("home", e)}
-            >
-              {isOpen ? (
-                <>
-                  <RiHomeSmile2Line /> Home
-                </>
-              ) : (
-                <RiHomeSmile2Line />
-              )}
-              {hoveredIcon === "home" && !isOpen && (
-                <span className="nav-text">Home</span>
-              )}
-            </a>
-          ) : (
-            <Link to="/" className="nav-link">
-              <RiHomeSmile2Line />
-              {hoveredIcon === "home" && !isOpen && (
-                <span className="nav-text">Home</span>
-              )}
-            </Link>
-          )}
-        </div>
-        <div
-          className="nav-link"
-          onMouseEnter={() => setHoveredIcon("projects")}
-          onMouseLeave={() => setHoveredIcon(null)}
-        >
-          <a
-            href="#recentprojects"
-            className="nav-link"
-            onClick={(e) => handleNavClick("recentprojects", e)}
-          >
-            {isOpen ? (
-              <>
-                <IoLayersOutline /> Projects
-              </>
-            ) : (
-              <IoLayersOutline />
-            )}
-            {hoveredIcon === "projects" && !isOpen && (
-              <span className="nav-text">Projects</span>
-            )}
-          </a>
-        </div>
-        <div
-          className="nav-link"
-          onMouseEnter={() => setHoveredIcon("journey")}
-          onMouseLeave={() => setHoveredIcon(null)}
-        >
-          <Link to="/journey">
-            {isOpen ? (
-              <>
-                <TbMap2 />
-                Journey
-              </>
-            ) : (
-              <TbMap2 />
-            )}
-            {hoveredIcon === "journey" && !isOpen && (
-              <span className="nav-text">Journey</span>
-            )}
-          </Link>
-        </div>
-        <div
-          className="nav-link"
-          onMouseEnter={() => setHoveredIcon("contact")}
-          onMouseLeave={() => setHoveredIcon(null)}
-        >
-          <a
-            href="#contact"
-            className="nav-link"
-            onClick={(e) => handleNavClick("contact", e)}
-          >
-            {isOpen ? (
-              <>
-                <TbMessageChatbot />
-                Contact
-              </>
-            ) : (
-              <TbMessageChatbot />
-            )}
-
-            {hoveredIcon === "contact" && !isOpen && (
-              <span className="nav-text">Contact</span>
-            )}
-          </a>
-        </div>
+        <NavItem
+          icon={<RiHomeSmile2Line />}
+          text="Home"
+          hash="home"
+          hoveredItem={hoveredItem}
+          setHoveredItem={setHoveredItem}
+          handleNavClick={handleNavClick}
+          isOpen={isOpen}
+          isActive={isHomePage}
+        />
+        <NavItem
+          icon={<IoLayersOutline />}
+          text="Projects"
+          hash="recentprojects"
+          hoveredItem={hoveredItem}
+          setHoveredItem={setHoveredItem}
+          handleNavClick={handleNavClick}
+          isOpen={isOpen}
+          isActive={location.pathname === "/journey"}
+        />
+        <NavItem
+          icon={<TbMap2 />}
+          text="Journey"
+          to="/journey"
+          hoveredItem={hoveredItem}
+          setHoveredItem={setHoveredItem}
+          handleNavClick={handleNavClick}
+          isOpen={isOpen}
+          isActive={location.pathname === "/journey"}
+        />
+        <NavItem
+          icon={<TbMessageChatbot />}
+          text="Contact"
+          hash="contact"
+          hoveredItem={hoveredItem}
+          setHoveredItem={setHoveredItem}
+          handleNavClick={handleNavClick}
+          isOpen={isOpen}
+          isActive={location.pathname === "/journey"}
+        />
       </div>
     </nav>
+  );
+}
+
+function NavItem({
+  icon,
+  text,
+  hash,
+  to,
+  hoveredItem,
+  setHoveredItem,
+  handleNavClick,
+  isOpen,
+  isActive,
+}) {
+  return (
+    <div
+      className={`nav-link ${isActive ? "active" : ""}`}
+      onMouseEnter={() => setHoveredItem(hash || text.toLowerCase())}
+      onMouseLeave={() => setHoveredItem(null)}
+    >
+      {to ? (
+        <Link to={to} className="nav-link">
+          {icon}
+          {hoveredItem === text.toLowerCase() && !isOpen && (
+            <span className="nav-text">{text}</span>
+          )}
+        </Link>
+      ) : (
+        <a
+          href={`#${hash}`}
+          className="nav-link"
+          onClick={(e) => handleNavClick(hash, e)}
+        >
+          {icon}
+          {hoveredItem === text.toLowerCase() && !isOpen && (
+            <span className="nav-text">{text}</span>
+          )}
+        </a>
+      )}
+    </div>
   );
 }
