@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import projectsData from "./projectsData.json";
-import "../css/RecentProjects.css";
+import "../css/Projects.css";
 
-export default function RecentProjects() {
+export default function Projects() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   function handleMouseEnter(index) {
@@ -17,11 +17,11 @@ export default function RecentProjects() {
   return (
     <section className="container" id="recentprojects">
       <h2 className="section-title" id="portfolioheading">
-        Recent Projects
+        Projects
       </h2>
       <div className="portfolio--container">
         {projectsData.projects.map((project, index) => (
-          <Link to={`/project/${index}`} key={index}>
+          <Link to={`/projects/${index}`} key={index}>
             <div
               className={`project--item ${
                 hoveredIndex === index ? "hovered" : ""

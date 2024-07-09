@@ -1,9 +1,9 @@
-import "../css/ProjectPage.css";
-import projectsData from "./projectsData.json";
+import React from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
+import projectsData from "./projectsData.json";
+import "../css/ProjectPage.css";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { FiArrowUpRight } from "react-icons/fi";
 import { PiStarFourFill } from "react-icons/pi";
@@ -16,7 +16,6 @@ export default function ProjectPage() {
   const currentIndex = parseInt(projectIndex, 10);
   const nextIndex = (currentIndex + 1) % projectsData.projects.length;
   const project = projectsData.projects[currentIndex];
-
   const navigate = useNavigate();
 
   return (
@@ -29,7 +28,7 @@ export default function ProjectPage() {
             </button>
           </p>
           <p id="nextproject">
-            <Link to={`/project/${nextIndex}`} className="btn">
+            <Link to={`/projects/${nextIndex}`} className="btn">
               Next Project <FiArrowUpRight />
             </Link>
           </p>
