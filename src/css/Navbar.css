@@ -14,7 +14,7 @@
   z-index: 100;
   transition: background-color 0.3s ease, width 0.3s ease;
   font-size: 1rem;
-  background: rgb(255, 255, 255, 0.5);
+  background: rgb(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-radius: 1rem;
@@ -56,10 +56,11 @@
 
 .navbar a {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   padding: 0.25rem 0;
   width: 100%;
-  text-decoration: none;
+  position: relative; /* Ensure relative positioning for child elements */
 }
 
 .navbar a:hover,
@@ -82,9 +83,6 @@
 .nav-link {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
 }
 
 .nav-text {
