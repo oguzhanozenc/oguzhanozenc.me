@@ -64,8 +64,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className={`navbarmenu ${isOpen ? "open" : ""}`}>
-        <div className="navbarlogo">
-          <Link to="/" className="nav-link">
+        <div className="navbar-avatar" id="navbar-avatar">
+          <Link to="/" className="nav-link" id="avatar-link">
             <img src="./me2.png" alt="" />
             {isOpen && (
               <div className="title-container">
