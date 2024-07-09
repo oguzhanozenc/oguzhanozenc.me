@@ -66,13 +66,14 @@ const Navbar = () => {
       <div className={`navbarmenu ${isOpen ? "open" : ""}`}>
         <div className="navbarlogo">
           <Link to="/" className="nav-link">
-            <img src="./me2.png" alt="" />{" "}
+            <img src="./me2.png" alt="" />
             {isOpen && (
               <div className="title-container">
                 <p>Oğuzhan Özenç</p>
                 <small>Front-end Developer</small>
               </div>
             )}
+            {!isOpen && <div className="online-circle"></div>}
           </Link>
         </div>
         <div>

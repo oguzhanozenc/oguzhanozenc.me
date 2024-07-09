@@ -48,6 +48,7 @@
   background-color: #23262d;
   border-radius: 0.5rem 0.5rem 0 0;
   border-bottom: 1px solid grey;
+  position: relative;
 }
 
 .navbarlogo img {
@@ -136,4 +137,16 @@
   color: #fff;
   background: rgba(94, 69, 255, 0.6);
   border-radius: 0.5rem;
+}
+
+.online-circle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(75%) translateX(-115%);
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #00ff00;
+  border: 2px solid #23262d;
 }
