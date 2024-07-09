@@ -45,7 +45,7 @@
   text-align: center;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: hsl(230, 29%, 6%);
+  background: #090e14;
   color: lch(58.2 7.7 259);
   background-size: cover;
   transition: all 0.3s ease;
