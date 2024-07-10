@@ -23,12 +23,12 @@ export default function ProjectPage() {
       <div className="project-top">
         <div className="topsection">
           <p id="portfoliolink">
-            <button onClick={() => navigate(-1)} className="btn">
+            <button onClick={() => navigate(-1)} className="button">
               <RiArrowGoBackFill /> Go Back
             </button>
           </p>
           <p id="nextproject">
-            <Link to={`/projects/${nextIndex}`} className="btn">
+            <Link to={`/projects/${nextIndex}`} className="button">
               Next Project <FiArrowUpRight />
             </Link>
           </p>
@@ -42,17 +42,17 @@ export default function ProjectPage() {
               <h1>{project.title}</h1>
               <p>{project.description}</p>
               <div className="project-links">
-                <a className="btn" href={project.demoLink}>
+                <a className="button" href={project.demoLink}>
                   Project Link <FiArrowUpRight />
                 </a>
-                <a className="btn" href={project.githubLink}>
+                <a className="button" href={project.githubLink}>
                   Github <FiArrowUpRight />
                 </a>
               </div>
             </div>
           </div>
 
-          <h2 className="section-title">About</h2>
+          <h2 className="sectiontitle">About</h2>
           <div className="project-overview">
             <div className="project-role box">
               <h3>My Role</h3>
@@ -73,7 +73,7 @@ export default function ProjectPage() {
           </div>
 
           <section className="demo">
-            <h2 className="section-title">User Journey</h2>
+            <h2 className="sectiontitle">User Journey</h2>
             <Tabs>
               <TabList>
                 {project.demoData.map((demo, index) => (
@@ -106,7 +106,7 @@ export default function ProjectPage() {
           </section>
 
           <div className="project-features">
-            <h2 className="section-title">Features</h2>
+            <h2 className="sectiontitle">Features</h2>
             <ul>
               {project.features.map((feature, index) => (
                 <li key={index} className="box">
@@ -118,7 +118,7 @@ export default function ProjectPage() {
           </div>
 
           <div className="project-challenges">
-            <h2 className="section-title">Challenges and Solutions</h2>
+            <h2 className="sectiontitle">Challenges and Solutions</h2>
             {project.challengesAndSolutions.map((item, index) => (
               <div key={index} className="challenge-solution-item">
                 <div className="challenge box">
@@ -140,7 +140,7 @@ export default function ProjectPage() {
             ))}
           </div>
 
-          <h2 className="section-title">{project.upcomingFeatures.heading}</h2>
+          <h2 className="sectiontitle">{project.upcomingFeatures.heading}</h2>
           <section className="upcoming-features box">
             <div>
               {project.upcomingFeatures.features.map((feature, index) => (
@@ -149,10 +149,10 @@ export default function ProjectPage() {
                   <p>{feature.explanation}</p>
                 </div>
               ))}
-            </div>{" "}
+            </div>
           </section>
 
-          <h2 className="section-title">Contact or Feedback Section</h2>
+          <h2 className="sectiontitle">Contact or Feedback Section</h2>
           <section className="bottomsection box">
             <div className="project-contact">
               <p>{project.contactOrFeedbackSection}</p>

@@ -8,7 +8,7 @@ export default function Journey() {
   const JourneyTimeline = ({ journeyData }) => {
     return (
       <div className="journey-timeline">
-        <h1>Journey </h1>
+        <h2 className="sectiontitle">Journey </h2>
         {journeyData.map((milestone, index) => (
           <div key={index} className="milestone">
             <div className="content">

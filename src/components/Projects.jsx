@@ -16,7 +16,7 @@ export default function Projects() {
 
   return (
     <section className="container" id="recentprojects">
-      <h2 className="section-title" id="portfolioheading">
+      <h2 className="sectiontitle" id="portfolioheading">
         Projects
       </h2>
       <div className="portfolio--container">

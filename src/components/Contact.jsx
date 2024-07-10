@@ -23,7 +23,7 @@ export default function Contact() {
 
   return (
     <section className="contact--section" id="contact">
-      <h2 className="section-title">Contact</h2>
+      <h2 className="sectiontitle">Contact</h2>
       <div className="contact-container">
         {formSubmitted ? (
           <div className="confirmation-message">
@@ -84,7 +84,7 @@ export default function Contact() {
                 ></textarea>
               </p>
 
-              <button type="submit" className="btn">
+              <button type="submit" className="button">
                 Submit
               </button>
             </form>

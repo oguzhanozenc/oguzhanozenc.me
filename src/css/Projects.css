@@ -1,10 +1,8 @@
 #recentprojects {
-  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 10% auto;
-  padding: 10% 0;
+  padding: 4rem 2rem;
   justify-self: start;
   position: relative;
 }
@@ -12,26 +10,12 @@
 #portfolioheading {
 }
 
-.sectionheading {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.sectionheading svg {
-  margin-right: 1rem;
-  font-size: 2rem;
-}
-
 .portfolio--container {
-  width: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3%;
+  gap: 1%;
   justify-content: center;
   align-items: stretch;
-  margin: 0 auto;
-  padding: 10%;
 }
 
 .project--item {
@@ -43,27 +27,28 @@
   justify-items: center;
   align-items: stretch;
   text-align: center;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: #090e14;
-  color: lch(58.2 7.7 259);
   background-size: cover;
   transition: all 0.3s ease;
   overflow: hidden;
-  box-shadow: 0 1px 100px rgba(94, 69, 255, 0.2);
-  border: 1px solid rgba(94, 69, 255, 1);
   margin: 0.5rem 0;
+  background: #fff;
+  box-shadow: rgba(10, 10, 10, 0.06) 0px 1.2px 1.2px 0px,
+    rgba(10, 10, 10, 0.04) 0px 5px 10px 0px;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(230, 230, 230);
 }
 
 .project--item:hover {
   transform: translateY(-5px);
-  border-color: rgba(200, 35, 215);
-  box-shadow: 0 1px 100px rgba(200, 35, 215, 0.4);
+  box-shadow: rgba(10, 10, 10, 0.15) 0px 2px 2px 0px,
+    rgba(10, 10, 10, 0.1) 0px 8px 16px 0px;
+  background: #f0f0f0;
 }
 
 .portfolio-projecttitle {
-  color: #fff;
-  font-weight: normal;
+  color: #373737;
+  font-weight: 600;
+  font-size: 1.125rem;
 }
 
 .project--details {
@@ -74,7 +59,8 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
+  color: #666;
 }
 
 .project--description {

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../css/Navbar.css";
-import { RiHomeSmile2Line } from "react-icons/ri";
+
 import { IoLayersOutline } from "react-icons/io5";
-import { TbMap2, TbMessageChatbot } from "react-icons/tb";
+import { HiOutlineMap } from "react-icons/hi2";
+import { TbSmartHome, TbUserCircle, TbMessageChatbot } from "react-icons/tb";
 
 const Navbar = () => {
   const location = useLocation();
@@ -16,26 +17,74 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbarmenu">
         <div className="navbarmenu-links">
-          {[
-            { to: "/", icon: <RiHomeSmile2Line />, text: "Home" },
-            { to: "/projects", icon: <IoLayersOutline />, text: "Projects" },
-            { to: "/journey", icon: <TbMap2 />, text: "Journey" },
-            { to: "/contact", icon: <TbMessageChatbot />, text: "Contact" },
-          ].map(({ to, icon, text }) => (
-            <div
-              key={to}
-              className={`nav-link ${location.pathname === to ? "active" : ""}`}
-              onMouseEnter={() => setHoveredLink(to)}
-              onMouseLeave={() => setHoveredLink(null)}
-            >
-              <Link to={to} className="nav-link">
-                {icon}
-                {hoveredLink === to && (
-                  <span className="hovered-text">{text}</span>
-                )}
-              </Link>
-            </div>
-          ))}
+          <div
+            className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+            onMouseEnter={() => setHoveredLink("/")}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            <Link to="/" className="nav-link">
+              <TbSmartHome />
+              {hoveredLink === "/" && (
+                <span className="hovered-text">Home</span>
+              )}
+            </Link>
+          </div>
+          <div
+            className={`nav-link ${
+              location.pathname === "/about" ? "active" : ""
+            }`}
+            onMouseEnter={() => setHoveredLink("/about")}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            <Link to="/about" className="nav-link">
+              <TbUserCircle />
+              {hoveredLink === "/about" && (
+                <span className="hovered-text">About</span>
+              )}
+            </Link>
+          </div>
+          <div
+            className={`nav-link ${
+              location.pathname === "/projects" ? "active" : ""
+            }`}
+            onMouseEnter={() => setHoveredLink("/projects")}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            <Link to="/projects" className="nav-link">
+              <IoLayersOutline />
+              {hoveredLink === "/projects" && (
+                <span className="hovered-text">Projects</span>
+              )}
+            </Link>
+          </div>
+          <div
+            className={`nav-link ${
+              location.pathname === "/journey" ? "active" : ""
+            }`}
+            onMouseEnter={() => setHoveredLink("/journey")}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            <Link to="/journey" className="nav-link">
+              <HiOutlineMap />
+              {hoveredLink === "/journey" && (
+                <span className="hovered-text">Journey</span>
+              )}
+            </Link>
+          </div>
+          <div
+            className={`nav-link ${
+              location.pathname === "/contact" ? "active" : ""
+            }`}
+            onMouseEnter={() => setHoveredLink("/contact")}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            <Link to="/contact" className="nav-link">
+              <TbMessageChatbot />
+              {hoveredLink === "/contact" && (
+                <span className="hovered-text">Contact</span>
+              )}
+            </Link>
+          </div>
         </div>
         <div className="navbar-avatar" id="navbar-avatar">
           <Link to="/" className="nav-link" id="avatar-link">

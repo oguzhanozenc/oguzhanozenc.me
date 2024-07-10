@@ -23,9 +23,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/journey" element={<Journey />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/projects/*" element={<Projects />}>
-              <Route path=":projectIndex" element={<ProjectPage />} />
-            </Route>
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:projectIndex" element={<ProjectPage />} />
           </Routes>
         </main>
       </div>
