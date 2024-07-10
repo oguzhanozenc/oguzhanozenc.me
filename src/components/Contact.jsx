@@ -28,7 +28,7 @@ export default function Contact() {
         {formSubmitted ? (
           <div className="confirmation-message">
             <p>Your message has been submitted successfully!</p>
-            <button onClick={() => setFormSubmitted(false)} className="btn">
+            <button onClick={() => setFormSubmitted(false)} className="button">
               <RiArrowGoBackLine /> Back to the form
             </button>
           </div>

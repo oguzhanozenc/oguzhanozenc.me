@@ -13,7 +13,7 @@ export default function Header() {
         <div className="header-container">
           <div className="header-content">
             <div className="headercontainer-text">
-              <h1>I'm Oguzhan</h1>{" "}
+              <h1>I’m Oguzhan</h1>{" "}
               <p className="header-title">
                 Front-end developer from Istanbul, Turkey.
               </p>{" "}
