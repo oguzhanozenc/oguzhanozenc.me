@@ -3,6 +3,11 @@
   line-height: 2rem;
 }
 
+.aboutcontainer {
+  width: 90%;
+  padding: 2rem 0;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 60% 30%;
