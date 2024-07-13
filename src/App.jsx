@@ -1,5 +1,5 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -18,18 +18,74 @@ function App() {
           <Navbar />
         </div>
         <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Header />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/journey" element={<Journey />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:projectIndex" element={<ProjectPage />} />
-          </Routes>
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <AnimateContent>
+                    <Header />
+                  </AnimateContent>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <AnimateContent>
+                    <About />
+                  </AnimateContent>
+                }
+              />
+              <Route
+                path="/journey"
+                element={
+                  <AnimateContent>
+                    <Journey />
+                  </AnimateContent>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <AnimateContent>
+                    <Contact />
+                  </AnimateContent>
+                }
+              />
+              <Route
+                path="/projects"
+                element={
+                  <AnimateContent>
+                    <Projects />
+                  </AnimateContent>
+                }
+              />
+              <Route
+                path="/projects/:projectIndex"
+                element={
+                  <AnimateContent>
+                    <ProjectPage />
+                  </AnimateContent>
+                }
+              />
+            </Routes>
+          </AnimatePresence>
         </main>
       </div>
     </BrowserRouter>
   );
 }
+
+const AnimateContent = ({ children }) => (
+  <motion.div
+    key={location.pathname}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    {children}
+  </motion.div>
+);
 
 export default App;

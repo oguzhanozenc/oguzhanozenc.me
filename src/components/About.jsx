@@ -5,46 +5,60 @@ export default function About() {
   return (
     <section className="aboutpage" id="about">
       <section className="aboutsection" id="aboutsection">
-        <div className="aboutme-text">
-          <h2 className="sectiontitle">Hey there,</h2>
-
-          <p>
-            I'm Oğuzhan Özenç, a front-end developer from Istanbul, Turkey. I
-            find the journey from concept to application incredibly rewarding
-            and am deeply fascinated by projects that tell stories. My main aim
-            is to help people share their stories by creating impactful
-            experiences. Software development allows me to turn ideas into
-            reality.
-          </p>
-        </div>{" "}
-        <div className="aboutme--img">
-          <img src="./aboutmeimg.jpg" alt="" />
+        <h2 className="sectiontitle">Hey there,</h2>
+        <div className="about-grid">
+          <div className="aboutme-text">
+            <p>
+              I am a Front-End Developer with a strong foundation in HTML, CSS,
+              JavaScript, and React, driven by a passion for design and
+              front-end development. I have always been drawn to projects that
+              tell stories and make a meaningful impact. Software development
+              allows me to transform ideas into reality, and I find the entire
+              process from concept to application incredibly rewarding.g. My
+              goal is to bridge the gap between design and development,
+              leveraging my skills to create cohesive and impactful projects.
+            </p>
+          </div>{" "}
+          <div className="aboutme--img">
+            <img src="./aboutmeimg.jpg" alt="" />
+          </div>
         </div>
         <div className="aboutme-text">
           {" "}
           <h2 className="sectiontitle">More About Me</h2>
           <p>
-            I graduated from Istanbul Technical University, where I developed
-            strong analytical and problem-solving skills. Starting my career at
-            Beko Corporate as an R&D Engineer, I contributed to sustainable
-            product development using agile project management. This experience
-            not only sharpened my skills but also forged lasting friendships.
+            <strong>👨‍💻Current Role:</strong> I am currently spearheading the
+            front-end and full-stack development of Offbeat Security, a
+            cutting-edge blockchain security business. Utilizing React for
+            dynamic and responsive user interfaces, I aim to develop an engaging
+            web application with seamless navigation. I integrated and
+            customized a CMS for efficient content management and seamless
+            deployment, enhancing user engagement with dynamic blog posts.
           </p>
           <p>
-            In 2023, after 2.5 years in R&D, I faced a career crossroads.
-            Despite a promising promotion, my passion for creativity and
-            technology, nurtured since my early days designing and coding blogs
-            and websites, drove me to pursue a new path. Leaving my engineering
-            role, I transitioned to the tech industry, equipped with skills in
-            project management, trend analysis, and collaboration.
+            <strong>🎓Educational Background:</strong> With a background in
+            Engineering from Istanbul Technical University and ongoing studies
+            in Management Information Systems at Anadolu University, I've gained
+            skills that have enabled me to tackle complex problems and deliver
+            innovative solutions.
           </p>
           <p>
-            Since transitioning to front-end development in 2023, inspired by my
-            early passion for designing websites, I've led projects like Offbeat
-            Security, a React-powered blockchain security app. These projects
-            emphasize dynamic interfaces and user engagement, utilizing tools
-            such as Vite, React, and Netlify CMS. My portfolio reflects my
-            dedication to crafting impactful digital experiences.
+            🌌<strong>Journey into Tech: </strong>I've always been passionate
+            about a career that would allow me to become more creative, and my
+            journey into software development was a perfect opportunity for me.
+            During my time at Beko Corporate, I applied agile methodologies for
+            sustainable product development, researched emerging technologies,
+            and established strategic collaborations, contributing to impactful
+            innovation initiatives.
+          </p>
+          <p>
+            <strong>💻Technical Skills:</strong> I am particularly focused on
+            React and aiming to incorporate Generative AI technologies into my
+            journey. I am excited to join a forward-thinking team where I can
+            contribute to innovative projects that tell a story and make human
+            life easier. My ideal role involves working with cutting-edge
+            technologies in a collaborative environment that values creativity,
+            user experience, and impactful solutions.
           </p>
           <div className="worktogether">
             <h2 className="sectiontitle">Let’s work together.</h2>
