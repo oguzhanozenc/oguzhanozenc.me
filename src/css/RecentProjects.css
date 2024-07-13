@@ -1,17 +1,24 @@
-#recentprojects {
+#recent-projects {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding: 4rem 2rem;
-  justify-self: start;
+  justify-content: space-between;
+
   position: relative;
-  width: 80%;
+  background: #f8f8f8;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
-#portfolioheading {
+.recent-projects-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  color: #373737;
+  padding: 0;
+  margin: 0.5rem 0;
 }
 
-.portfolio--container {
+.recent-projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1%;
@@ -19,7 +26,7 @@
   align-items: stretch;
 }
 
-.project--item {
+.recent-project-item {
   position: relative;
   width: 100%;
   height: 12rem;
@@ -27,7 +34,7 @@
   flex-direction: column;
   justify-items: center;
   align-items: stretch;
-  text-align: center;
+  text-align: justify;
   background-size: cover;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -35,24 +42,23 @@
   background: #fff;
   box-shadow: rgba(10, 10, 10, 0.06) 0px 1.2px 1.2px 0px,
     rgba(10, 10, 10, 0.04) 0px 5px 10px 0px;
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   border: 1px solid rgb(230, 230, 230);
 }
 
-.project--item:hover {
+.recent-project-item:hover {
   transform: translateY(-5px);
   box-shadow: rgba(10, 10, 10, 0.15) 0px 2px 2px 0px,
     rgba(10, 10, 10, 0.1) 0px 8px 16px 0px;
-  background: #f0f0f0;
 }
 
-.portfolio-projecttitle {
+.recent-project-title {
   color: #373737;
   font-weight: 600;
   font-size: 1.125rem;
 }
 
-.project--details {
+.recent-project-details {
   position: relative;
   overflow: hidden;
   flex: 1;
@@ -60,22 +66,22 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   color: #666;
 }
 
-.project--description {
+.recent-project-description {
   opacity: 1;
   transition: opacity 0.3s ease;
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 
-.project--item.hovered .project--description {
+.recent-project-item.hovered .recent-project-description {
   opacity: 0;
 }
 
-.portfolioitem--img {
+.recent-project-img-container {
   width: 100%;
   height: 8rem;
   object-fit: cover;
@@ -84,7 +90,7 @@
   opacity: 0.9;
 }
 
-.project-img {
+.recent-project-img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -93,24 +99,24 @@
   border: 1px solid lch(58.2 7.7 259);
 }
 
-.project--item.hovered .portfolioitem--img {
+.recent-project-item.hovered .recent-project-img-container {
   clip-path: inset(0 0 0 0);
   transform: translateY(-50%);
   opacity: 1;
 }
 
 @media (max-width: 1024px) {
-  .portfolio--container {
+  .recent-projects-grid {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  .project--item {
+  .recent-project-item {
     margin: 1rem auto;
   }
 
-  .project--details {
+  .recent-project-details {
     padding: 0.5rem;
   }
 }

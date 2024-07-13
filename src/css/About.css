@@ -29,14 +29,6 @@
   margin-bottom: 2rem;
 }
 
-.worktogether {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
 @media only screen and (max-width: 1200px) {
   .aboutsection {
     margin: 0 auto;

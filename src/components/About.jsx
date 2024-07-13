@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/About.css";
+import LetsWork from "./LetsWork";
 
 export default function About() {
   return (
@@ -60,17 +61,11 @@ export default function About() {
             technologies in a collaborative environment that values creativity,
             user experience, and impactful solutions.
           </p>
-          <div className="worktogether">
-            <h2 className="sectiontitle">Let’s work together.</h2>
-            <div className="aboutme-text">
-              <p>To create products that tells stories.</p>
-            </div>
-            <a href="mailto:oguzhanozenc10@gmail.com">
-              oguzhanozenc10@gmail.com
-            </a>
-          </div>
+        </div>{" "}
+        <div>
+          <LetsWork />
         </div>
-      </section>
+      </section>{" "}
     </section>
   );
 }

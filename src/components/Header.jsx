@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/Header.css";
+import RecentProjects from "./RecentProjects";
+import LetsWork from "./LetsWork";
 
 import { Link } from "react-router-dom";
 import { PiHandPeace } from "react-icons/pi";
@@ -78,6 +80,12 @@ export default function Header() {
                 ))}
               </div>
             </div>
+          </div>
+          <div>
+            <RecentProjects />{" "}
+          </div>
+          <div>
+            <LetsWork />
           </div>
         </div>
       </section>
