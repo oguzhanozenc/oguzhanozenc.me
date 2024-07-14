@@ -1,6 +1,5 @@
 .projectpage {
   padding: 4rem 2rem;
-  line-height: 2;
 }
 
 .topsection {
@@ -12,6 +11,7 @@
 
 .project-container {
   margin-top: 2rem;
+  line-height: 2;
 }
 
 .project-header {
@@ -165,12 +165,29 @@ ul li {
   margin: 0;
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1200px) {
   .demo {
     padding: 1rem 0.25rem;
   }
   .project--details {
     padding: 1rem 0.5rem;
+  }
+  .project-features ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-tech-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .project-tech-stack ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.85rem;
+    gap: 0.5%;
   }
 }
 
@@ -206,23 +223,5 @@ ul li {
 
   .react-tabs__tab-panel {
     padding: 0;
-  }
-
-  .project-features ul {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .project-tech-stack {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .project-tech-stack ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 0.85rem;
-    gap: 1%;
   }
 }

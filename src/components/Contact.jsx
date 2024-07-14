@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/Contact.css";
-import SocialMedia from "./SocialMedia";
+import Footer from "./Footer";
 import { RiArrowGoBackLine } from "react-icons/ri";
 
 export default function Contact() {
@@ -24,6 +24,7 @@ export default function Contact() {
   return (
     <section className="contact--section container" id="contact">
       <h2 className="sectiontitle">Contact</h2>
+
       <div className="contact-container">
         {formSubmitted ? (
           <div className="confirmation-message">
@@ -89,7 +90,12 @@ export default function Contact() {
               </button>
             </form>
           </div>
-        )}
+        )}{" "}
+        <div className="contact-rightsection">
+          <div className="contactimg">
+            <img src="/contactimg.png" alt="contact image" />
+          </div>
+        </div>
       </div>
     </section>
   );

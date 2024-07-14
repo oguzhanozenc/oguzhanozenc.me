@@ -1,10 +1,9 @@
 #recentprojects {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
   padding: 4rem 2rem;
-  justify-self: start;
-  position: relative;
   width: 80%;
 }
 
@@ -27,7 +26,7 @@
   flex-direction: column;
   justify-items: center;
   align-items: stretch;
-  text-align: center;
+  text-align: left;
   background-size: cover;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -99,7 +98,12 @@
   opacity: 1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  #recentprojects {
+    padding: 2rem 0.25rem;
+    width: 90%;
+  }
+
   .portfolio--container {
     display: flex;
     flex-direction: column;

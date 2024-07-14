@@ -22,16 +22,13 @@ export default function ProjectPage() {
     <section className="projectpage">
       <div className="project-top">
         <div className="topsection">
-          <p id="portfoliolink">
-            <button onClick={() => navigate(-1)} className="button">
-              <RiArrowGoBackFill /> Go Back
-            </button>
-          </p>
-          <p id="nextproject">
-            <Link to={`/projects/${nextIndex}`} className="button">
-              Next Project <FiArrowUpRight />
-            </Link>
-          </p>
+          <button onClick={() => navigate(-1)} className="button">
+            <RiArrowGoBackFill /> Go Back
+          </button>
+
+          <Link to={`/projects/${nextIndex}`} className="button">
+            Next Project <FiArrowUpRight />
+          </Link>
         </div>
       </div>
 

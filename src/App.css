@@ -121,3 +121,15 @@ a {
     outline: 4px double hsla(0, 0%, 50%, 0);
   }
 }
+
+@media (max-width: 1200px) {
+  body {
+    width: 90%;
+  }
+  .container {
+    padding: 1rem 0;
+  }
+  .main-content {
+    margin: 4rem;
+  }
+}
