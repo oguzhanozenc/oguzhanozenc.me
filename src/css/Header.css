@@ -78,7 +78,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(25%, 10%);
+  transform: translate(40%, 10%);
 }
 
 .available p {
@@ -150,5 +150,29 @@
 
   .available p {
     font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .headercontainer-text {
+    padding: 1rem 0.5rem;
+  }
+
+  .headerrightside {
+    flex-direction: column;
+  }
+
+  .headersocials {
+    flex-direction: row;
+  }
+  .headersocials a {
+    font-size: 1.1rem;
   }
 }

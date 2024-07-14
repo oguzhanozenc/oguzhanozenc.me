@@ -67,3 +67,12 @@
     padding: 2rem 0.25rem;
   }
 }
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column-reverse;
+  }
+  .aboutme--img,
+  .aboutme--img img {
+    border-radius: 0.75rem;
+  }
+}

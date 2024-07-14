@@ -13,7 +13,7 @@ export default function Journey() {
           <div key={index} className="milestone">
             <div className="content">
               <div className="journeyyear">
-                <h2>{milestone.year}</h2>
+                <h3>{milestone.year}</h3>
               </div>
               <div className="roadcontainer">
                 <div className="dot">

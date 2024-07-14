@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.journeyyear h3 {
+  font-size: 1.5rem;
+}
+
 .milestone {
   margin: 0rem auto;
 }
@@ -87,14 +91,15 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .journeyyear {
+  .journeyyear h3 {
     margin-right: 1rem;
     margin-top: 0;
+    font-size: 1rem;
   }
 
   .journey--details {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .roadcontainer {
     margin-right: 2rem;
@@ -105,21 +110,28 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .journeypage h2 {
-    font-size: 1rem;
+@media only screen and (max-width: 768px) {
+  #journey {
+    width: 100%;
+  }
+  .journeyyear h3 {
+    margin: 1rem auto 0 auto;
+    font-size: 0.85rem;
   }
 
-  .journey--details {
-    margin-left: 2rem;
-  }
-  .journeyyear {
-    margin-top: 1rem;
-  }
   .roadcontainer {
     margin-right: 1rem;
   }
   .milestone--img {
-    margin: 1rem auto;
+    margin: 0rem auto;
+  }
+  .content {
+    max-width: fit-content;
+    display: grid;
+    gap: 3%;
+    grid-template-columns: 12% 5% 80%;
+  }
+  .journey--details {
+    width: 95%;
   }
 }
