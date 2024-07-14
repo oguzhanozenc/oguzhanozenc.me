@@ -31,6 +31,16 @@ body {
   border: 1px solid rgb(230, 230, 230);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .sectiontitle {
   font-size: 2.25rem;
   text-align: left;

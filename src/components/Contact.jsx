@@ -22,7 +22,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact--section" id="contact">
+    <section className="contact--section container" id="contact">
       <h2 className="sectiontitle">Contact</h2>
       <div className="contact-container">
         {formSubmitted ? (

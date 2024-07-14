@@ -37,8 +37,8 @@ export default function Journey() {
   };
 
   return (
-    <section className="journeypage" id="journey">
-      <section className="journeysection" id="journeysection">
+    <section className="journeypage container" id="journey">
+      <section className="journeysection container" id="journeysection">
         <JourneyTimeline journeyData={journeyData} />
       </section>
     </section>

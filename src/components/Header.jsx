@@ -36,7 +36,7 @@ const getSocialIcon = (key) => {
 export default function Header() {
   return (
     <header>
-      <section className="header" id="home">
+      <section className="header container" id="home">
         <div className="header-container">
           <div className="header-content">
             <div className="headercontainer-text">
