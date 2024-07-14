@@ -7,6 +7,7 @@ import Journey from "./components/Journey";
 import Projects from "./components/Projects";
 import ProjectPage from "./components/ProjectPage";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import ScrollToSection from "./components/ScrollToSection";
 
 function App() {
@@ -69,7 +70,8 @@ function App() {
                 }
               />
             </Routes>
-          </AnimatePresence>
+          </AnimatePresence>{" "}
+          <Footer />
         </main>
       </div>
     </BrowserRouter>

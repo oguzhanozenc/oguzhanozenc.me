@@ -12,22 +12,22 @@ import { FaGithub, FaTelegram } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 
 const socialMedia = {
+  email: "mailto:oguzhanozenc10@gmail.com",
   github: "https://github.com/oguzhanozenc",
   telegram: "https://t.me/oguzhanozenc",
   twitter: "https://x.com/oguzhanozencdev",
-  email: "mailto:oguzhanozenc10@gmail.com",
 };
 
 const getSocialIcon = (key) => {
   switch (key) {
+    case "email":
+      return <HiOutlineMail />;
     case "github":
       return <FaGithub />;
     case "telegram":
       return <FaTelegram />;
     case "twitter":
       return <RiTwitterXLine />;
-    case "email":
-      return <HiOutlineMail />;
     default:
       return null;
   }
