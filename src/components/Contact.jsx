@@ -23,75 +23,77 @@ export default function Contact() {
 
   return (
     <section className="contact--section container" id="contact">
-      <h2 className="sectiontitle">Contact</h2>
-
-      <div className="contact-container">
-        {formSubmitted ? (
-          <div className="confirmation-message">
-            <p>Your message has been submitted successfully!</p>
-            <button onClick={() => setFormSubmitted(false)} className="button">
-              <RiArrowGoBackLine /> Back to the form
-            </button>
-          </div>
-        ) : (
-          <div className="form-container">
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              onSubmit={handleSubmit}
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <p>
-                <label htmlFor="name"></label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  required
-                  autoComplete="name"
-                  placeholder="Name"
-                />
-              </p>
-              <p>
-                <label htmlFor="email"></label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  autoComplete="email"
-                  placeholder="Email"
-                />
-              </p>
-              <p>
-                <label htmlFor="company"></label>
-                <input
-                  type="text"
-                  name="company"
-                  id="company"
-                  required
-                  autoComplete="organization"
-                  placeholder="Company"
-                />
-              </p>
-              <p>
-                <label htmlFor="message"></label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                  required
-                ></textarea>
-              </p>
-
-              <button type="submit" className="button">
-                Submit
+      <div className="contact-container container">
+        <h2 className="sectiontitle">Contact</h2>{" "}
+        <div>
+          {formSubmitted ? (
+            <div className="confirmation-message">
+              <p>Your message has been submitted successfully!</p>
+              <button
+                onClick={() => setFormSubmitted(false)}
+                className="button"
+              >
+                <RiArrowGoBackLine /> Back to the form
               </button>
-            </form>
-          </div>
-        )}{" "}
-        <div className="contact-rightsection">
+            </div>
+          ) : (
+            <div className="form-container">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                onSubmit={handleSubmit}
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p>
+                  <label htmlFor="name"></label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    autoComplete="name"
+                    placeholder="Name"
+                  />
+                </p>
+                <p>
+                  <label htmlFor="email"></label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    autoComplete="email"
+                    placeholder="Email"
+                  />
+                </p>
+                <p>
+                  <label htmlFor="company"></label>
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    required
+                    autoComplete="organization"
+                    placeholder="Company"
+                  />
+                </p>
+                <p>
+                  <label htmlFor="message"></label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                    required
+                  ></textarea>
+                </p>
+
+                <button type="submit" className="button">
+                  Submit
+                </button>
+              </form>
+            </div>
+          )}
           <div className="contactimg">
             <img src="/contactimg.png" alt="contact image" />
           </div>
