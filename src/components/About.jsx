@@ -16,14 +16,13 @@ export default function About() {
               </h2>{" "}
               <p>
                 I’m Oguzhan, a Front-End Developer with a strong foundation in
-                HTML, CSS, JavaScript, and React, driven by a passion for design
-                and front-end development. I have always been drawn to projects
-                that tell stories and make a meaningful impact. Software
-                development allows me to transform ideas into reality, and I
-                find the entire process from concept to application incredibly
-                rewarding.g. My goal is to bridge the gap between design and
-                development, leveraging my skills to create cohesive and
-                impactful projects.
+                HTML, CSS, JavaScript, and React, driven by a passion for
+                front-end development. I have always been drawn to projects that
+                tell stories and make a meaningful impact. Software development
+                allows me to transform ideas into reality, and I find the entire
+                process from concept to application incredibly rewarding. My
+                goal is to bridge the gap between design and development,
+                leveraging my skills to create cohesive and impactful projects.
               </p>
             </div>{" "}
             <div className="aboutme--img">
