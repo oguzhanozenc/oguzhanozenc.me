@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { PiHandPeace } from "react-icons/pi";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
-import { HiOutlineMail } from "react-icons/hi";
+import { LuMail } from "react-icons/lu";
 import { FaGithub, FaTelegram } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 
@@ -21,7 +21,7 @@ const socialMedia = {
 const getSocialIcon = (key) => {
   switch (key) {
     case "email":
-      return <HiOutlineMail />;
+      return <LuMail />;
     case "github":
       return <FaGithub />;
     case "telegram":

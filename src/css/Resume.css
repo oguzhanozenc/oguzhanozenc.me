@@ -1,0 +1,86 @@
+.resume-section {
+  padding: 2rem 3rem;
+  color: #373737;
+}
+
+.resume-introsection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.intro-info h1,
+.intro-info p {
+  padding: 0.1rem 0;
+  margin: 0.1rem 0;
+}
+
+.location {
+  font-size: 0.9rem;
+}
+
+.opentoremote {
+  color: #666;
+}
+
+.profilephoto img {
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: auto;
+}
+
+.resume-contact ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.resume-contact ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+}
+
+.resume-contact ul li a svg {
+  margin-right: 0.25rem;
+}
+
+.resume-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.resume-skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillname {
+  font-weight: 600;
+}
+
+.resume-skill ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.25rem;
+}
+
+.resume-skill ul li {
+  margin-right: 0.5rem;
+  margin: 0;
+  padding: 0;
+}

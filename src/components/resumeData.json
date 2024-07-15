@@ -1,0 +1,146 @@
+{
+  "name": "Oğuzhan Özenç",
+  "title": "Front-end Developer",
+  "photo": "https://avatars.githubusercontent.com/u/110353261?s=400&u=be9a1d9012db4e7a93836283c8f297657f5cfed4&v=4",
+  "location": {
+    "city": "Istanbul",
+    "country": "Turkey",
+    "link": "https://maps.app.goo.gl/ms99iWHVgr4UxTvG6",
+    "remote": true
+  },
+  "about": "I am a Front-End Developer with a strong foundation in HTML, CSS, JavaScript, and React. I am passionate about participating in impactful projects that tell stories. Software development allows me to turn ideas into reality, and I find the journey from concept to application incredibly rewarding.",
+  "skills": [
+    {
+      "title": "Front-end",
+      "items": ["HTML", "CSS", "Bootstrap", "JavaScript", "React", "Firebase"]
+    },
+    {
+      "title": "Version Control",
+      "items": ["Git", "GitHub"]
+    },
+    {
+      "title": "Design",
+      "items": [
+        "Responsive Design",
+        "Interactive Design",
+        "UI/UX understanding",
+        "Figma"
+      ]
+    },
+    {
+      "title": "Principles & Methodologies",
+      "items": [
+        "Agile Methodologies",
+        "Scrum Principles",
+        "Product Development"
+      ]
+    }
+  ],
+  "socialMedia": [
+    {
+      "title": "email",
+      "shorturl": "oguzhanozenc10@gmail.com",
+      "url": "oguzhanozenc10@gmail.com"
+    },
+    {
+      "title": "phone",
+      "shorturl": "+123456789",
+      "url": "+123456789"
+    },
+    {
+      "title": "GitHub",
+      "shorturl": "/oguzhanozenc",
+      "url": "https://github.com/oguzhanozenc"
+    },
+    {
+      "title": "LinkedIn",
+      "shorturl": "/oguzhanozenc",
+      "url": "https://www.linkedin.com/in/oguzhanozenc/"
+    },
+    {
+      "title": "Website",
+      "shorturl": "oguzhanozenc.me",
+      "url": "https://oguzhanozenc.me/"
+    }
+  ],
+  "workExperience": [
+    {
+      "company": "Offbeat Security",
+      "date": "April 2024 - Present",
+      "type": "Remote",
+      "position": "Freelance Front-end Developer",
+      "responsibilities": [
+        "Leading front-end development for Offbeat Security, a single-page web application focused on blockchain security business.",
+        "Developing dynamic, responsive, and user-friendly interfaces with React, using media queries, CSS, and atomic design principles, and integrating React Router for seamless navigation.",
+        "Incorporated animation effects using react-awesome-reveal and creating a responsive slider with react-slick.",
+        "Customized Netlify (Decap) CMS for efficient content management and deployment.",
+        "Added a blog subscription feature to facilitate user engagement and content updates.",
+        "Managing the project lifecycle from concept to deployment, ensuring timely delivery and achieving 100% client satisfaction."
+      ],
+      "technologiesUsed": [
+        "Vite",
+        "Node.js",
+        "React",
+        "React Router",
+        "React Awesome Reveal",
+        "React-Slick",
+        "React Accessible Accordion",
+        "React Markdown",
+        "Netlify (Decap) CMS",
+        "Mailchimp",
+        "Substack"
+      ]
+    },
+    {
+      "company": "Beko Corporate",
+      "date": "2021 - 2023",
+      "type": "Full-time",
+      "position": "Research and Development Engineer",
+      "responsibilities": [
+        "Utilized agile project management to drive results as a Technology Developer contributing to sustainable product development.",
+        "Researched and adopted technologies, analyzed market trends, and developed technology roadmaps aligned with innovation and sustainability goals.",
+        "Responsible for academic writing, preparation of patent applications, technical reporting, and presenting to internal and external stakeholders.",
+        "Collaborated with national and international partners to ensure projects aligned with industry standards and sustainability initiatives."
+      ],
+      "technologiesUsed": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Anadolu University",
+      "degree": "Bachelor's Degree in Management Information Systems",
+      "date": "2023 - 2026"
+    },
+    {
+      "institution": "Istanbul Technical University",
+      "degree": "Bachelor's Degree in Engineering",
+      "date": "2015 - 2020"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Offbeat Security",
+      "description": "A single page application for a blockchain security business aiming to partner with complex blockchain system builders providing security solutions.",
+      "role": "Lead Frontend Developer",
+      "technologiesUsed": ["Vite", "React", "Node.js", "Decap CMS"]
+    },
+    {
+      "name": "Personal Portfolio Website",
+      "description": "Creative collaboration platform that combines video conferencing and HD media streaming.",
+      "role": "Lead Frontend Developer",
+      "technologiesUsed": ["TypeScript", "React", "Node.js", "GraphQL"]
+    },
+    {
+      "name": "#VanLife",
+      "description": "#VanLife app is a web application based on the React Router that will allow users to rent vans for roadtrips.",
+      "role": "Lead Frontend Developer",
+      "technologiesUsed": [
+        "React",
+        "React Router",
+        "Vite",
+        "Firebase (Database, File Storage)",
+        "Vanilla CSS"
+      ]
+    }
+  ]
+}

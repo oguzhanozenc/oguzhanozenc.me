@@ -5,6 +5,7 @@ import "../css/Navbar.css";
 import { IoLayersOutline } from "react-icons/io5";
 import { HiOutlineMap } from "react-icons/hi2";
 import { TbSmartHome, TbUserCircle, TbMessageChatbot } from "react-icons/tb";
+import { PiReadCvLogoBold } from "react-icons/pi";
 
 const Navbar = () => {
   const location = useLocation();
@@ -73,6 +74,19 @@ const Navbar = () => {
             <TbMessageChatbot />
             {hoveredLink === "/contact" && (
               <span className="hovered-text">Contact</span>
+            )}
+          </Link>{" "}
+          <Link
+            to="/resume"
+            className={`nav-link ${
+              location.pathname === "/resume" ? "active" : ""
+            }`}
+            onMouseEnter={() => setHoveredLink("/resume")}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            <PiReadCvLogoBold />
+            {hoveredLink === "/resume" && (
+              <span className="hovered-text">Resume</span>
             )}
           </Link>
         </div>

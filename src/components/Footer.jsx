@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { HiOutlineMail } from "react-icons/hi";
-import { FaGithub, FaTelegram } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
+import { FaGithub } from "react-icons/fa";
+import { PiTelegramLogoBold } from "react-icons/pi";
 import { RiTwitterXLine } from "react-icons/ri";
 
 import "../css/Footer.css";
@@ -17,11 +18,11 @@ const socialMedia = {
 const getSocialIcon = (key) => {
   switch (key) {
     case "mail":
-      return <HiOutlineMail />;
+      return <LuMail />;
     case "github":
       return <FaGithub />;
     case "telegram":
-      return <FaTelegram />;
+      return <PiTelegramLogoBold />;
     case "twitter":
       return <RiTwitterXLine />;
     default:

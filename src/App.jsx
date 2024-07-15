@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import ProjectPage from "./components/ProjectPage";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Resume from "./components/Resume";
 import ScrollToSection from "./components/ScrollToSection";
 
 function App() {
@@ -66,6 +67,14 @@ function App() {
                 element={
                   <AnimateContent>
                     <ProjectPage />
+                  </AnimateContent>
+                }
+              />{" "}
+              <Route
+                path="/resume"
+                element={
+                  <AnimateContent>
+                    <Resume />
                   </AnimateContent>
                 }
               />
