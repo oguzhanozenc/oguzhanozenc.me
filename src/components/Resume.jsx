@@ -1,12 +1,14 @@
-import React from "react";
-import resumeData from "./resumeData.json";
+import React, { useState } from "react";
 import "../css/Resume.css";
 import { FaGithub, FaLinkedin, FaMapPin } from "react-icons/fa";
 import { RiTwitterLine } from "react-icons/ri";
 import { LuGlobe, LuMail, LuPhone } from "react-icons/lu";
 import { HiOutlineExternalLink } from "react-icons/hi";
+import resumeData from "./resumeData.json";
 
 export default function Resume() {
+  const [isDownloading, setIsDownloading] = useState(false);
+
   const {
     name,
     title,
@@ -40,8 +42,29 @@ export default function Resume() {
     }
   };
 
+  const handleDownload = () => {
+    setIsDownloading(true);
+
+    const link = document.createElement("a");
+    link.href = "/Oğuzhan Özenç _ Resume _2024.pdf";
+    link.download = "Oğuzhan Özenç _ Resume _2024.pdf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    setTimeout(() => {
+      setIsDownloading(false);
+    }, 1000);
+  };
+
   return (
     <section className="resume-section">
+      <div className="resume-download">
+        <button onClick={handleDownload} className="button">
+          {isDownloading ? "Downloading..." : "Download Resume"}
+        </button>
+      </div>
       <div className="resume-introsection">
         <div className="intro-info">
           <h1 className="resume-name">{name}</h1>
@@ -157,7 +180,7 @@ export default function Resume() {
             )}
           </div>
         ))}
-      </div>{" "}
+      </div>
       <div className="resume-certification">
         <h2 className="resume-sectiontitle">Certification</h2>
         <div className="certification-info">
@@ -228,7 +251,7 @@ export default function Resume() {
                 </ul>
               )}
             </div>
-          ))}{" "}
+          ))}
         </div>
       </div>
     </section>

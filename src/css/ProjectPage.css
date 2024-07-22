@@ -23,24 +23,37 @@
 
 .project-tech-stack {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.project-tech-stack p {
+  margin: 0;
+  padding: 0;
 }
 
 .project-tech-stack ul {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
 }
 
-.project-tech-stack ul,
 .project-tech-stack ul li {
-  margin: 0 0.25rem;
+  background: #e7e5ee;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin: 0;
+  font-size: 0.75rem;
 }
 
 .project--details {
   flex: 1;
+  text-align: justify;
 }
 
 .project-links {
@@ -54,12 +67,8 @@
 
 .project-overview {
   display: grid;
-  grid-template-columns: 30% 68%;
+  grid-template-columns: 43% 55%;
   gap: 2%;
-}
-
-.demo {
-  padding: 5% 10%;
 }
 
 .project-role,
@@ -67,10 +76,9 @@
   flex: 1;
   padding: 1rem;
   background: #fff;
-  box-shadow: rgba(10, 10, 10, 0.06) 0px 1.2px 1.2px 0px,
-    rgba(10, 10, 10, 0.04) 0px 5px 10px 0px;
   border-radius: 0.75rem;
   border: 1px solid rgb(230, 230, 230);
+  text-align: justify;
 }
 
 .project-features ul {
@@ -89,8 +97,8 @@
 }
 
 .stages {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1%;
   justify-content: center;
   align-items: center;
@@ -126,19 +134,20 @@
 .screenshotframe {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0.25rem;
   margin-top: 1rem;
 }
 
 .screenshotframe img {
   width: 100%;
   display: block;
-  border-radius: 8px;
+  border-radius: 0.25rem;
 }
 
 .challenge-solution-item {
   display: grid;
   grid-template-columns: 48% 4% 48%;
+  margin-bottom: 1rem;
 }
 
 #arrow {
@@ -166,9 +175,6 @@ ul li {
 }
 
 @media only screen and (max-width: 1200px) {
-  .demo {
-    padding: 1rem 0.25rem;
-  }
   .project--details {
     padding: 1rem 0.5rem;
   }
@@ -206,10 +212,6 @@ ul li {
 
   .project-overview {
     flex-direction: column;
-  }
-
-  .demo {
-    padding: 1rem 0.25rem;
   }
 
   .stages {

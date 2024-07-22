@@ -6,7 +6,7 @@ import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { FiArrowUpRight } from "react-icons/fi";
-import { PiStarFourFill } from "react-icons/pi";
+
 import { TbTopologyComplex } from "react-icons/tb";
 import { FaCheck } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
@@ -36,15 +36,21 @@ export default function ProjectPage() {
         <div className="project-container">
           <div className="project-header">
             <div className="project--details box">
-              <h1>{project.title}</h1>
+              <h2 className="sectiontitle">{project.title}</h2>
               <p>{project.description}</p>
               <div className="project-links">
-                <a className="button" href={project.demoLink}>
+                <a className="button" href={project.demoLink} target="_blank">
                   Project Link <FiArrowUpRight />
                 </a>
-                <a className="button" href={project.githubLink}>
-                  Github <FiArrowUpRight />
-                </a>
+                {project.githubLink && (
+                  <a
+                    className="button"
+                    href={project.githubLink}
+                    target="_blank"
+                  >
+                    Github <FiArrowUpRight />
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -56,10 +62,12 @@ export default function ProjectPage() {
               <p>{project.myRole}</p>
             </div>
             <div className="box">
-              <h3>Who is this app for?</h3>
+              <h3>Project Overview</h3>
               <p>{project.overview}</p>
               <div className="project-tech-stack">
-                <p>Stack:</p>
+                <p>
+                  <strong>Stack:</strong>
+                </p>
                 <ul>
                   {project.techStack.map((tech, index) => (
                     <li key={index}>{tech}</li>
@@ -90,9 +98,7 @@ export default function ProjectPage() {
                       </div>
                       <ul className="description--stages">
                         {demo.description.map((desc, descIndex) => (
-                          <li key={descIndex}>
-                            <PiStarFourFill /> {desc}
-                          </li>
+                          <li key={descIndex}>{desc}</li>
                         ))}
                       </ul>
                     </div>

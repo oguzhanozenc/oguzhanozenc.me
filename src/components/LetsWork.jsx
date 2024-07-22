@@ -45,7 +45,7 @@ export default function LetsWork() {
             <span className={`button-text ${copied ? "copied-animation" : ""}`}>
               {copied ? (
                 <>
-                  <LuCopyCheck /> Copied
+                  <LuCopyCheck /> Copying...
                 </>
               ) : (
                 <>

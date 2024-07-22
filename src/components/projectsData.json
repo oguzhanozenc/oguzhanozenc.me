@@ -2,10 +2,10 @@
   "projects": [
     {
       "title": "Offbeat Security",
-      "featuredText": "A blockchain security business aiming to partner with complex blockchain system builders providing  security solutions.",
-      "description": "Offbeat Security is a blockchain security business aiming to partner with builders of complex blockchain systems providing bespoke security solutions.",
+      "featuredText": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features.",
+      "description": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features such as a tailor-made appealing landing page, integrated blog section, blog subscription, and contact form.",
       "projectLink": "./Project_OffbeatSecurity",
-      "image": "offbeatsecurity.png",
+      "image": "obsec1.gif",
       "techStack": [
         "React",
         "React Router",
@@ -13,12 +13,10 @@
         "react-slick",
         "Netlify (Decap) CMS",
         "WordPress API",
-        "CSS",
-        "HTML"
+        "Framer Motion"
       ],
       "overview": "Offbeat Security is at the forefront of blockchain security, providing a web application that combines dynamic content, efficient content management, and a user-friendly interface to ensure top-notch security services.",
-      "myRole": "I spearheaded the front-end and full-stack development for the launch of Offbeat Security, managing the entire project lifecycle from initial concept to deployment.",
-      "githubLink": "https://github.com/yourusername/OffbeatSecurity",
+      "myRole": "I led the front-end development and full-stack integration for the launch of Offbeat Security, managing the project lifecycle from initial concept to deployment. My work included designing the user interface and handling full-stack development tasks, particularly focusing on blog integration.",
       "demoLink": "https://offbeatsecurity.xyz/",
       "features": [
         {
@@ -44,32 +42,53 @@
       ],
       "demoData": [
         {
-          "title": "Stage 1: Dynamic UI",
+          "title": "Stage 1: Cyber Security Homepage",
           "description": [
-            "The first stage involved developing a dynamic and responsive user interface using React, ensuring a seamless navigation experience with React Router."
+            "Users are welcomed with a tailor-made, cyber security focused homepage featuring a typewriter effect for the slogan. The slogan dynamically updates with each render, making it engaging to follow."
           ],
-          "screenshot": "/offbeatsecurity.png"
+          "screenshot": "/obsec1.gif"
         },
         {
-          "title": "Stage 2: Animation and Interaction",
+          "title": "Stage 2: Enhanced About Section",
           "description": [
-            "Incorporated animation effects with react-awesome-reveal and created a responsive slider with react-slick for a visually engaging user experience."
+            "The about section features a semi-transparent background to enhance brand identity. A call-to-action (CTA) button is included to navigate to the contact section."
           ],
-          "screenshot": "/offbeatsecurity.png"
+          "screenshot": "/obsec2.gif"
         },
         {
-          "title": "Stage 3: Content Management",
+          "title": "Stage 3: Interactive People Section",
           "description": [
-            "Customized Netlify (Decap) CMS for efficient content management and seamless deployment, enhancing user engagement with dynamic blog posts."
+            "An encryption effect is used for staff names and images to convey a sense of security. Clicking on each person card navigates to their corresponding window for more details, with a back button to return."
           ],
-          "screenshot": "/offbeatsecurity.png"
+          "screenshot": "/obsec3.gif"
         },
         {
-          "title": "Stage 4: Window-like View",
+          "title": "Stage 4: Gradient Foundation Section",
           "description": [
-            "Implemented a window-like view for content-heavy sections to enhance user experience and engagement."
+            "The foundation section features a cool gradient inspired by brand colors with an accordion look to manage long text."
           ],
-          "screenshot": "/offbeatsecurity.png"
+          "screenshot": "/obsec4.gif"
+        },
+        {
+          "title": "Stage 5: Our Approach Section",
+          "description": [
+            "This section, initially crowded with text, uses a multi-window look. Clicking each window shows corresponding tabs with animations. A CTA button navigates to the contact section on the last stage."
+          ],
+          "screenshot": "/obsec5.gif"
+        },
+        {
+          "title": "Stage 6: Recent Posts Section",
+          "description": [
+            "The recent posts section features the latest blog posts along with a subscription option. Users can click to explore or go directly to the latest posts. The blog page includes pagination and social media sharing. Additionally, the business owner can post, edit, or remove blogs through the Netlify CMS. The posts will be dynamically updated from there and displayed on the application."
+          ],
+          "screenshot": "/obsec6.gif"
+        },
+        {
+          "title": "Stage 7: Contact Section",
+          "description": [
+            "The contact section includes a 'Book a Call' link and a contact form. Buttons are designed with a pulsating effect to encourage clicking."
+          ],
+          "screenshot": "/obsec7.gif"
         }
       ],
       "challengesAndSolutions": [
@@ -98,10 +117,6 @@
           {
             "title": "Advanced Analytics Integration",
             "explanation": "Integrate advanced analytics tools to provide deeper insights into user behavior and application performance."
-          },
-          {
-            "title": "Enhanced Security Features",
-            "explanation": "Develop and integrate additional security features to further enhance the blockchain security offerings."
           }
         ]
       },
@@ -220,94 +235,6 @@
         "openingStatement": "Feedbacks are appreciated. Have some ideas? Contact us!"
       },
       "contactOrFeedbackSection": "Feel free to reach out for any questions or feedback regarding my portfolio project. You can contact me at oguzhanozenc10@gmail.com"
-    },
-    {
-      "title": "Quik - Instant Delivery App",
-      "image": "/quik2.gif",
-      "featuredText": "A web application designed to provide users with a quick and personalized instant delivery experience.",
-      "description": "Quik is a web application designed to provide users with a quick and personalized instant delivery experience.",
-      "techStack": ["HTML5", "CSS3", "JavaScript (ES6+)", "UUID (v4)"],
-      "overview": "Ever faced the hassle of waiting for your online orders? Quik, a revolutionary web app, is here to transform your delivery experience. Whether you sign up for a personalized journey or jump in as a guest, Quik dynamically adds products to your basket with real-time updates. Seamlessly navigate order and checkout processes, and feel the joy as a personalized thank-you message pops up upon successful payment. Quik isn't just an app; it's the swift, personalized, and delightful delivery solution you've been waiting for!",
-      "projectLink": "./Project_Second",
-      "githubLink": "https://github.com/oguzhanozenc/Quik-Instant-Delivery-App",
-      "demoLink": "https://quik-instant-delivery-app.netlify.app/",
-      "features": [
-        {
-          "title": "Welcome Page",
-          "description": "Greet users with a homepage offering sign-up or guest options, setting the stage for instant delivery."
-        },
-        {
-          "title": "Signup Form",
-          "description": "For sign-ups, a form collects essential info crucial for personalization in subsequent stages."
-        },
-        {
-          "title": "App Page",
-          "description": "Signed-in or guest users can dynamically add products with real-time updates, ensuring a seamless shopping experience."
-        },
-        {
-          "title": "Order and Checkout",
-          "description": "As users add products, the section dynamically updates, displaying details and total price in real-time, prompting users to proceed to checkout."
-        },
-        {
-          "title": "Payment Confirmation",
-          "description": "After reviewing items and entering payment info, users receive a prompt thank-you message, acknowledging the transaction and expressing appreciation, with the user's name if provided during signup."
-        }
-      ],
-      "demoData": [
-        {
-          "title": "Stage 1: Welcome and Signup",
-          "description": [
-            "Users are greeted with a welcoming homepage for users to engage with the app. They have the option to either sign up for a personalized experience or continue as a guest.",
-            "For those choosing to sign up, a form collects essential information and this information then is used for personalization and ease of use in subsequent stages."
-          ],
-          "screenshot": "/quik1.gif"
-        },
-        {
-          "title": "Stage 2: Shopping Experience",
-          "description": [
-            "Signed-in or guest users access the App Page for dynamic product addition to their basket with real-time updates, enhancing the interactive experience.",
-            "Adding products dynamically updates the Order and Checkout sections, displaying list of items, quantities, prices, with the total order price calculated in real-time, prompting users to proceed to checkout."
-          ],
-          "screenshot": "/quik2.gif"
-        },
-        {
-          "title": "Stage 3: Checkout and Payment",
-          "description": [
-            "Users reach the Checkout Page to review and submit payment details. Autofill streamlines the process if user information is provided earlier, only payment information needs to be entered.",
-            "Upon successful payment submission, users receive a personalized thank-you message featuring their name."
-          ],
-          "screenshot": "/quik3.gif"
-        }
-      ],
-      "challengesAndSolutions": [
-        {
-          "challenge": "Handling Static Content",
-          "challengeDescription": "Managing static content initially posed challenges, making updates cumbersome. To address this, we introduced JSON (JavaScript Object Notation) for streamlined content management.",
-          "solution": "Dynamic Content with JSON",
-          "solutionDescription": "By incorporating JSONs to app, the dynamic content updates become possible. Items could be changed effortlessly within the app with utilization of JSONs. This approach enhanced flexibility, enabling easy adjustments without complex procedures."
-        },
-        {
-          "challenge": "User Interface and DOM Manipulation",
-          "challengeDescription": "Developing a refined user interface presented challenges, especially concerning precise item selection in the Document Object Model (DOM).",
-          "solution": "Efficient DOM Interaction with UUIDs",
-          "solutionDescription": "To overcome this, we implemented UUIDs (Universally Unique Identifiers). These identifiers streamlined item selection and manipulation within the DOM, improving the overall user interface."
-        }
-      ],
-      "upcomingFeatures": {
-        "heading": "What's Next?",
-        "features": [
-          {
-            "title": "Delivery Tracking System",
-            "explanation": "Introducing a demonstration tracking feature that allows users to seamlessly follow the progress of their simulated products."
-          },
-          {
-            "title": "Product Request",
-            "explanation": "A product request section for users to contact us and suggest products they would like to see in future."
-          }
-        ],
-        "openingStatement": "All feedbacks are valuable. Have some ideas? Contact us!"
-      },
-      "contactOrFeedbackSection": "Feel free to reach out for any questions or feedback regarding Quik. You can contact me at oguzhanozenc10@gmail.com"
     },
     {
       "title": "Cinemate - Movie Watchlist App",
