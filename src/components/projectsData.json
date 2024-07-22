@@ -1,6 +1,113 @@
 {
   "projects": [
     {
+      "title": "Homebody",
+      "featuredText": "A retro / arcade themed shopping experience platform focused on apparel and accessories.",
+      "description": "Homebody is a shopping experience platform that combines a modern, dynamic user interface with intuitive navigation and responsive design. It includes features for managing a shopping basket, a streamlined checkout process, and a visually appealing presentation of products and blog posts.",
+      "projectLink": "./Project_Homebody",
+      "image": "homebody1.gif",
+      "techStack": [
+        "React",
+        "React Router",
+        "react-icons",
+        "CSS",
+        "Netlify",
+        "Shopify"
+      ],
+      "overview": "Homebody provides a seamless shopping experience by integrating user-friendly features for managing a shopping basket, navigating through product details, and proceeding through checkout. The platform utilizes Shopify for backend e-commerce functionalities, ensuring robust management of products and transactions.",
+      "myRole": "I led the development of Homebody, focusing on creating a user-friendly shopping interface and integrating various functionalities such as basket management and checkout processes. My role included designing and implementing key features and ensuring a smooth user experience across different devices.",
+      "demoLink": "https://homebodyapp.netlify.app/",
+      "features": [
+        {
+          "title": "Order Navbar",
+          "description": "Enhanced with clickable items that navigate to product pages and a toggle button for better user control."
+        },
+        {
+          "title": "Basket Management",
+          "description": "Users can view, remove items from the basket, and proceed to checkout with updated UI elements for ease of use."
+        },
+        {
+          "title": "Checkout Experience",
+          "description": "Added a confirmation dialog in the checkout process to improve user flow and experience."
+        },
+        {
+          "title": "Blog Integration",
+          "description": "The BlogPost component displays full blog content, and recent posts offer subscription options and updates."
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Ensured that all features and components are responsive and function seamlessly across different devices."
+        }
+      ],
+      "demoData": [
+        {
+          "title": "Stage 1: Home Page",
+          "description": [
+            "Users are greeted with a modern home page featuring interactive elements and a visually appealing layout."
+          ],
+          "screenshot": "/homebody1.gif"
+        },
+        {
+          "title": "Stage 2: Product List",
+          "description": [
+            "A detailed view of products categorized into apparel and accessories with enhanced visuals and user interaction features."
+          ],
+          "screenshot": "/homebody2.gif"
+        },
+        {
+          "title": "Stage 3: Order Navbar",
+          "description": [
+            "The order navbar includes clickable items and a toggle button for easy management of the shopping basket."
+          ],
+          "screenshot": "/homebody3.gif"
+        },
+        {
+          "title": "Stage 4: Checkout Page",
+          "description": [
+            "The checkout page now features a confirmation dialog to confirm or cancel the purchase, improving the checkout experience."
+          ],
+          "screenshot": "/homebody4.gif"
+        },
+        {
+          "title": "Stage 5: Blog Section",
+          "description": [
+            "Displays full blog posts and allows users to subscribe and view the latest updates."
+          ],
+          "screenshot": "/homebody5.gif"
+        }
+      ],
+      "challengesAndSolutions": [
+        {
+          "challenge": "Seamless Navigation",
+          "challengeDescription": "Ensuring smooth navigation between product pages, blog posts, and other sections of the application.",
+          "solution": "React Router",
+          "solutionDescription": "Utilized React Router for managing page navigation and transitions between different components such as product pages and blog posts, ensuring a fluid user experience."
+        },
+        {
+          "challenge": "Integrating Shopify Backend",
+          "challengeDescription": "Incorporating Shopify as the backend for e-commerce functionalities, including product management and transactions.",
+          "solution": "Shopify Integration",
+          "solutionDescription": "Planned integration with Shopify to handle e-commerce needs, including product management, payments, and order tracking."
+        },
+        {
+          "challenge": "Responsive Design Implementation",
+          "challengeDescription": "Maintaining a consistent user experience across different devices and screen sizes.",
+          "solution": "CSS Flexbox and Media Queries",
+          "solutionDescription": "Utilized CSS Flexbox and media queries to ensure a responsive and adaptive design."
+        }
+      ],
+      "upcomingFeatures": {
+        "heading": "What's next?",
+        "features": [
+          {
+            "title": "Enhanced Analytics Integration",
+            "explanation": "Plan to integrate advanced analytics tools to track user behavior and enhance application performance insights."
+          }
+        ]
+      },
+      "contactOrFeedbackSection": "Feel free to reach out with any questions or feedback regarding Homebody."
+    },
+    {
       "title": "Offbeat Security",
       "featuredText": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features.",
       "description": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features such as a tailor-made appealing landing page, integrated blog section, blog subscription, and contact form.",
@@ -93,35 +200,36 @@
       ],
       "challengesAndSolutions": [
         {
-          "challenge": "Dynamic Content Updates",
-          "challengeDescription": "Managing dynamic content updates efficiently and ensuring seamless integration.",
-          "solution": "Customized Netlify (Decap) CMS",
-          "solutionDescription": "Implemented and customized Netlify (Decap) CMS to handle dynamic content updates seamlessly."
-        },
-        {
-          "challenge": "Animation Integration",
-          "challengeDescription": "Integrating smooth and engaging animations without compromising performance.",
+          "challenge": "Managing Complex Interactions",
+          "challengeDescription": "Handling multiple interactive elements and ensuring a cohesive user experience.",
           "solution": "React Animation Libraries",
-          "solutionDescription": "Used react-awesome-reveal and react-slick to create engaging animations and responsive sliders."
+          "solutionDescription": "Utilized libraries such as react-awesome-reveal and Framer Motion to manage complex animations and interactions efficiently."
         },
         {
-          "challenge": "Project Lifecycle Management",
-          "challengeDescription": "Ensuring timely delivery and client satisfaction throughout the project lifecycle.",
-          "solution": "Agile Methodology",
-          "solutionDescription": "Adopted agile methodologies to manage the project lifecycle efficiently, ensuring timely delivery and client satisfaction."
+          "challenge": "Seamless Blog Integration",
+          "challengeDescription": "Integrating dynamic blog content into the React application while ensuring smooth updates.",
+          "solution": "Netlify CMS and WordPress API",
+          "solutionDescription": "Leveraged Netlify CMS for content management and WordPress API for content retrieval, ensuring up-to-date and engaging blog content."
+        },
+        {
+          "challenge": "Responsive Design Adaptation",
+          "challengeDescription": "Ensuring consistent and functional design across various screen sizes and devices.",
+          "solution": "CSS Media Queries",
+          "solutionDescription": "Applied CSS media queries and responsive design principles to achieve a flexible layout that adapts to different screen sizes."
         }
       ],
       "upcomingFeatures": {
         "heading": "What's next?",
         "features": [
           {
-            "title": "Advanced Analytics Integration",
-            "explanation": "Integrate advanced analytics tools to provide deeper insights into user behavior and application performance."
+            "title": "Enhanced User Interactions",
+            "explanation": "Plan to incorporate advanced user interactions and animations to further engage users."
           }
         ]
       },
-      "contactOrFeedbackSection": "Feel free to reach out for any questions or feedback regarding Offbeat Security."
+      "contactOrFeedbackSection": "We welcome your feedback and inquiries. Feel free to reach out through our contact form."
     },
+
     {
       "title": "Personal Portfolio Website",
       "image": "portfolio1.gif",
