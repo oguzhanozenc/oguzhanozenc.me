@@ -8,7 +8,7 @@
     "link": "https://maps.app.goo.gl/ms99iWHVgr4UxTvG6",
     "remote": true
   },
-  "about": "I am a Front-End Developer with expertise in HTML, CSS, JavaScript, and React, dedicated to creating impactful and engaging web experiences. My approach blends technical skills with a passion for storytelling, transforming ideas into dynamic applications.",
+  "about": "Front-End Developer skilled in HTML, CSS, JavaScript, and React. I create engaging, user-friendly web applications, focusing on storytelling and innovative design. Dedicated to continuous learning, I thrive in dynamic environments, transforming ideas into user-centric, functional, and aesthetically appealing applications.",
   "skills": [
     {
       "title": "Front-end",
@@ -40,7 +40,7 @@
     "title": "The Frontend Developer Career Path Certification",
     "date": "2023-2024",
     "provider": "https://v2.scrimba.com/the-frontend-developer-career-path-c0j",
-    "description": "Certified in collaboration with Mozilla MDN, covering the latest best practices in modern web development. The program includes comprehensive training in HTML, CSS, JavaScript, React, APIs, Web architecture, Responsive design, UI Design, and Git.",
+    "description": "Certified in collaboration with Mozilla MDN, covering comprehensive training in HTML, CSS, JavaScript, React, APIs, Web architecture, Responsive design, UI Design, and Git.",
     "link": "https://scrimba.com/certificate/uLzBgDcK/gfrontend"
   },
   "socialMedia": [
@@ -72,6 +72,37 @@
   ],
   "workExperience": [
     {
+      "company": "Offbeat Security",
+      "date": "April 2024 - Present",
+      "type": "Remote",
+      "position": "Freelance Front-end Developer",
+      "responsibilities": [
+        "Leading front-end development for a blockchain security web application.",
+        "Developed dynamic, responsive interfaces using React Router, which reduced page load times by 20% and provided a smoother user experience through client-side navigation.",
+        "Customized Netlify (Decap) CMS for content management.",
+        "Adding a blog subscription feature for user engagement.",
+        "Managing the project lifecycle from concept to deployment."
+      ],
+      "achievements": [
+        "Delivered a dynamic web application tailored to blockchain security needs.",
+        "Enhanced user engagement through custom features and efficient content management.",
+        "Successfully launched the application within the projected timeline"
+      ],
+      "technologiesUsed": [
+        "Vite",
+        "Node.js",
+        "React",
+        "React Router",
+        "React Awesome Reveal",
+        "React-Slick",
+        "React Accessible Accordion",
+        "React Markdown",
+        "Netlify (Decap) CMS",
+        "Mailchimp",
+        "Substack"
+      ]
+    },
+    {
       "company": "Homebody - E-commerce Web App",
       "date": "July 2024 - Present",
       "type": "Remote",
@@ -96,37 +127,6 @@
       "status": "In Progress: Landing page completed. Upcoming milestones include product pages, blog integration, e-commerce setup, and final review."
     },
     {
-      "company": "Offbeat Security",
-      "date": "April 2024 - Present",
-      "type": "Remote",
-      "position": "Freelance Front-end Developer",
-      "responsibilities": [
-        "Leading front-end development for a blockchain security web application.",
-        "Creating dynamic, responsive interfaces with React and integrating React Router.",
-        "Incorporating animations using react-awesome-reveal and implementing a responsive slider with react-slick.",
-        "Customizing Netlify (Decap) CMS for content management.",
-        "Adding a blog subscription feature for user engagement.",
-        "Managing the project lifecycle from concept to deployment."
-      ],
-      "achievements": [
-        "Delivered a dynamic web application tailored to blockchain security needs.",
-        "Enhanced user engagement through custom features and efficient content management."
-      ],
-      "technologiesUsed": [
-        "Vite",
-        "Node.js",
-        "React",
-        "React Router",
-        "React Awesome Reveal",
-        "React-Slick",
-        "React Accessible Accordion",
-        "React Markdown",
-        "Netlify (Decap) CMS",
-        "Mailchimp",
-        "Substack"
-      ]
-    },
-    {
       "company": "Beko Corporate",
       "date": "2021 - 2023",
       "type": "Full-time",
@@ -144,6 +144,7 @@
     {
       "institution": "Anadolu University",
       "degree": "Bachelor's Degree in Management Information Systems",
+      "relevantCourses": "Internet and Web Programming, User Experience Design, Information Technologies, Project Management",
       "date": "2023 - 2026"
     },
     {
@@ -156,8 +157,8 @@
     {
       "name": "Homebody - in development",
       "link": "https://homebodyapp.netlify.app/",
-      "description": "Developing a comprehensive, responsive website for a retro/arcade-themed e-commerce business.",
-      "role": "Lead Frontend Developer",
+      "description": "A responsive e-commerce platform for a retro-themed t-shirt business, featuring a blog and subscription features to enhance customer engagement.",
+      "role": "Lead Front-end Developer",
       "technologiesUsed": [
         "Vite",
         "React",
@@ -169,16 +170,23 @@
     {
       "name": "Offbeat Security",
       "link": "https://offbeatsecurity.xyz/",
-      "description": "A single-page application for a blockchain security business, featuring dynamic interfaces and custom features.",
-      "role": "Lead Frontend Developer",
+      "description": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features.",
+      "role": "Lead Front-end Developer",
       "technologiesUsed": ["Vite", "React", "Node.js", "Netlify (Decap) CMS"]
     },
     {
       "name": "Personal Portfolio Website",
       "link": "https://oguzhanozenc.me/",
-      "description": "A creative collaboration platform combining video conferencing and HD media streaming.",
-      "role": "Lead Frontend Developer",
-      "technologiesUsed": ["TypeScript", "React", "Node.js", "GraphQL"]
+      "repository": "https://github.com/oguzhanozenc/oguzhanozenc.me",
+      "description": "A dynamic personal portfolio website that captures my front-end development journey.",
+      "role": "Lead Front-end Developer",
+      "technologiesUsed": [
+        "Vite",
+        "React",
+        "Node.js",
+        "React Router",
+        "JSON Management"
+      ]
     }
   ]
 }

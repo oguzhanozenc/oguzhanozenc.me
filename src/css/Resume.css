@@ -192,6 +192,13 @@
   text-align: justify;
 }
 
+#courses {
+  font-size: 0.7rem;
+  font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
+    Menlo, Consolas, monospace;
+  color: #666;
+}
+
 .experience ul,
 .project ul {
   display: flex;
@@ -276,7 +283,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
   padding: 0.5rem;

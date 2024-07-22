@@ -91,7 +91,7 @@ export default function Resume() {
         </div>
       </div>
       <div className="resume-about">
-        <h2 className="resume-sectiontitle">About</h2>
+        <h2 className="resume-sectiontitle">Summary</h2>
         <p>{about}</p>
       </div>
       <div className="resume-skills">
@@ -152,6 +152,9 @@ export default function Resume() {
               <p>{edu.date}</p>
             </div>
             <p>{edu.degree}</p>
+            {edu.relevantCourses && (
+              <p id="courses">Relevant Courses: {edu.relevantCourses}</p>
+            )}
           </div>
         ))}
       </div>{" "}
@@ -190,7 +193,7 @@ export default function Resume() {
           {projects.map((project, index) => (
             <div key={index} className="project">
               <div className="project-info">
-                <p>
+                <div>
                   <a
                     href={project.link}
                     target="_blank"
@@ -199,7 +202,18 @@ export default function Resume() {
                   >
                     {project.name} <HiOutlineExternalLink />
                   </a>
-                </p>
+                </div>{" "}
+                {project.repository && (
+                  <div>
+                    <a
+                      href={project.repository}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub />
+                    </a>
+                  </div>
+                )}
               </div>
               <p>{project.description}</p>
 
