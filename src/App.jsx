@@ -10,78 +10,95 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume";
 import ScrollToSection from "./components/ScrollToSection";
+import { useEffect } from "react";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToSection />
+      <BodyClass />
       <div className="app-container">
         <div className="navbar-wrapper">
-          <Navbar />
+          <ConditionalNavbar />
         </div>
-        <main className="main-content">
-          <AnimatePresence mode="wait">
-            <Routes>
-              <Route
-                path="/"
-                element={
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="main-content">
                   <AnimateContent>
                     <Header />
                   </AnimateContent>
-                }
-              />
-              <Route
-                path="/about"
-                element={
+                  <ConditionalFooter />
+                </div>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <div className="main-content">
                   <AnimateContent>
                     <About />
                   </AnimateContent>
-                }
-              />
-              <Route
-                path="/journey"
-                element={
+                  <ConditionalFooter />
+                </div>
+              }
+            />
+            <Route
+              path="/journey"
+              element={
+                <div className="main-content">
                   <AnimateContent>
                     <Journey />
                   </AnimateContent>
-                }
-              />
-              <Route
-                path="/contact"
-                element={
+                  <ConditionalFooter />
+                </div>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <div className="main-content">
                   <AnimateContent>
                     <Contact />
                   </AnimateContent>
-                }
-              />
-              <Route
-                path="/projects"
-                element={
+                  <ConditionalFooter />
+                </div>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <div className="main-content">
                   <AnimateContent>
                     <Projects />
                   </AnimateContent>
-                }
-              />
-              <Route
-                path="/projects/:projectIndex"
-                element={
+                  <ConditionalFooter />
+                </div>
+              }
+            />
+            <Route
+              path="/projects/:projectIndex"
+              element={
+                <div className="main-content">
                   <AnimateContent>
                     <ProjectPage />
                   </AnimateContent>
-                }
-              />
-              <Route
-                path="/resume"
-                element={
-                  <AnimateContent>
-                    <Resume />
-                  </AnimateContent>
-                }
-              />
-            </Routes>
-          </AnimatePresence>
-          <ConditionalFooter />
-        </main>
+                  <ConditionalFooter />
+                </div>
+              }
+            />
+            <Route
+              path="/resume"
+              element={
+                <AnimateContent>
+                  <Resume />
+                </AnimateContent>
+              }
+            />
+          </Routes>
+        </AnimatePresence>
       </div>
     </BrowserRouter>
   );
@@ -105,6 +122,25 @@ const AnimateContent = ({ children }) => {
 const ConditionalFooter = () => {
   const location = useLocation();
   return location.pathname !== "/resume" ? <Footer /> : null;
+};
+
+const ConditionalNavbar = () => {
+  const location = useLocation();
+  return location.pathname !== "/resume" ? <Navbar /> : null;
+};
+
+const BodyClass = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/resume") {
+      document.body.classList.add("resume-body");
+    } else {
+      document.body.classList.remove("resume-body");
+    }
+  }, [location.pathname]);
+
+  return null;
 };
 
 export default App;
