@@ -8,7 +8,7 @@
     "link": "https://maps.app.goo.gl/ms99iWHVgr4UxTvG6",
     "remote": true
   },
-  "about": "I am a Front-End Developer with a strong foundation in HTML, CSS, JavaScript, and React. I am passionate about participating in impactful projects that tell stories. Software development allows me to turn ideas into reality, and I find the journey from concept to application incredibly rewarding.",
+  "about": "I am a Front-End Developer with expertise in HTML, CSS, JavaScript, and React, dedicated to creating impactful and engaging web experiences. My approach blends technical skills with a passion for storytelling, transforming ideas into dynamic applications.",
   "skills": [
     {
       "title": "Front-end",
@@ -23,7 +23,7 @@
       "items": [
         "Responsive Design",
         "Interactive Design",
-        "UI/UX understanding",
+        "UI/UX Understanding",
         "Figma"
       ]
     },
@@ -36,16 +36,22 @@
       ]
     }
   ],
+  "certification": {
+    "title": "Front-End Developer Certification",
+    "provider": "Scrimba",
+    "description": "Certified in collaboration with Mozilla MDN, covering the latest best practices in modern web development. The program includes comprehensive training in HTML, CSS, JavaScript, React, APIs, Web architecture, Responsive design, UI Design, and Git.",
+    "link": "https://scrimba.com/certificate"
+  },
   "socialMedia": [
     {
-      "title": "email",
+      "title": "Email",
       "shorturl": "oguzhanozenc10@gmail.com",
-      "url": "oguzhanozenc10@gmail.com"
+      "url": "mailto:oguzhanozenc10@gmail.com"
     },
     {
-      "title": "phone",
-      "shorturl": "+123456789",
-      "url": "+123456789"
+      "title": "Phone",
+      "shorturl": "+905398851436",
+      "url": "tel:+905398851436"
     },
     {
       "title": "GitHub",
@@ -65,17 +71,45 @@
   ],
   "workExperience": [
     {
+      "company": "Homebody - E-commerce Web App",
+      "date": "July 2024 - Present",
+      "type": "Remote",
+      "position": "Freelance Front-end Developer",
+      "responsibilities": [
+        "Developing a responsive, retro-themed e-commerce website for a t-shirt business.",
+        "Designing and implementing a visually engaging landing page.",
+        "Creating product pages for apparel and accessories to enhance navigation.",
+        "Integrating a blog section using Netlify CMS for content management.",
+        "Setting up Shopify for e-commerce functionality, including custom front-end development.",
+        "Preparing for final testing and optimization to ensure a launch-ready website."
+      ],
+      "technologiesUsed": [
+        "Vite",
+        "Node.js",
+        "React",
+        "React Router",
+        "Shopify Backend",
+        "Netlify (Decap) CMS",
+        "Mailchimp"
+      ],
+      "status": "In Progress: Landing page completed. Upcoming milestones include product pages, blog integration, e-commerce setup, and final review."
+    },
+    {
       "company": "Offbeat Security",
       "date": "April 2024 - Present",
       "type": "Remote",
       "position": "Freelance Front-end Developer",
       "responsibilities": [
-        "Leading front-end development for Offbeat Security, a single-page web application focused on blockchain security business.",
-        "Developing dynamic, responsive, and user-friendly interfaces with React, using media queries, CSS, and atomic design principles, and integrating React Router for seamless navigation.",
-        "Incorporated animation effects using react-awesome-reveal and creating a responsive slider with react-slick.",
-        "Customized Netlify (Decap) CMS for efficient content management and deployment.",
-        "Added a blog subscription feature to facilitate user engagement and content updates.",
-        "Managing the project lifecycle from concept to deployment, ensuring timely delivery and achieving 100% client satisfaction."
+        "Leading front-end development for a blockchain security web application.",
+        "Creating dynamic, responsive interfaces with React and integrating React Router.",
+        "Incorporating animations using react-awesome-reveal and implementing a responsive slider with react-slick.",
+        "Customizing Netlify (Decap) CMS for content management.",
+        "Adding a blog subscription feature for user engagement.",
+        "Managing the project lifecycle from concept to deployment."
+      ],
+      "achievements": [
+        "Delivered a dynamic web application tailored to blockchain security needs.",
+        "Enhanced user engagement through custom features and efficient content management."
       ],
       "technologiesUsed": [
         "Vite",
@@ -97,10 +131,10 @@
       "type": "Full-time",
       "position": "Research and Development Engineer",
       "responsibilities": [
-        "Utilized agile project management to drive results as a Technology Developer contributing to sustainable product development.",
-        "Researched and adopted technologies, analyzed market trends, and developed technology roadmaps aligned with innovation and sustainability goals.",
-        "Responsible for academic writing, preparation of patent applications, technical reporting, and presenting to internal and external stakeholders.",
-        "Collaborated with national and international partners to ensure projects aligned with industry standards and sustainability initiatives."
+        "Utilized agile methodologies for sustainable product development.",
+        "Researched and adopted new technologies, analyzed market trends, and developed technology roadmaps.",
+        "Prepared academic writings, patent applications, and technical reports.",
+        "Collaborated with partners to ensure projects met industry standards and sustainability goals."
       ],
       "technologiesUsed": []
     }
@@ -119,28 +153,28 @@
   ],
   "projects": [
     {
-      "name": "Offbeat Security",
-      "description": "A single page application for a blockchain security business aiming to partner with complex blockchain system builders providing security solutions.",
+      "name": "Homebody",
+      "description": "Developing a comprehensive, responsive website for a retro/arcade-themed e-commerce business.",
       "role": "Lead Frontend Developer",
-      "technologiesUsed": ["Vite", "React", "Node.js", "Decap CMS"]
+      "technologiesUsed": [
+        "Vite",
+        "React",
+        "Node.js",
+        "Shopify Backend",
+        "Netlify (Decap) CMS"
+      ]
+    },
+    {
+      "name": "Offbeat Security",
+      "description": "A single-page application for a blockchain security business, featuring dynamic interfaces and custom features.",
+      "role": "Lead Frontend Developer",
+      "technologiesUsed": ["Vite", "React", "Node.js", "Netlify (Decap) CMS"]
     },
     {
       "name": "Personal Portfolio Website",
-      "description": "Creative collaboration platform that combines video conferencing and HD media streaming.",
+      "description": "A creative collaboration platform combining video conferencing and HD media streaming.",
       "role": "Lead Frontend Developer",
       "technologiesUsed": ["TypeScript", "React", "Node.js", "GraphQL"]
-    },
-    {
-      "name": "#VanLife",
-      "description": "#VanLife app is a web application based on the React Router that will allow users to rent vans for roadtrips.",
-      "role": "Lead Frontend Developer",
-      "technologiesUsed": [
-        "React",
-        "React Router",
-        "Vite",
-        "Firebase (Database, File Storage)",
-        "Vanilla CSS"
-      ]
     }
   ]
 }

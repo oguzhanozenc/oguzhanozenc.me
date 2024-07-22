@@ -17,6 +17,7 @@ export default function Resume() {
     workExperience,
     education,
     projects,
+    certification,
   } = resumeData;
 
   const renderSocialIcon = (title) => {
@@ -42,18 +43,18 @@ export default function Resume() {
     <section className="resume-section">
       <div className="resume-introsection">
         <div className="intro-info">
-          <h1>{name}</h1>
-          <p>{title}</p>
-          <p className="location">
+          <h1 className="resume-name">{name}</h1>
+          <p className="resume-title">{title}</p>
+          <span className="location">
             <a href={location.link} target="_blank" rel="noopener noreferrer">
               <FaMapPin /> {location.city}, {location.country}{" "}
               {location.remote && (
                 <span className="opentoremote">
-                  - open to remote work worldwide.
+                  - Open to remote work worldwide.
                 </span>
               )}
             </a>
-          </p>{" "}
+          </span>
           <div className="resume-contact">
             <ul>
               {socialMedia.map((social, idx) => (
@@ -61,7 +62,7 @@ export default function Resume() {
                   <a
                     href={
                       social.title === "email"
-                        ? `mailto:${social.url}`
+                        ? `mailto:${social.shorturl}`
                         : social.url
                     }
                     target="_blank"
@@ -73,12 +74,12 @@ export default function Resume() {
               ))}
             </ul>
           </div>
-        </div>{" "}
-        <div className="profilephoto">
-          <img src={photo} alt="" />
         </div>
-      </div>{" "}
-      <div className="resume-introparagraph">
+        <div className="profilephoto">
+          <img src={photo} alt={`${name}'s photo`} />
+        </div>
+      </div>
+      <div className="resume-about">
         <h2 className="resume-sectiontitle">About</h2>
         <p>{about}</p>
       </div>
@@ -86,10 +87,10 @@ export default function Resume() {
         <h2 className="resume-sectiontitle">Skills</h2>
         {skills.map((skillCategory, index) => (
           <div key={index} className="resume-skill">
-            <p className="skillname">{skillCategory.title}: </p>
+            <p className="skillname">{skillCategory.title}:</p>
             <ul>
               {skillCategory.items.map((skill, idx) => (
-                <li key={idx}>{skill},</li>
+                <li key={idx}>{skill}, </li>
               ))}
             </ul>
           </div>
@@ -98,47 +99,86 @@ export default function Resume() {
       <div className="resume-workexperience">
         <h2 className="resume-sectiontitle">Work Experience</h2>
         {workExperience.map((experience, index) => (
-          <div key={index}>
-            <h3>
-              {experience.company} <span>{experience.type}</span>
+          <div key={index} className="experience">
+            <div className="experience-info">
+              <p id="project-name">
+                {experience.company}{" "}
+                <span className="worktype">{experience.type}</span>{" "}
+              </p>{" "}
               <p>{experience.date}</p>
-            </h3>
-            <h4>{experience.position}</h4>
-            {experience.responsibilities.map((responsibility, idx) => (
-              <p key={idx}>{responsibility}</p>
-            ))}
-            <ul>
-              {experience.technologiesUsed.map((tech, idx) => (
-                <li key={idx}>{tech}</li>
+            </div>
+            <div className="experience-details">
+              <p>{experience.position}</p>
+              {experience.responsibilities.map((responsibility, idx) => (
+                <p key={idx}>- {responsibility}</p>
               ))}
-            </ul>
+              {experience.technologiesUsed.length > 0 && (
+                <ul>
+                  {experience.technologiesUsed.map((tech, idx) => (
+                    <li key={idx} className="tech">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {experience.achievements &&
+                experience.achievements.length > 0 && (
+                  <p>
+                    <strong>Achievements:</strong>{" "}
+                    {experience.achievements.join(", ")}
+                  </p>
+                )}
+            </div>
           </div>
         ))}
       </div>
       <div className="resume-education">
         <h2 className="resume-sectiontitle">Education</h2>
         {education.map((edu, index) => (
-          <div key={index}>
-            <h3>{edu.degree}</h3>
-            <p>{edu.institution}</p>
-            <p>{edu.date}</p>
+          <div key={index} className="education">
+            <div className="edu-details">
+              <p id="edu-institution">{edu.institution}</p>
+              <p>{edu.date}</p>
+            </div>
+            <p>{edu.degree}</p>
           </div>
         ))}
+      </div>{" "}
+      <div className="resume-certification">
+        <h2 className="resume-sectiontitle">Certification</h2>
+        <p>
+          <strong>{certification.title}</strong> from {certification.provider}.{" "}
+          {certification.description}{" "}
+          <a
+            href={certification.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Certification
+          </a>
+        </p>
       </div>
-      <div className="resume-projects">
-        <h2 className="resume-sectiontitle">Projects</h2>
-        {projects.map((project, index) => (
-          <div key={index}>
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-            <p>Role: {project.role}</p>
-            <ul>
-              {project.technologiesUsed.map((tech, idx) => (
-                <li key={idx}>{tech}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="resume-projectssection">
+        <h2 className="resume-sectiontitle">Projects</h2>{" "}
+        <div className="resume-projects">
+          {projects.map((project, index) => (
+            <div key={index} className="project">
+              <p id="project-name">{project.name}</p>
+              <p>{project.description}</p>
+
+              {project.technologiesUsed.length > 0 && (
+                <ul>
+                  <li className="project-tech">{project.role}</li>
+                  {project.technologiesUsed.map((tech, idx) => (
+                    <li key={idx} className="project-tech">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}{" "}
+        </div>
       </div>
     </section>
   );
