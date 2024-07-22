@@ -72,6 +72,30 @@
   ],
   "workExperience": [
     {
+      "company": "Homebody - E-commerce Web App",
+      "date": "July 2024 - Present",
+      "type": "Remote",
+      "position": "Freelance Front-end Developer",
+      "responsibilities": [
+        "Developing a responsive, retro-themed e-commerce website for a t-shirt business.",
+        "Designing and implementing a visually engaging landing page.",
+        "Creating product pages for apparel and accessories to enhance navigation.",
+        "Integrating a blog section using Netlify CMS for content management.",
+        "Setting up Shopify for e-commerce functionality, including custom front-end development.",
+        "Preparing for final testing and optimization to ensure a launch-ready website."
+      ],
+      "technologiesUsed": [
+        "Vite",
+        "Node.js",
+        "React",
+        "React Router",
+        "Shopify Backend",
+        "Netlify (Decap) CMS",
+        "Mailchimp"
+      ],
+      "status": "In Progress: Landing page completed. Upcoming milestones include product pages, blog integration, e-commerce setup, and final review."
+    },
+    {
       "company": "Offbeat Security",
       "date": "April 2024 - Present",
       "type": "Remote",
@@ -102,30 +126,7 @@
         "Substack"
       ]
     },
-    {
-      "company": "Homebody - E-commerce Web App",
-      "date": "July 2024 - Present",
-      "type": "Remote",
-      "position": "Freelance Front-end Developer",
-      "responsibilities": [
-        "Developing a responsive, retro-themed e-commerce website for a t-shirt business.",
-        "Designing and implementing a visually engaging landing page.",
-        "Creating product pages for apparel and accessories to enhance navigation.",
-        "Integrating a blog section using Netlify CMS for content management.",
-        "Setting up Shopify for e-commerce functionality, including custom front-end development.",
-        "Preparing for final testing and optimization to ensure a launch-ready website."
-      ],
-      "technologiesUsed": [
-        "Vite",
-        "Node.js",
-        "React",
-        "React Router",
-        "Shopify Backend",
-        "Netlify (Decap) CMS",
-        "Mailchimp"
-      ],
-      "status": "In Progress: Landing page completed. Upcoming milestones include product pages, blog integration, e-commerce setup, and final review."
-    },
+
     {
       "company": "Beko Corporate",
       "date": "2021 - 2023",
@@ -155,19 +156,6 @@
   ],
   "projects": [
     {
-      "name": "Homebody - in development",
-      "link": "https://homebodyapp.netlify.app/",
-      "description": "A responsive e-commerce platform for a retro-themed t-shirt business, featuring a blog and subscription features to enhance customer engagement.",
-      "role": "Lead Front-end Developer",
-      "technologiesUsed": [
-        "Vite",
-        "React",
-        "Node.js",
-        "Shopify Backend",
-        "Netlify (Decap) CMS"
-      ]
-    },
-    {
       "name": "Offbeat Security",
       "link": "https://offbeatsecurity.xyz/",
       "description": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features.",
@@ -186,6 +174,19 @@
         "Node.js",
         "React Router",
         "JSON Management"
+      ]
+    },
+    {
+      "name": "Homebody - in development",
+      "link": "https://homebodyapp.netlify.app/",
+      "description": "A responsive e-commerce platform for a retro-themed t-shirt business, featuring a blog and subscription features to enhance customer engagement.",
+      "role": "Lead Front-end Developer",
+      "technologiesUsed": [
+        "Vite",
+        "React",
+        "Node.js",
+        "Shopify Backend",
+        "Netlify (Decap) CMS"
       ]
     }
   ]
