@@ -4,6 +4,7 @@ import "../css/Resume.css";
 import { FaGithub, FaLinkedin, FaMapPin } from "react-icons/fa";
 import { RiTwitterLine } from "react-icons/ri";
 import { LuGlobe, LuMail, LuPhone } from "react-icons/lu";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 export default function Resume() {
   const {
@@ -32,7 +33,7 @@ export default function Resume() {
         return <FaGithub />;
       case "Twitter":
         return <RiTwitterLine />;
-      case "Website":
+      case "portfolio":
         return <LuGlobe />;
       default:
         return null;
@@ -63,12 +64,22 @@ export default function Resume() {
                     href={
                       social.title === "email"
                         ? `mailto:${social.shorturl}`
+                        : social.title === "phone"
+                        ? `tel:${social.shorturl}`
                         : social.url
                     }
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {renderSocialIcon(social.title)} {social.shorturl}
+                    {social.title === "email" ||
+                    social.title === "phone" ||
+                    social.title === "portfolio" ? (
+                      <>
+                        {renderSocialIcon(social.title)} {social.shorturl}
+                      </>
+                    ) : (
+                      renderSocialIcon(social.title)
+                    )}
                   </a>
                 </li>
               ))}
@@ -101,14 +112,14 @@ export default function Resume() {
         {workExperience.map((experience, index) => (
           <div key={index} className="experience">
             <div className="experience-info">
-              <p id="project-name">
+              <p id="experience-name">
                 {experience.company}{" "}
                 <span className="worktype">{experience.type}</span>{" "}
               </p>{" "}
               <p>{experience.date}</p>
             </div>
             <div className="experience-details">
-              <p>{experience.position}</p>
+              <p className="experience-role">{experience.position}</p>
               {experience.responsibilities.map((responsibility, idx) => (
                 <p key={idx}>- {responsibility}</p>
               ))}
@@ -125,7 +136,7 @@ export default function Resume() {
                 experience.achievements.length > 0 && (
                   <p>
                     <strong>Achievements:</strong>{" "}
-                    {experience.achievements.join(", ")}
+                    {experience.achievements.join(` `)}
                   </p>
                 )}
             </div>
@@ -146,16 +157,31 @@ export default function Resume() {
       </div>{" "}
       <div className="resume-certification">
         <h2 className="resume-sectiontitle">Certification</h2>
-        <p>
-          <strong>{certification.title}</strong> from {certification.provider}.{" "}
+        <div className="certification-info">
+          <p>
+            <strong>
+              {" "}
+              {certification.title} -{" "}
+              <a
+                href={certification.provider}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Scrimba
+              </a>{" "}
+            </strong>
+          </p>
+          <p>{certification.date}</p>
+        </div>
+        <p className="certificate-desc">
           {certification.description}{" "}
           <a
             href={certification.link}
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Certification
-          </a>
+            View <HiOutlineExternalLink />
+          </a>{" "}
         </p>
       </div>
       <div className="resume-projectssection">
@@ -163,7 +189,18 @@ export default function Resume() {
         <div className="resume-projects">
           {projects.map((project, index) => (
             <div key={index} className="project">
-              <p id="project-name">{project.name}</p>
+              <div className="project-info">
+                <p>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    id="project-name"
+                  >
+                    {project.name} <HiOutlineExternalLink />
+                  </a>
+                </p>
+              </div>
               <p>{project.description}</p>
 
               {project.technologiesUsed.length > 0 && (

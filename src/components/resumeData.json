@@ -37,26 +37,27 @@
     }
   ],
   "certification": {
-    "title": "Front-End Developer Certification",
-    "provider": "Scrimba",
+    "title": "The Frontend Developer Career Path Certification",
+    "date": "2023-2024",
+    "provider": "https://v2.scrimba.com/the-frontend-developer-career-path-c0j",
     "description": "Certified in collaboration with Mozilla MDN, covering the latest best practices in modern web development. The program includes comprehensive training in HTML, CSS, JavaScript, React, APIs, Web architecture, Responsive design, UI Design, and Git.",
-    "link": "https://scrimba.com/certificate"
+    "link": "https://scrimba.com/certificate/uLzBgDcK/gfrontend"
   },
   "socialMedia": [
     {
-      "title": "Email",
+      "title": "email",
       "shorturl": "oguzhanozenc10@gmail.com",
       "url": "mailto:oguzhanozenc10@gmail.com"
     },
     {
-      "title": "Phone",
+      "title": "phone",
       "shorturl": "+905398851436",
       "url": "tel:+905398851436"
     },
     {
-      "title": "GitHub",
-      "shorturl": "/oguzhanozenc",
-      "url": "https://github.com/oguzhanozenc"
+      "title": "portfolio",
+      "shorturl": "oguzhanozenc.me",
+      "url": "https://oguzhanozenc.me/"
     },
     {
       "title": "LinkedIn",
@@ -64,9 +65,9 @@
       "url": "https://www.linkedin.com/in/oguzhanozenc/"
     },
     {
-      "title": "Website",
-      "shorturl": "oguzhanozenc.me",
-      "url": "https://oguzhanozenc.me/"
+      "title": "GitHub",
+      "shorturl": "/oguzhanozenc",
+      "url": "https://github.com/oguzhanozenc"
     }
   ],
   "workExperience": [
@@ -153,7 +154,8 @@
   ],
   "projects": [
     {
-      "name": "Homebody",
+      "name": "Homebody - in development",
+      "link": "https://homebodyapp.netlify.app/",
       "description": "Developing a comprehensive, responsive website for a retro/arcade-themed e-commerce business.",
       "role": "Lead Frontend Developer",
       "technologiesUsed": [
@@ -166,12 +168,14 @@
     },
     {
       "name": "Offbeat Security",
+      "link": "https://offbeatsecurity.xyz/",
       "description": "A single-page application for a blockchain security business, featuring dynamic interfaces and custom features.",
       "role": "Lead Frontend Developer",
       "technologiesUsed": ["Vite", "React", "Node.js", "Netlify (Decap) CMS"]
     },
     {
       "name": "Personal Portfolio Website",
+      "link": "https://oguzhanozenc.me/",
       "description": "A creative collaboration platform combining video conferencing and HD media streaming.",
       "role": "Lead Frontend Developer",
       "technologiesUsed": ["TypeScript", "React", "Node.js", "GraphQL"]

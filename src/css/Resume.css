@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 .resume-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   padding: 2rem;
   color: #373737;
   font-family: "Inter", sans-serif;
+  margin: 0 auto;
+}
+
+.resume-section a:hover {
+  text-decoration: underline;
+  transition: all 300ms ease;
 }
 
 .resume-introsection {
@@ -11,7 +21,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 .intro-info {
@@ -59,23 +68,12 @@
 
 .resume-contact ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   padding: 0;
   list-style: none;
-  margin: 0.25rem 0;
-}
-
-.resume-contact ul li {
-  margin-right: 0.5rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.25rem;
-  transition: all 300ms ease;
-}
-
-.resume-contact ul li:hover {
-  background-color: #edebeb;
-  color: #000;
+  gap: 0.25rem;
 }
 
 .resume-contact ul li a {
@@ -86,23 +84,32 @@
   padding: 0.5rem;
   text-decoration: none;
   color: #373737;
+  margin-right: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  transition: all 300ms ease;
 }
 
-.resume-contact ul li a svg {
-  margin-right: 0.25rem;
+.resume-contact ul li a:hover {
+  background-color: #edebeb;
+  color: #000;
 }
 
 .resume-sectiontitle {
   font-size: 1.25rem;
   padding: 0;
   margin: 1.5rem 0 0.5rem 0;
+  color: #000;
 }
 
 .resume-about p {
-  line-height: 1.875;
+  line-height: 1.5;
   padding: 0;
   margin: 0;
   text-align: justify;
+  font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
+    Menlo, Consolas, monospace;
+  font-size: 0.9rem;
 }
 
 .resume-skills {
@@ -115,7 +122,11 @@
 .resume-skill {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 0 0.25rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
   align-items: center;
   font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
     Menlo, Consolas, monospace;
@@ -141,23 +152,25 @@
   font-size: 0.875rem;
 }
 
-.resume-certification {
-  margin-top: 2rem;
-}
-
 .resume-certification a {
-  color: #007bff;
+  color: black;
+  background: #e5e7eb;
   text-decoration: none;
+  font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
+    Menlo, Consolas, monospace;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
 }
 
 .resume-certification a:hover {
   text-decoration: underline;
 }
 
-.resume-workexperience,
-.resume-education,
-.resume-projects {
-  margin-top: 2rem;
+.certificate-desc {
+  font-size: 0.9rem;
+  font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
+    Menlo, Consolas, monospace;
+  text-align: justify;
 }
 
 .experience h3,
@@ -169,7 +182,8 @@
 
 .experience-details p,
 .education p,
-.project p {
+.project p,
+.edu-details p {
   margin: 0.5rem 0;
   font-size: 0.9rem;
   font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
@@ -189,6 +203,11 @@
 .experience ul li,
 .project ul li {
   font-size: 0.85rem;
+}
+
+.experience-role {
+  color: #030712;
+  font-weight: 600;
 }
 
 .tech {
@@ -211,12 +230,16 @@
   font-weight: bold;
 }
 
-.experience-info {
+.experience-info,
+.certification-info,
+.project-info {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 0.25rem 0;
+  font-size: 0.9rem;
 }
 
 .experience-info p {
@@ -226,7 +249,6 @@
 
 #edu-institution {
   font-size: 1rem;
-
   font-weight: 600;
 }
 
@@ -269,9 +291,25 @@
     Menlo, Consolas, monospace;
 }
 
-#project-name {
+#project-name,
+#experience-name {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: black;
+  color: #111827;
+  transition: all 300ms ease;
+}
+
+#project-name:hover {
+  background-color: #e5e7eb;
+}
+
+@media screen and (max-width: 600px) {
+  .resume-introsection {
+    flex-wrap: wrap-reverse;
+  }
+
+  .resume-projects {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }

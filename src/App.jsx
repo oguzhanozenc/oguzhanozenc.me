@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -69,7 +69,7 @@ function App() {
                     <ProjectPage />
                   </AnimateContent>
                 }
-              />{" "}
+              />
               <Route
                 path="/resume"
                 element={
@@ -79,24 +79,32 @@ function App() {
                 }
               />
             </Routes>
-          </AnimatePresence>{" "}
-          <Footer />
+          </AnimatePresence>
+          <ConditionalFooter />
         </main>
       </div>
     </BrowserRouter>
   );
 }
 
-const AnimateContent = ({ children }) => (
-  <motion.div
-    key={location.pathname}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    {children}
-  </motion.div>
-);
+const AnimateContent = ({ children }) => {
+  const location = useLocation();
+  return (
+    <motion.div
+      key={location.pathname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const ConditionalFooter = () => {
+  const location = useLocation();
+  return location.pathname !== "/resume" ? <Footer /> : null;
+};
 
 export default App;
