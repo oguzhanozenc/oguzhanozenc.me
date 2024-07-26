@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import projectsData from "./projectsData.json";
 import "../css/RecentProjects.css";
 
-export default function Projects() {
+export default function RecentProjects() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   function handleMouseEnter(index) {
@@ -36,9 +36,14 @@ export default function Projects() {
                 </div>
                 <div className="recent-project-img-container">
                   <img
-                    src={project.image}
+                    src={project.featuredimg}
                     alt={project.title}
                     className="recent-project-img"
+                  />
+                  <img
+                    src={project.featuredimgMobile}
+                    alt={`${project.title} mobile`}
+                    className="recent-project-img-mobile"
                   />
                 </div>
               </div>

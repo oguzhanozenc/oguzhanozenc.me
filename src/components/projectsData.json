@@ -5,7 +5,8 @@
       "featuredText": "A retro / arcade themed shopping experience platform focused on apparel and accessories.",
       "description": "Homebody is a shopping experience platform that combines a modern, dynamic user interface with intuitive navigation and responsive design. It includes features for managing a shopping basket, a streamlined checkout process, and a visually appealing presentation of products and blog posts.",
       "projectLink": "./Project_Homebody",
-      "image": "homebody1.gif",
+      "featuredimg": "homebody-macbook.png",
+      "featuredimgMobile": "homebody-mobile.png",
       "techStack": [
         "React",
         "React Router",
@@ -112,7 +113,8 @@
       "featuredText": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features.",
       "description": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features such as a tailor-made appealing landing page, integrated blog section, blog subscription, and contact form.",
       "projectLink": "./Project_OffbeatSecurity",
-      "image": "obsec1.gif",
+      "featuredimg": "offbeat-macbook.png",
+      "featuredimgMobile": "offbeat-mobile.png",
       "techStack": [
         "React",
         "React Router",
@@ -232,12 +234,13 @@
 
     {
       "title": "Personal Portfolio Website",
-      "image": "portfolio1.gif",
       "featuredText": "A dynamic personal portfolio website that showcases and captures my front-end development journey",
       "description": "Conceptualized, designed, and developed a dynamic personal portfolio website that showcases and captures my front-end development journey.",
       "techStack": ["React"],
       "overview": "This site captures my continuous journey in front-end development, serving as a personal hub for easy updates, and showcasing projects and skills. I shape and present my unique path in the dynamic world of front-end development through implementing JSONs. I consider it my digital scrapbook, illustrating the evolution of my skills and knowledge in this ever-changing field.",
       "projectLink": "./Project_First",
+      "featuredimg": "portfolio-macbook.png",
+      "featuredimgMobile": "portfolio-mobile.png",
       "githubLink": "https://github.com/oguzhanozenc/oguzhanozenc.me",
       "demoLink": "https://oguzhanozenc.me/",
       "features": [
@@ -346,12 +349,13 @@
     },
     {
       "title": "Cinemate - Movie Watchlist App",
-      "image": "cinemate2.gif",
       "featuredText": "A web app for movie enthusiasts to explore, track, and manage their favorite movies.",
       "description": "A web app for movie enthusiasts to explore, track, and manage their favorite movies.",
       "techStack": ["HTML5", "CSS3", "JavaScript (ES6+)", "OMDb API"],
       "overview": "Passionate about movies but tired of losing track? Cinemate, a user-friendly web app, is your go-to solution for exploring, tracking, and managing your favorite movies. Search for movies effortlessly, add or remove them from your watchlist, and delve into a curated list of featured movies. Cinemate ensures a seamless experience across different devices, making your movie journey enjoyable and accessible anytime, anywhere. Say goodbye to movie chaos and hello to Cinemate, your personalized movie companion!",
       "projectLink": "./Project_Third",
+      "featuredimg": "cinemate2.gif",
+      "featuredimgMobile": "cinemate-mobile.png",
       "githubLink": "https://github.com/oguzhanozenc/cinemate-movie-watchlist-app",
       "demoLink": "https://cinemate-movie-watchlist-app.netlify.app/",
       "features": [

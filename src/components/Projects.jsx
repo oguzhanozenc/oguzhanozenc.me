@@ -36,11 +36,17 @@ export default function Projects() {
                 <div className="project--description">
                   {project.featuredText}
                 </div>
+
                 <div className="portfolioitem--img">
                   <img
-                    src={project.image}
+                    src={project.featuredimg}
                     alt={project.title}
                     className="project-img"
+                  />
+                  <img
+                    src={project.featuredimgMobile}
+                    alt={`${project.title} mobile`}
+                    className="project-img-mobile"
                   />
                 </div>
               </div>
