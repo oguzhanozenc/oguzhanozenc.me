@@ -15,38 +15,35 @@ export default function Projects() {
   }
 
   return (
-    <section className="container" id="recentprojects">
-      <h2 className="sectiontitle" id="portfolioheading">
-        Projects
-      </h2>
-      <div className="portfolio--container">
+    <section className="recent-projects-container" id="recentprojects">
+      <p className="recent-projects-title">Projects</p>
+      <div className="recent-projects-grid">
         {projectsData.projects.map((project, index) => (
           <Link to={`/projects/${index}`} key={index}>
             <div
-              className={`project--item ${
+              className={`recent-project-item ${
                 hoveredIndex === index ? "hovered" : ""
               }`}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
-              <div className="project--details">
+              <div className="recent-project-details">
                 <div>
-                  <h3 className="portfolio-projecttitle">{project.title}</h3>
+                  <h3 className="recent-project-title">{project.title}</h3>
                 </div>
-                <div className="project--description">
+                <div className="recent-project-description">
                   {project.featuredText}
                 </div>
-
-                <div className="portfolioitem--img">
+                <div className="recent-project-img-container">
                   <img
                     src={project.featuredimg}
                     alt={project.title}
-                    className="project-img"
+                    className="recent-project-img"
                   />
                   <img
                     src={project.featuredimgMobile}
                     alt={`${project.title} mobile`}
-                    className="project-img-mobile"
+                    className="recent-project-img-mobile"
                   />
                 </div>
               </div>

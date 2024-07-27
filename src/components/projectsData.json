@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Homebody",
-      "featuredText": "A retro / arcade themed shopping experience platform focused on apparel and accessories.",
+      "featuredText": "A retro / arcade themed e-commerce platform that combines a modern, dynamic user interface with intuitive navigation and responsive design.",
       "description": "Homebody is a shopping experience platform that combines a modern, dynamic user interface with intuitive navigation and responsive design. It includes features for managing a shopping basket, a streamlined checkout process, and a visually appealing presentation of products and blog posts.",
       "projectLink": "./Project_Homebody",
       "featuredimg": "homebody-macbook.png",
@@ -234,7 +234,7 @@
 
     {
       "title": "Personal Portfolio Website",
-      "featuredText": "A dynamic personal portfolio website that showcases and captures my front-end development journey",
+      "featuredText": "A dynamic personal portfolio website that highlights my front-end development journey, allows for easy updates, and showcases projects and skills.",
       "description": "Conceptualized, designed, and developed a dynamic personal portfolio website that showcases and captures my front-end development journey.",
       "techStack": ["React"],
       "overview": "This site captures my continuous journey in front-end development, serving as a personal hub for easy updates, and showcasing projects and skills. I shape and present my unique path in the dynamic world of front-end development through implementing JSONs. I consider it my digital scrapbook, illustrating the evolution of my skills and knowledge in this ever-changing field.",
