@@ -12,7 +12,7 @@ import { FaGithub, FaTelegram } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 
 const socialMedia = {
-  email: "mailto:oguzhanozenc10@gmail.com",
+  email: "mailto:hello@oguzhanozenc.me",
   github: "https://github.com/oguzhanozenc",
   telegram: "https://t.me/oguzhanozenc",
   twitter: "https://x.com/oguzhanozencdev",

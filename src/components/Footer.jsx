@@ -9,7 +9,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import "../css/Footer.css";
 
 const socialMedia = {
-  mail: "mailto:oguzhanozenc10@gmail.com",
+  mail: "mailto:hello@oguzhanozenc.me",
   github: "https://github.com/oguzhanozenc",
   telegram: "https://t.me/oguzhanozenc",
   twitter: "https://x.com/oguzhanozencdev",

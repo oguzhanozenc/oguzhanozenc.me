@@ -9,7 +9,7 @@ export default function LetsWork() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    const email = "oguzhanozenc10@gmail.com";
+    const email = "hello@oguzhanozenc.me";
     navigator.clipboard
       .writeText(email)
       .then(() => {
