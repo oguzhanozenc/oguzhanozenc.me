@@ -133,6 +133,7 @@ export default function Resume() {
     </div>
   ))}
 </div>
+
       <div className="resume-workexperience">
         <h2 className="resume-sectiontitle">Work Experience</h2>
         {workExperience.map((experience, index) => (
