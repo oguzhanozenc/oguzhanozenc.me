@@ -113,6 +113,17 @@
   font-size: 0.9rem;
 }
 
+.loginInfo {
+  font-family: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono",
+    Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+  padding: 0.25rem;
+  background: #111827cc;
+  color: #fff;
+  border-radius: 0.15rem;
+}
+
 .resume-skills {
   display: flex;
   flex-direction: column;
@@ -208,8 +219,7 @@
   list-style: none;
 }
 
-.experience ul li,
-.project ul li {
+.experience ul li {
   font-size: 0.85rem;
 }
 
