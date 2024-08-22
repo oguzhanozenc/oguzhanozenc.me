@@ -176,7 +176,7 @@
   "projects": [
     {
       "name": "Offbeat Security",
-      "link": "https://offbeatsecurity.xyz/",
+      "link": "https://offbeatsecurity.xyz/demo",
       "description": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features.",
       "role": "Lead Front-end Developer",
       "technologiesUsed": ["Vite", "React", "Node.js", "Netlify (Decap) CMS"]
