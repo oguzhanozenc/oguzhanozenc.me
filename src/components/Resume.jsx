@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/Resume.css";
+import "../styles/Resume.css";
 import { FaGithub, FaLinkedin, FaMapPin } from "react-icons/fa";
 import { RiTwitterLine } from "react-icons/ri";
 import { LuGlobe, LuMail, LuPhone } from "react-icons/lu";
@@ -117,23 +117,19 @@ export default function Resume() {
         <h2 className="resume-sectiontitle">Summary</h2>
         <p>{about}</p>
       </div>
-<div className="resume-skills">
-  <h2 className="resume-sectiontitle">Skills</h2>
-  {skills.map((skillCategory, index) => (
-    <div key={index} className="resume-skill">
-      <p className="skillname">{skillCategory.title}:</p>
-      <ul>
-        {skillCategory.items.map((skill, idx) => (
-          <li key={idx}>
-            {skill}
-            {idx === skillCategory.items.length - 1 ? '.' : ', '}
-          </li>
+      <div className="resume-skills">
+        <h2 className="resume-sectiontitle">Skills</h2>
+        {skills.map((skillCategory, index) => (
+          <div key={index} className="resume-skill">
+            <p className="skillname">{skillCategory.title}:</p>
+            <ul>
+              {skillCategory.items.map((skill, idx) => (
+                <li key={idx}>{skill}, </li>
+              ))}
+            </ul>
+          </div>
         ))}
-      </ul>
-    </div>
-  ))}
-</div>
-
+      </div>
       <div className="resume-workexperience">
         <h2 className="resume-sectiontitle">Work Experience</h2>
         {workExperience.map((experience, index) => (
@@ -243,7 +239,9 @@ export default function Resume() {
                 )}
               </div>
               <p>{project.description}</p>
-
+              {project.loginInfo && (
+                <small className="loginInfo">{project.loginInfo}</small>
+              )}
               {project.technologiesUsed.length > 0 && (
                 <ul>
                   <li className="project-tech">{project.role}</li>
