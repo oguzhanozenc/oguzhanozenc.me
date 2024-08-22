@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Resume.css";
+import "../css/Resume.css";
 import { FaGithub, FaLinkedin, FaMapPin } from "react-icons/fa";
 import { RiTwitterLine } from "react-icons/ri";
 import { LuGlobe, LuMail, LuPhone } from "react-icons/lu";
