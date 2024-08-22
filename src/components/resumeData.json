@@ -8,7 +8,7 @@
     "link": "https://maps.app.goo.gl/ms99iWHVgr4UxTvG6",
     "remote": true
   },
-  "about": "Front-End Developer skilled in HTML, CSS, JavaScript, React, and VueJS. I create engaging, user-friendly web applications with a focus on innovative design. My experience in full-stack development gives me a solid understanding of how frontend and backend systems interact. I’m dedicated to continuous learning and thrive in dynamic environments, transforming ideas into functional and visually appealing applications.",
+  "about": "Front-End Developer skilled in HTML, CSS, JavaScript, React.js, and Vue.js. I create engaging, user-friendly web applications with a focus on innovative design. While my expertise lies in frontend development, I also have experience with backend technologies, giving me a comprehensive understanding of fullstack development. I’m dedicated to continuous learning and thrive in dynamic environments, transforming ideas into functional and visually appealing applications.",
   "skills": [
     {
       "title": "Front-end",
@@ -17,19 +17,19 @@
         "CSS",
         "Bootstrap",
         "JavaScript",
-        "React",
+        "React.js",
         "VueJS",
         "Firebase"
       ]
     },
     {
-      "title": "Back-end",
+      "title": "Additional Skills",
       "items": [
         "Node.js",
         "Express",
         "Firebase Authentication",
         "Firestore",
-        "REST APIs"
+        "RESTful APIs"
       ]
     },
 
@@ -106,7 +106,7 @@
       "technologiesUsed": [
         "Vite",
         "Node.js",
-        "React",
+        "React.js",
         "React Router",
         "Shopify Backend",
         "Netlify (Decap) CMS",
@@ -134,7 +134,7 @@
       "technologiesUsed": [
         "Vite",
         "Node.js",
-        "React",
+        "React.js",
         "React Router",
         "React Awesome Reveal",
         "React-Slick",
@@ -179,7 +179,7 @@
       "link": "https://offbeatsecurity.xyz/demo",
       "description": "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features.",
       "role": "Lead Front-end Developer",
-      "technologiesUsed": ["Vite", "React", "Node.js", "Netlify (Decap) CMS"]
+      "technologiesUsed": ["Vite", "React.js", "Node.js", "Netlify (Decap) CMS"]
     },
     {
       "name": "Homebody - in development",
@@ -188,7 +188,7 @@
       "role": "Lead Front-end Developer",
       "technologiesUsed": [
         "Vite",
-        "React",
+        "React.js",
         "Node.js",
         "Shopify Backend",
         "Netlify (Decap) CMS"
@@ -201,8 +201,8 @@
       "description": "A full-stack configuration management panel project includes user authentication, configuration management, and responsive design.",
       "role": "Full Stack Developer",
       "technologiesUsed": [
-        "VueJS",
-        "NodeJS",
+        "Vue.js",
+        "Node.js",
         "RESTful APIs",
         "Firebase Authentication",
         "Firestore",
