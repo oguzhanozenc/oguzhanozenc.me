@@ -117,19 +117,23 @@ export default function Resume() {
         <h2 className="resume-sectiontitle">Summary</h2>
         <p>{about}</p>
       </div>
-      <div className="resume-skills">
-        <h2 className="resume-sectiontitle">Skills</h2>
-        {skills.map((skillCategory, index) => (
-          <div key={index} className="resume-skill">
-            <p className="skillname">{skillCategory.title}:</p>
-            <ul>
-              {skillCategory.items.map((skill, idx) => (
-                <li key={idx}>{skill}, </li>
-              ))}
-            </ul>
-          </div>
+     <div className="resume-skills">
+  <h2 className="resume-sectiontitle">Skills</h2>
+  {skills.map((skillCategory, index) => (
+    <div key={index} className="resume-skill">
+      <p className="skillname">{skillCategory.title}:</p>
+      <ul>
+        {skillCategory.items.map((skill, idx) => (
+          <li key={idx}>
+            {skill}
+            {idx === skillCategory.items.length - 1 ? "." : ","}
+          </li>
         ))}
-      </div>
+      </ul>
+    </div>
+  ))}
+</div>
+
       <div className="resume-workexperience">
         <h2 className="resume-sectiontitle">Work Experience</h2>
         {workExperience.map((experience, index) => (
