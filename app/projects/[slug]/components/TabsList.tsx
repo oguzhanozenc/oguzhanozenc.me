@@ -5,5 +5,5 @@ type TabsListProps = {
 };
 
 export default function TabsList({ children }: TabsListProps) {
-  return <div className="flex gap-2 mb-4">{children}</div>;
+  return <div className="flex gap-2 mb-4 flex-wrap">{children}</div>;
 }

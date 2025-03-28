@@ -7,8 +7,8 @@ export const projects = [
     description:
       "Homebody is a shopping experience platform that combines a modern, dynamic user interface with intuitive navigation and responsive design. It includes features for managing a shopping basket, a streamlined checkout process, and a visually appealing presentation of products and blog posts.",
     projectLink: "/projects/homebody",
-    featuredimg: "/homebody-macbook.png",
-    featuredimgMobile: "/homebody-mobile.png",
+    featuredimg: "/homebody/homebody-macbook.png",
+    featuredimgMobile: "/homebody/homebody-mobile.png",
     techStack: [
       "React",
       "React Router",
@@ -55,21 +55,21 @@ export const projects = [
         description: [
           "Users are greeted with a modern home page featuring interactive elements and a visually appealing layout.",
         ],
-        screenshot: "/homebody1.gif",
+        screenshot: "/homebody/homebody1.gif",
       },
       {
         title: "Stage 2: Product List",
         description: [
           "A detailed view of products categorized into apparel and accessories with enhanced visuals and user interaction features.",
         ],
-        screenshot: "/homebody2.gif",
+        screenshot: "/homebody/homebody2.gif",
       },
       {
         title: "Stage 3: Order Navbar",
         description: [
           "The order navbar includes clickable items and a toggle button for easy management of the shopping basket.",
         ],
-        screenshot: "/homebody3.gif",
+        screenshot: "/homebody/homebody3.gif",
       },
       {
         title: "Stage 4: Checkout Page",
@@ -83,7 +83,7 @@ export const projects = [
         description: [
           "Displays full blog posts and allows users to subscribe and view the latest updates.",
         ],
-        screenshot: "/homebody5.gif",
+        screenshot: "/homebody/homebody5.gif",
       },
     ],
     challengesAndSolutions: [
@@ -133,8 +133,8 @@ export const projects = [
     description:
       "A blockchain security web application designed to provide users with dynamic, responsive interfaces and enhanced engagement through custom features such as a tailor-made appealing landing page, integrated blog section, blog subscription, and contact form.",
     projectLink: "/projects/offbeat-security",
-    featuredimg: "/offbeat-macbook.png",
-    featuredimgMobile: "/offbeat-mobile.png",
+    featuredimg: "/offbeat-security/offbeat-macbook.png",
+    featuredimgMobile: "/offbeat-security/offbeat-mobile.png",
     techStack: [
       "React",
       "React Router",
@@ -182,35 +182,35 @@ export const projects = [
         description: [
           "Users are welcomed with a tailor-made, cyber security focused homepage featuring a typewriter effect for the slogan. The slogan dynamically updates with each render, making it engaging to follow.",
         ],
-        screenshot: "/obsec1.gif",
+        screenshot: "/offbeat-security/obsec1.gif",
       },
       {
         title: "Stage 2: Enhanced About Section",
         description: [
           "The about section features a semi-transparent background to enhance brand identity. A call-to-action (CTA) button is included to navigate to the contact section.",
         ],
-        screenshot: "/obsec2.gif",
+        screenshot: "/offbeat-security/obsec2.gif",
       },
       {
         title: "Stage 3: Interactive People Section",
         description: [
           "An encryption effect is used for staff names and images to convey a sense of security. Clicking on each person card navigates to their corresponding window for more details, with a back button to return.",
         ],
-        screenshot: "/obsec3.gif",
+        screenshot: "/offbeat-security/obsec3.gif",
       },
       {
         title: "Stage 4: Gradient Foundation Section",
         description: [
           "The foundation section features a cool gradient inspired by brand colors with an accordion look to manage long text.",
         ],
-        screenshot: "/obsec4.gif",
+        screenshot: "/offbeat-security/obsec4.gif",
       },
       {
         title: "Stage 5: Our Approach Section",
         description: [
           "This section, initially crowded with text, uses a multi-window look. Clicking each window shows corresponding tabs with animations. A CTA button navigates to the contact section on the last stage.",
         ],
-        screenshot: "/obsec5.gif",
+        screenshot: "/offbeat-security/obsec5.gif",
       },
       {
         title: "Stage 6: Recent Posts Section",
@@ -218,14 +218,14 @@ export const projects = [
           "The recent posts section features the latest blog posts along with a subscription option. Users can click to explore or go directly to the latest posts. The blog page includes pagination and social media sharing.",
           "Additionally, the business owner can post, edit, or remove blogs through the Netlify CMS. The posts will be dynamically updated from there and displayed on the application.",
         ],
-        screenshot: "/obsec6.gif",
+        screenshot: "/offbeat-security/obsec6.gif",
       },
       {
         title: "Stage 7: Contact Section",
         description: [
           "The contact section includes a 'Book a Call' link and a contact form. Buttons are designed with a pulsating effect to encourage clicking.",
         ],
-        screenshot: "/obsec7.gif",
+        screenshot: "/offbeat-security/obsec7.gif",
       },
     ],
     challengesAndSolutions: [
@@ -275,8 +275,8 @@ export const projects = [
     description:
       "Conceptualized, designed, and developed a dynamic personal portfolio website that showcases and captures my front-end development journey.",
     projectLink: "/projects/portfolio",
-    featuredimg: "/portfolio-macbook.png",
-    featuredimgMobile: "/portfolio-mobile.png",
+    featuredimg: "/portfolio-website/portfolio-macbook.png",
+    featuredimgMobile: "/portfolio-website/portfolio-mobile.png",
     githubLink: "https://github.com/oguzhanozenc/oguzhanozenc.me",
     demoLink: "https://oguzhanozenc.me/",
     techStack: ["React"],
@@ -326,14 +326,14 @@ export const projects = [
           "With this website, my goal is to have a dynamic platform where I can continually update and display what I've learned along the way, kind of like my countless blogs from my childhood.",
           "Users are greeted with a home page that showcases my skills, background, and invites visitors to explore the projects and journey.",
         ],
-        screenshot: "/portfolio1.gif",
+        screenshot: "/portfolio-website/portfolio1.gif",
       },
       {
         title: "Stage 2: User-friendly Navigation",
         description: [
           "Ensured seamless navigation for enhanced user experience providing intuitive and easy-to-use navigation throughout different pages of the website.",
         ],
-        screenshot: "/portfolio2.gif",
+        screenshot: "/portfolio-website/portfolio2.gif",
       },
       {
         title: "Stage 3: Portfolio & Project Pages",
@@ -341,7 +341,7 @@ export const projects = [
           "To demonstrate the latest project and technical skills, a portfolio page was developed. This page showcases various projects with technical details and it enables dynamic content updates.",
           "To enhance user interaction with various projects, two separate buttons have been added—one leading to the main portfolio page and the other to explore additional projects.",
         ],
-        screenshot: "/portfolio3.gif",
+        screenshot: "/portfolio-website/portfolio3.gif",
       },
       {
         title: "Stage 4: More About Me & Journey Pages",
@@ -349,7 +349,7 @@ export const projects = [
           "In these sections, I aim to provide more details about myself. I believe that as human beings, we often seek connections with others.",
           "With these pages, my goal is to share more about my personal life and personality. Additionally, to chronicle my journey, I've created a Journey section that summarizes, captures and highlights both my career and personal updates.",
         ],
-        screenshot: "/portfolio4.gif",
+        screenshot: "/portfolio-website/portfolio4.gif",
       },
     ],
     challengesAndSolutions: [
@@ -403,134 +403,5 @@ export const projects = [
     },
     contactOrFeedbackSection:
       "Feel free to reach out for any questions or feedback regarding my portfolio project. You can contact me at oguzhanozenc10@gmail.com",
-  },
-  {
-    title: "Cinemate - Movie Watchlist App",
-    slug: "cinemate-movie-watchlist-app",
-    featuredText:
-      "A web app for movie enthusiasts to explore, track, and manage their favorite movies.",
-    description:
-      "A web app for movie enthusiasts to explore, track, and manage their favorite movies.",
-    projectLink: "/projects/cinemate",
-    featuredimg: "/cinemate2.gif",
-    featuredimgMobile: "/cinemate-mobile.png",
-    githubLink: "https://github.com/oguzhanozenc/cinemate-movie-watchlist-app",
-    demoLink: "https://cinemate-movie-watchlist-app.netlify.app/",
-    techStack: ["HTML5", "CSS3", "JavaScript (ES6+)", "OMDb API"],
-    overview:
-      "Passionate about movies but tired of losing track? Cinemate, a user-friendly web app, is your go-to solution for exploring, tracking, and managing your favorite movies. Search for movies effortlessly, add or remove them from your watchlist, and delve into a curated list of featured movies. Cinemate ensures a seamless experience across different devices, making your movie journey enjoyable and accessible anytime, anywhere. Say goodbye to movie chaos and hello to Cinemate, your personalized movie companion!",
-    features: [
-      {
-        title: "Movie Search",
-        description:
-          "Users can add movies to their watchlist in two ways: they can add movies from the list of featured movies on the Welcome Page or can directly search for movies using the search bar by providing input.",
-      },
-      {
-        title: "Watchlist Management",
-        description:
-          "Add and remove movies from the watchlist. Movies can be added either from the list of featured movies on the Welcome Page or directly searched using the search bar.",
-      },
-      {
-        title: "Featured Movies",
-        description:
-          "Explore a curated list of featured movies on the Welcome Page. These movies are fetched from the OMDB API with the help of custom IDs and can be dynamically updated if desired (e.g., for commercial purposes).",
-      },
-      {
-        title: "Event Handling",
-        description:
-          "Implement Click Event Listeners for button clicks, enhancing the interactivity of the application.",
-      },
-      {
-        title: "Local Storage",
-        description:
-          "Utilized LocalStorage API for storing and retrieving watchlist data. This ensures that users can access their watchlist even after navigating away from the app.",
-      },
-      {
-        title: "Dynamic Content Update",
-        description:
-          "Implemented Fetch API for dynamically updating content on the page. This allows for real-time updates, ensuring that users stay informed about the latest information.",
-      },
-    ],
-    demoData: [
-      {
-        title: "Stage 1: Welcome Page - Explore Featured Movies",
-        description: [
-          "Users are welcomed to the app and presented with a Welcome Page.",
-          "Featured movies are displayed on this page, fetched from the OMDB API using custom IDs.",
-          "The content can be dynamically updated for commercial purposes if needed.",
-        ],
-        screenshot: "/cinemate1.gif",
-      },
-      {
-        title: "Stage 2: Add Movies to Watchlist",
-        description: [
-          "Users can add movies to their watchlist in two ways: either by selecting from the list of featured movies on the Welcome Page or by directly searching for movies using the provided search bar.",
-          "The app quickly fetches movie information from the API and displays the results.",
-          "Once a user adds a movie to their watchlist, the button under the movie dynamically changes to 'In Your Watchlist'.",
-        ],
-        screenshot: "/cinemate2.gif",
-      },
-      {
-        title: "Stage 3: View and Manage Watchlist",
-        description: [
-          "Users can navigate to the 'My Watchlist' page and on this page, they can see a list of movies they previously added to their watchlist.",
-          "Movies are stored in the local storage, ensuring persistence between sessions.",
-          "Users can manage their watchlist by removing movies if they wish to do so.",
-        ],
-        screenshot: "/cinemate3.gif",
-      },
-    ],
-    challengesAndSolutions: [
-      {
-        challenge: "Handling Static Content",
-        challengeDescription:
-          "Managing static content initially posed challenges, making updates cumbersome.",
-        solution: "Dynamic Content with JSON",
-        solutionDescription:
-          "By incorporating JSON into the app, dynamic content updates became possible. Items could be changed effortlessly within the app using JSON, enhancing flexibility and enabling easy adjustments.",
-      },
-      {
-        challenge: "User Interface and DOM Manipulation",
-        challengeDescription:
-          "Developing a refined user interface presented challenges, especially concerning precise item selection in the Document Object Model (DOM).",
-        solution: "Efficient DOM Interaction with UUIDs",
-        solutionDescription:
-          "To overcome this, we implemented UUIDs (Universally Unique Identifiers). These identifiers streamlined item selection and manipulation within the DOM, improving the overall user interface.",
-      },
-    ],
-    upcomingFeatures: {
-      heading: "What's Next?",
-      features: [
-        {
-          title: "Enhanced Search Filters",
-          explanation:
-            "Refine your movie searches based on genres, release years, and ratings.",
-        },
-        {
-          title: "Personalized Recommendations",
-          explanation:
-            "Leverage AI to suggest movies that match your taste and watchlist.",
-        },
-        {
-          title: "Fun Quiz",
-          explanation:
-            "Get ready for a fun quiz that asks about your favorite movies and recommends similar ones.",
-        },
-        {
-          title: "Community Engagement",
-          explanation:
-            "Dive into the conversation, talk about movies, share reviews, and build watchlists together.",
-        },
-        {
-          title: "Reviews and Voting",
-          explanation:
-            "Have your say with the upcoming feature, allowing you to voice your thoughts and find like-minded folks.",
-        },
-      ],
-    },
-    contactOrFeedbackSection:
-      "Feel free to reach out for any questions or feedback regarding Cinemate. You can contact me at oguzhanozenc10@gmail.com",
-    thankYouMessage:
-      "Thank you for exploring Cinemate - Your Movie Watchlist App!",
   },
 ];

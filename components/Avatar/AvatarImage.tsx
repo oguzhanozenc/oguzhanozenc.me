@@ -8,7 +8,6 @@ type AvatarImageProps = {
   alt: string;
   size?: "small" | "medium" | "large";
   className?: string;
-  hoverRotate?: "rotate-6" | "-rotate-6" | "none";
 };
 
 export default function AvatarImage({
@@ -16,16 +15,12 @@ export default function AvatarImage({
   alt,
   size = "medium",
   className,
-  hoverRotate = "rotate-6",
 }: AvatarImageProps) {
   const wrapperSizes = {
     small: "max-sm:w-[160px] sm:w-32 md:w-36 lg:w-40",
     medium: "max-sm:w-[200px] sm:w-40 md:w-48 lg:w-[280px]",
     large: "max-sm:w-[240px] sm:w-48 md:w-56 lg:w-[320px]",
   };
-
-  const hoverClass =
-    hoverRotate !== "none" ? `hover:${hoverRotate}` : undefined;
 
   return (
     <div
@@ -44,8 +39,7 @@ export default function AvatarImage({
         className={clsx(
           "rounded-full object-cover aspect-square bg-[#f3f3f1]",
           "shadow-[rgba(10,10,10,0.06)_0px_1.2px_1.2px_0px,rgba(10,10,10,0.04)_0px_5px_10px_0px]",
-          "transition-all duration-300 ease-in-out",
-          hoverClass
+          "transition-all duration-300 ease-in-out"
         )}
         priority
       />

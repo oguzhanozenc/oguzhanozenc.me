@@ -15,7 +15,7 @@ export default function ProjectNav({ slug, projects }: ProjectNavProps) {
     projects.length > 1 ? projects[(currentIndex + 1) % projects.length] : null;
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12">
+    <div className="flex flex-wrap flex-row justify-between items-start sm:items-center gap-4 mb-12">
       <Button
         onClick={() =>
           history.length > 1 ? router.back() : router.push("/projects")

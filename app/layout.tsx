@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
       <head>
-        <link rel="icon" type="image/png" href="/logo-white.png" />
+        <link rel="icon" type="image/png" href="/branding/logo.png" />
       </head>
       <body className={isResumePage ? "resume-body" : "default-body"}>
         <div className={isResumePage ? "resume-container" : "app-container"}>

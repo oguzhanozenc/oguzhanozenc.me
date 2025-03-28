@@ -44,9 +44,9 @@ export default function HomePage() {
           <div className="flex flex-row max-sm:flex-col items-center justify-center lg:w-1/2 gap-3 max-sm:my-4">
             <Avatar>
               <AvatarImage
-                src="/me.png"
+                src="/branding/me.png"
                 alt="Oguzhan Ozenc"
-                hoverRotate="rotate-6"
+                className="hover:rotate-6 transition-all duration-300 ease-in-out"
               />
               <AvatarBadge>
                 <GoDotFill className="mr-1" />

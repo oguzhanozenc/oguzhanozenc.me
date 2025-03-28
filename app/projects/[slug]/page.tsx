@@ -32,7 +32,7 @@ export default function ProjectPage() {
   }
 
   return (
-    <section className="px-[2rem] py-[4rem] sm:px-[5%]">
+    <section className=" py-[4rem] sm:px-[5%] max-sm:px-0">
       {/* Navigation */}
       <ProjectNav slug={slug as string} projects={projects} />
 

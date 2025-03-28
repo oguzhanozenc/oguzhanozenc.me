@@ -52,8 +52,9 @@ export default function Contact() {
           <div className="w-full max-w-xl">
             {formSubmitted ? (
               <div className="flex flex-col items-center justify-center text-center gap-4">
-                <p className="text-lg text-gray-700">
-                  Your message has been submitted successfully!
+                <p className="text-lg text-gray-700 font-medium">
+                  Thanks for reaching out! I will get back to you as soon as
+                  possible. 😊
                 </p>
                 <Button
                   variant="secondary"
@@ -123,10 +124,10 @@ export default function Contact() {
           <div className="flex flex-col items-center md:items-start w-full max-w-xs mx-auto md:mx-0">
             <Avatar>
               <AvatarImage
-                src="/contactimg.png"
+                src="/branding/contactimg.png"
                 alt="Contact image"
                 size="medium"
-                hoverRotate="rotate-6"
+                className="hover:rotate-6 transition-all duration-300 ease-in-out"
               />
             </Avatar>
 

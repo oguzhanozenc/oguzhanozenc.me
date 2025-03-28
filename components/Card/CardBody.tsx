@@ -9,7 +9,6 @@ function CardBody({ children }: { children?: React.ReactNode }) {
     large: "text-lg",
   };
 
-  // Default to medium size
   return (
     <p
       className={clsx(

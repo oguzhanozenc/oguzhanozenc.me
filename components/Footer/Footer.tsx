@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="flex flex-col items-center justify-center p-1 mr-2 text-center rounded-xl transition-all duration-300">
               <Link href="/">
                 <Image
-                  src="/logo.png"
+                  src="/branding/logo.png"
                   alt="Oguzhan Ozenc Logo"
                   width={48}
                   height={48}

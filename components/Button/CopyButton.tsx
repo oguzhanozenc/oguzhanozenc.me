@@ -33,7 +33,6 @@ export default function CopyButton({
     });
   };
 
-  // Dynamically set icon size based on the 'size' prop
   const iconSize = size === "sm" ? 16 : size === "lg" ? 24 : 18;
   const textSize =
     size === "sm" ? "text-sm" : size === "lg" ? "text-lg" : "text-base";

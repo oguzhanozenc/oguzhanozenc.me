@@ -30,10 +30,10 @@ export default function AboutPage() {
 
         <Avatar>
           <AvatarImage
-            src="/aboutmeimg.jpg"
+            src="/branding/aboutmeimg.jpg"
             alt="Oguzhan Ozenc"
             size="medium"
-            hoverRotate="-rotate-6"
+            className="hover:-rotate-6 transition-all duration-300 ease-in-out"
           />
         </Avatar>
       </div>
