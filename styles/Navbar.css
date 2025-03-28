@@ -1,0 +1,30 @@
+@keyframes swipeIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hovered-text {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: translateX(-100%);
+  font-size: 0.75rem;
+  opacity: 0;
+  white-space: nowrap;
+  background: #373737;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.animate-swipeIn {
+  animation: swipeIn 0.5s forwards;
+}

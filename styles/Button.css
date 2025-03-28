@@ -1,0 +1,126 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.025rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(230, 230, 230);
+  background-color: #f8f8f8;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: rgba(10, 10, 10, 0.06) 0px 1.2px 1.2px,
+    rgba(10, 10, 10, 0.04) 0px 5px 10px;
+}
+
+.btn:hover {
+  background-color: #ececec;
+  box-shadow: rgba(10, 10, 10, 0.15) 0px 2px 2px,
+    rgba(10, 10, 10, 0.1) 0px 8px 16px;
+}
+
+.btn:active {
+  background-color: #dedede;
+  box-shadow: rgba(10, 10, 10, 0.25) 0px 1px 2px,
+    rgba(10, 10, 10, 0.12) 0px 4px 8px;
+}
+
+.btn--secondary {
+  background-color: #fff;
+  color: #0a0a0a;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.btn--secondary:hover {
+  background-color: #f0f0f0;
+}
+
+.btn--secondary:active {
+  background-color: #e0e0e0;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #0a0a0a;
+  border: 1px solid #ccc;
+}
+
+.btn--outline:hover {
+  background-color: #f9f9f9;
+}
+
+.btn--outline:active {
+  background-color: #f1f1f1;
+}
+
+.btn--pulsating {
+  background-color: #f0f8ff;
+  color: #0a0a0a;
+
+  position: relative;
+}
+
+.btn--pulsating:hover {
+  background-color: #e6f2ff;
+}
+
+.btn--pulsating:active {
+  background-color: #d4ecff;
+}
+
+.btn--pulsating::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  animation: pulsating 2s infinite;
+  outline: 4px double hsla(0, 0%, 50%, 0.2);
+}
+
+@keyframes pulsating {
+  0% {
+    inset: 4px;
+    outline: 4px double hsla(0, 0%, 50%, 0.333);
+  }
+  90%,
+  100% {
+    inset: -6px;
+    outline: 4px double hsla(0, 0%, 50%, 0);
+  }
+}
+
+.btn--copy {
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  background-color: #f8f8f8;
+}
+
+.btn--copy:hover {
+  background-color: #ececec;
+}
+
+.btn--copy:active {
+  background-color: #dedede;
+}
+
+.copied-animation {
+  animation: swipeAnimation 1s ease-out;
+  pointer-events: none;
+}
+
+@keyframes swipeAnimation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+}
