@@ -21,6 +21,8 @@ type Props = {
   };
 };
 
+// trigger clean deploy
+
 export default async function ProjectPage({ params }: Props) {
   const allProjects = await getProjectEntries();
   const project = allProjects.find((p) => p.slug === params.slug);
@@ -159,7 +161,6 @@ export default async function ProjectPage({ params }: Props) {
       )}
     </section>
   );
-  
 }
 export async function generateStaticParams() {
   const projects = await getProjectEntries();
