@@ -10,6 +10,11 @@
     Menlo, Consolas, monospace;
 }
 
+a,
+button {
+  font-family: inherit;
+}
+
 .default-body {
   font-family: var(--font-inter);
   @apply flex justify-center items-center text-[#090e14] bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,180,170,0.13)_0,rgba(0,180,170,0)_50%,rgba(0,180,170,0)_100%)] w-[70%] mx-auto;

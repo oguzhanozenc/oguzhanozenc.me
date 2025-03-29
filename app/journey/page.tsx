@@ -1,4 +1,4 @@
-import { getJourneyEntries } from "@/lib/contentful";
+import { getJourneyEntries } from "@/lib/contentful/getJourney";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import {
   JourneyItem,

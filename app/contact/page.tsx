@@ -116,7 +116,7 @@ export default function Contact() {
                   className="w-fit"
                   variant="pulsating"
                 >
-                  {isLoading ? "Sending..." : "Submit"}
+                  {isLoading ? "Submitting..." : "Submit"}
                 </Button>
               </form>
             )}

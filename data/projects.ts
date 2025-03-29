@@ -265,7 +265,7 @@ export const projects = [
       ],
     },
     contactOrFeedbackSection:
-      "We welcome your feedback and inquiries. Feel free to reach out through our contact form.",
+      "Feel free to reach out with any questions or feedback regarding Offbeat Security.",
   },
   {
     title: "Personal Portfolio Website",

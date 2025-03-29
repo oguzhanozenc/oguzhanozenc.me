@@ -1,3 +1,5 @@
+"use client";
+
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/Button";
 import { RiArrowGoBackFill, RiArrowRightUpLine } from "react-icons/ri";

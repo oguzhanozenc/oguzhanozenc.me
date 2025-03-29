@@ -1,49 +1,45 @@
-"use client";
+import { notFound } from "next/navigation";
+import { getProjectEntries } from "@/lib/contentful/getProject";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-import { useParams } from "next/navigation";
-import { projects } from "@/data/projects";
 import { SectionTitle } from "@/components/SectionTitle";
-
 import {
   ProjectNav,
   ProjectCard,
   ProjectGrid,
   ProjectStack,
-  ProjectImage,
-  Tabs,
-  TabsList,
-  TabsPanel,
-  TabsTrigger,
+  UserJourneyTabs,
 } from "@/app/projects/[slug]/components";
 
 import { HiArrowLongRight } from "react-icons/hi2";
 import { TbTopologyComplex } from "react-icons/tb";
 import { FaCheck } from "react-icons/fa6";
 
-import { useState } from "react";
+type Props = {
+  params: {
+    slug: string;
+  };
+};
 
-export default function ProjectPage() {
-  const { slug } = useParams();
-  const [activeTab, setActiveTab] = useState<string>("stage-1");
-  const project = projects.find((p) => p.slug === slug);
+export default async function ProjectPage({ params }: Props) {
+  const allProjects = await getProjectEntries();
+  const project = allProjects.find((p) => p.slug === params.slug);
 
-  if (!project) {
-    return <p className="text-center mt-20">Project not found</p>;
-  }
+  if (!project) return notFound();
 
   return (
-    <section className=" py-[4rem] sm:px-[5%] max-sm:px-0">
+    <section className="py-[4rem] sm:px-[5%] max-sm:px-0">
       {/* Navigation */}
-      <ProjectNav slug={slug as string} projects={projects} />
+      <ProjectNav slug={params.slug} projects={allProjects} />
 
       {/* Header */}
       <div className="bg-white border border-[rgb(230,230,230)] rounded-[0.75rem] p-6 text-justify mb-20">
         <SectionTitle size="large" align="center">
           {project.title}
         </SectionTitle>
-        <p className="text-base text-center max-w-3xl mx-auto">
-          {project.description}
-        </p>
+        <div className="text-base text-center max-w-3xl mx-auto mb-4">
+          {documentToReactComponents(project.description)}
+        </div>
 
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           {project.demoLink && (
@@ -56,9 +52,9 @@ export default function ProjectPage() {
               Project Link
             </a>
           )}
-          {project.githubLink && (
+          {project.githubRepoLink && (
             <a
-              href={project.githubLink}
+              href={project.githubRepoLink}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--outline btn--md"
@@ -73,112 +69,92 @@ export default function ProjectPage() {
       <div className="mb-20">
         <SectionTitle size="medium">About</SectionTitle>
         <ProjectGrid columns={2}>
-          <ProjectCard title="My Role">{project.myRole}</ProjectCard>
+          <ProjectCard title="My Role">
+            {project.role && documentToReactComponents(project.role)}
+          </ProjectCard>
           <ProjectCard title="Project Overview">
-            <p>{project.overview}</p>
+            {project.overview && documentToReactComponents(project.overview)}
             <ProjectStack items={project.techStack} />
           </ProjectCard>
         </ProjectGrid>
       </div>
 
-      {/* User Journey */}
-      {project.demoData?.length > 0 && (
-        <div className="mb-20">
+      {/* User Journey (Media) */}
+      {project.userJourney && project.userJourney.length > 0 && (
+        <div>
           <SectionTitle size="medium">User Journey</SectionTitle>
-
-          <Tabs>
-            <TabsList>
-              {project.demoData.map((_, i) => (
-                <TabsTrigger
-                  key={i}
-                  value={`stage-${i + 1}`}
-                  activeTab={activeTab}
-                  setActiveTab={setActiveTab}
-                >
-                  Stage {i + 1}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
-            {project.demoData.map((demo, i) => (
-              <TabsPanel key={i} value={`stage-${i + 1}`} activeTab={activeTab}>
-                <div className="flex flex-col gap-6 p-6">
-                  <ProjectImage src={demo.screenshot} alt={`Stage ${i + 1}`} />
-
-                  <ul className="space-y-2 text-base list-disc pl-5 text-left ">
-                    {demo.description.map((desc, idx) => (
-                      <li key={idx}>{desc}</li>
-                    ))}
-                  </ul>
-                </div>
-              </TabsPanel>
-            ))}
-          </Tabs>
+          <UserJourneyTabs userJourney={project.userJourney} />
         </div>
       )}
 
       {/* Features */}
-      {project.features?.length > 0 && (
+      {project.projectFeatures && (
         <div className="mb-20">
           <SectionTitle size="medium">Features</SectionTitle>
           <ProjectGrid columns={3}>
-            {project.features.map((feature, index) => (
-              <ProjectCard key={index} title={feature.title}>
-                <p className="text-sm">{feature.description}</p>
+            {project.projectFeatures?.map((feature, index) => (
+              <ProjectCard key={index} title={feature.fields.featureTitle}>
+                <p className="text-sm">
+                  {documentToReactComponents(feature.fields.featureDescription)}
+                </p>
               </ProjectCard>
             ))}
           </ProjectGrid>
         </div>
       )}
-
       {/* Challenges & Solutions */}
-      {project.challengesAndSolutions?.length > 0 && (
+      {project.projectChallenges && (
         <div className="mb-20">
           <SectionTitle size="medium">Challenges and Solutions</SectionTitle>
-          {project.challengesAndSolutions.map((item, index) => (
+          {(project.projectChallenges ?? []).map((item, index) => (
             <ProjectGrid key={index} columns={3}>
-              <ProjectCard title={`${item.challenge}`}>
+              <ProjectCard title={item.fields.challenge}>
                 <div className="flex items-center gap-2 mb-2 text-sm font-medium text-gray-700">
                   <TbTopologyComplex /> Challenge
                 </div>
-                <p className="text-sm">{item.challengeDescription}</p>
+                <p className="text-sm">
+                  {documentToReactComponents(item.fields.challengeDescription)}
+                </p>
               </ProjectCard>
 
               <div className="hidden lg:flex justify-center items-center text-[1.5rem] mx-auto text-muted-foreground">
                 <HiArrowLongRight />
               </div>
 
-              <ProjectCard title={`${item.solution}`}>
+              <ProjectCard title={item.fields.solution}>
                 <div className="flex items-center gap-2 mb-2 text-sm font-medium text-gray-700">
                   <FaCheck /> Solution
                 </div>
-                <p className="text-sm">{item.solutionDescription}</p>
+                <p className="text-sm">
+                  {documentToReactComponents(item.fields.solutionDescription)}
+                </p>
               </ProjectCard>
             </ProjectGrid>
           ))}
         </div>
       )}
 
-      {/* Upcoming Features */}
-      {project.upcomingFeatures?.features?.length > 0 && (
-        <div className="bg-white border border-[rgb(230,230,230)] rounded-[0.75rem] p-6 text-justify mb-20">
-          <SectionTitle size="medium">
-            {project.upcomingFeatures.heading}
-          </SectionTitle>
-          {project.upcomingFeatures.features.map((feature, index) => (
-            <div key={index} className="mb-4">
-              <h4 className="font-semibold text-base">{feature.title}:</h4>
-              <p className="text-sm">{feature.explanation}</p>
-            </div>
+      {/* Future Plans */}
+      {project.futurePlans && (
+        <div className="mb-20">
+          <SectionTitle size="medium">Future Plans</SectionTitle>
+
+          {project.futurePlans?.map((plan, index) => (
+            <ProjectCard key={index} title={plan.fields.title}>
+              <p className="text-sm">{plan.fields.description}</p>
+            </ProjectCard>
           ))}
         </div>
       )}
 
       {/* Contact / Feedback */}
-      {project.contactOrFeedbackSection && (
-        <div className="bg-white border border-[rgb(230,230,230)] rounded-[0.75rem] p-6 text-justify">
-          <SectionTitle size="medium">Contact or Feedback Section</SectionTitle>
-          <p className="text-base">{project.contactOrFeedbackSection}</p>
+      {project.contactFeedback && (
+        <div className="mb-20">
+          {" "}
+          <SectionTitle size="medium">Contact or Feedback</SectionTitle>
+          <ProjectCard>
+            <p className="text-base">{project.contactFeedback}</p>
+          </ProjectCard>
         </div>
       )}
     </section>

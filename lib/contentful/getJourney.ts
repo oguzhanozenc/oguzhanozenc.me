@@ -1,10 +1,6 @@
-import { createClient } from "contentful";
-import { Document } from "@contentful/rich-text-types";
+import { client } from "@/lib/contentful/client";
 
-const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID!,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
-});
+import { Document } from "@contentful/rich-text-types";
 
 export type JourneyItem = {
   title: string;

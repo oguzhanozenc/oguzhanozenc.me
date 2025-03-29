@@ -37,7 +37,7 @@ export default function AvatarImage({
         width={250}
         height={250}
         className={clsx(
-          "rounded-full object-cover aspect-square bg-[#f3f3f1]",
+          "rounded-full object-cover aspect-square ",
           "shadow-[rgba(10,10,10,0.06)_0px_1.2px_1.2px_0px,rgba(10,10,10,0.04)_0px_5px_10px_0px]",
           "transition-all duration-300 ease-in-out"
         )}

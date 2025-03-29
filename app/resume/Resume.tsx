@@ -1,8 +1,6 @@
-"use client";
-
 import "@/styles/ResumePrint.css";
 import Image from "next/image";
-import resume from "@/data/resume";
+import { getResumeEntry } from "@/lib/contentful/getResume";
 import {
   ResumeHeader,
   ResumeName,
@@ -39,203 +37,248 @@ import {
   ResumeDownloadButton,
 } from "@/app/resume/components";
 
-import { FaMapPin } from "react-icons/fa";
+import { FaMapPin, FaGithub, FaLinkedin } from "react-icons/fa";
+import { LuGlobe, LuMail } from "react-icons/lu";
+import { notFound } from "next/navigation";
 
-export default function Resume() {
-  const {
-    name,
-    title,
-    photo,
-    location,
-    socialMedia,
-    about,
-    skills,
-    workExperience,
-    education,
-    projects,
-    certification,
-  } = resume;
+const iconMap = {
+  FaGithub,
+  FaLinkedin,
+  LuMail,
+  LuGlobe,
+};
+
+export default async function Resume() {
+  const resume = await getResumeEntry();
+  if (!resume) return notFound();
 
   return (
     <>
       <div className="mb-4">
         <ResumeDownloadButton />
       </div>
+
       <section
         id="resume-content"
         className="flex flex-col mx-auto max-w-[80rem] text-[#373737]"
       >
         <ResumeHeader>
           <div className="flex flex-col items-start">
-            <ResumeName>{name}</ResumeName>
-            <ResumeTitle>{title}</ResumeTitle>
+            <ResumeName>{resume.name}</ResumeName>
+            <ResumeTitle>{resume.title}</ResumeTitle>
             <ResumeLocation>
               <FaMapPin className="inline-block text-black mr-1" />
-              {location.city}, {location.country}
-              {location.remote && " – Open to remote work worldwide."}
+              <a
+                href={resume.locationMapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+                style={{ fontFamily: "var(--font-sfmono)" }}
+              >
+                {resume.locationCity}, {resume.locationCountry}
+              </a>
+              {resume.remote && " – Open to remote work worldwide."}
             </ResumeLocation>
 
             <ResumeSocialLinks>
-              {socialMedia.map((social, i) => (
-                <ResumeSocialLink key={i} href={social.url} icon={social.icon}>
-                  {!["linkedin", "github"].includes(
-                    social.title.toLowerCase()
-                  ) && social.shorturl}
-                </ResumeSocialLink>
-              ))}
+              {resume.socialLinks?.map((social, i) => {
+                const iconKey = social.fields.icon;
+                const Icon = iconMap[iconKey as keyof typeof iconMap];
+
+                return (
+                  <ResumeSocialLink
+                    key={i}
+                    href={social.fields.url}
+                    icon={<Icon />}
+                  >
+                    {!["linkedin", "github"].includes(
+                      social.fields.title.toLowerCase()
+                    ) && social.fields.shorturl}
+                  </ResumeSocialLink>
+                );
+              })}
             </ResumeSocialLinks>
           </div>
 
-          <ResumePhoto>
-            <Image
-              src={photo}
-              alt={`${name}'s photo`}
-              width={128}
-              height={128}
-              className="rounded-md object-cover"
-            />
-          </ResumePhoto>
+          {resume.photo?.fields?.file?.url && (
+            <ResumePhoto>
+              <Image
+                src={`https:${resume.photo.fields.file.url}`}
+                alt={`${resume.name}'s photo`}
+                width={128}
+                height={128}
+                className="rounded-md object-cover"
+              />
+            </ResumePhoto>
+          )}
         </ResumeHeader>
 
         <section>
           <ResumeSectionTitle>Summary</ResumeSectionTitle>
-          <TextBlock>{about}</TextBlock>
+          <TextBlock>{resume.about}</TextBlock>
         </section>
 
-        <ResumeSkills>
-          <ResumeSectionTitle>Skills</ResumeSectionTitle>
-          {skills.map((category, i) => (
-            <ResumeSkillGroup key={i}>
-              <ResumeSkillTitle>{category.title}</ResumeSkillTitle>
-              <ResumeSkillList>
-                {category.items.map((skill, i2) => (
-                  <ResumeSkillItem
-                    key={i2}
-                    isLast={i2 === category.items.length - 1}
-                  >
-                    {skill}
-                  </ResumeSkillItem>
-                ))}
-              </ResumeSkillList>
-            </ResumeSkillGroup>
-          ))}
-        </ResumeSkills>
+        {resume.skills?.length > 0 && (
+          <ResumeSkills>
+            <ResumeSectionTitle>Skills</ResumeSectionTitle>
+            {resume.skills.map((group, i) => (
+              <ResumeSkillGroup key={i}>
+                <ResumeSkillTitle>{group.fields.title}</ResumeSkillTitle>
+                <ResumeSkillList>
+                  {group.fields.items.map((skill, i2) => (
+                    <ResumeSkillItem
+                      key={i2}
+                      isLast={i2 === group.fields.items.length - 1}
+                    >
+                      {skill}
+                    </ResumeSkillItem>
+                  ))}
+                </ResumeSkillList>
+              </ResumeSkillGroup>
+            ))}
+          </ResumeSkills>
+        )}
 
-        <Experience>
-          <ResumeSectionTitle>Work Experience</ResumeSectionTitle>
-          {workExperience.map((exp, i) => (
-            <ExperienceItem key={i}>
-              <SectionRow>
-                <ExperienceItemTitle>
-                  {exp.company}
-                  <Tag className="ml-2 bg-[#f3f4f6] text-[#111827] font-bold">
-                    {exp.type}
-                  </Tag>
-                </ExperienceItemTitle>
-                <SectionDate>{exp.date}</SectionDate>
-              </SectionRow>
-
-              <ExperienceItemPosition>{exp.position}</ExperienceItemPosition>
-
-              {exp.responsibilities.map((desc, i2) => (
-                <TextBlock key={i2}>- {desc}</TextBlock>
-              ))}
-
-              <ul className="flex flex-wrap gap-[0.25rem] p-0 list-none mt-1">
-                {exp.technologiesUsed.map((tech, i3) => (
-                  <Tag
-                    key={i3}
-                    className="bg-[#111827cc] text-[#f9fafb] text-[0.85rem]"
-                  >
-                    {tech}
-                  </Tag>
-                ))}
-              </ul>
-            </ExperienceItem>
-          ))}
-        </Experience>
-
-        <Education>
-          <ResumeSectionTitle>Education</ResumeSectionTitle>
-          {education.map((edu, i) => (
-            <EducationItem key={i}>
-              <SectionRow>
-                <EducationItemInstitution>
-                  {edu.institution}
-                </EducationItemInstitution>
-                <SectionDate>{edu.date}</SectionDate>
-              </SectionRow>
-
-              <TextBlock>{edu.degree}</TextBlock>
-
-              {edu.relevantCourses && (
-                <p
-                  className="text-[0.7rem] text-[#666]"
-                  style={{ fontFamily: "var(--font-sfmono)" }}
-                >
-                  Relevant Courses: {edu.relevantCourses}
-                </p>
-              )}
-            </EducationItem>
-          ))}
-        </Education>
-
-        <Certification>
-          <ResumeSectionTitle>Certification</ResumeSectionTitle>
-          <CertificationItem>
-            <CertificationItemTitle>
-              {certification.title} –{" "}
-              <Tag className="bg-[#e5e7eb] text-black">
-                <a
-                  href={certification.provider}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Scrimba
-                </a>
-              </Tag>
-            </CertificationItemTitle>
-
-            <SectionDate>{certification.date}</SectionDate>
-
-            <TextBlock>
-              {certification.description}{" "}
-              <SectionLink href={certification.link}>View</SectionLink>
-            </TextBlock>
-          </CertificationItem>
-        </Certification>
-
-        <Projects>
-          <ResumeSectionTitle>Projects</ResumeSectionTitle>
-          <ProjectsGrid>
-            {projects.map((project, i) => (
-              <ProjectItem key={i}>
+        {resume.workExperience?.length > 0 && (
+          <Experience>
+            <ResumeSectionTitle>Work Experience</ResumeSectionTitle>
+            {resume.workExperience.map((exp, i) => (
+              <ExperienceItem key={i}>
                 <SectionRow>
-                  <ProjectItemTitle href={project.link}>
-                    {project.name}
-                  </ProjectItemTitle>
-                  {project.repository && (
-                    <SectionLink href={project.repository}>GitHub</SectionLink>
-                  )}
+                  <ExperienceItemTitle>
+                    {exp.fields.company}
+                    <Tag className="ml-2 bg-[#f3f4f6] text-[#111827] font-bold">
+                      {exp.fields.type}
+                    </Tag>
+                  </ExperienceItemTitle>
+                  <SectionDate>{exp.fields.date}</SectionDate>
                 </SectionRow>
 
-                <TextBlock>{project.description}</TextBlock>
+                <ExperienceItemPosition>
+                  {exp.fields.position}
+                </ExperienceItemPosition>
 
-                <ul className="flex flex-wrap gap-[0.25rem] p-0 list-none mt-1">
-                  {project.technologiesUsed.map((tech, i2) => (
-                    <Tag
-                      key={i2}
-                      className="text-[0.75rem] bg-[#f3f4f6] text-[#111827]"
-                    >
-                      {tech}
-                    </Tag>
-                  ))}
-                </ul>
-              </ProjectItem>
+                {exp.fields.responsibilities?.map((desc, i2) => (
+                  <TextBlock key={i2}>- {desc}</TextBlock>
+                ))}
+
+                {exp.fields.achievements?.map((ach, i2) => (
+                  <TextBlock key={`ach-${i2}`}>• {ach}</TextBlock>
+                ))}
+
+                {exp.fields.techStack?.length > 0 && (
+                  <ul className="flex flex-wrap gap-[0.25rem] p-0 list-none mt-1">
+                    {exp.fields.techStack.map((tech, i3) => (
+                      <Tag
+                        key={i3}
+                        className="bg-[#111827cc] text-[#f9fafb] text-[0.85rem]"
+                      >
+                        {tech}
+                      </Tag>
+                    ))}
+                  </ul>
+                )}
+              </ExperienceItem>
             ))}
-          </ProjectsGrid>
-        </Projects>
-      </section>{" "}
+          </Experience>
+        )}
+
+        {resume.education?.length > 0 && (
+          <Education>
+            <ResumeSectionTitle>Education</ResumeSectionTitle>
+            {resume.education.map((edu, i) => (
+              <EducationItem key={i}>
+                <SectionRow>
+                  <EducationItemInstitution>
+                    {edu.fields.title}
+                  </EducationItemInstitution>
+                  <SectionDate>{edu.fields.date}</SectionDate>
+                </SectionRow>
+
+                <TextBlock>{edu.fields.degree}</TextBlock>
+
+                {edu.fields.relevantCourses && (
+                  <p
+                    className="text-[0.7rem] text-[#666]"
+                    style={{ fontFamily: "var(--font-sfmono)" }}
+                  >
+                    Relevant Courses: {edu.fields.relevantCourses}
+                  </p>
+                )}
+              </EducationItem>
+            ))}
+          </Education>
+        )}
+
+        {(resume.certifications ?? []).length > 0 && (
+          <Certification>
+            <ResumeSectionTitle>Certification</ResumeSectionTitle>
+            {(resume.certifications ?? []).map((cert, i) => (
+              <CertificationItem key={i}>
+                <CertificationItemTitle>
+                  {cert.fields.title} –{" "}
+                  <Tag className="bg-[#e5e7eb] text-black">
+                    <a
+                      href={cert.fields.providerLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontFamily: "var(--font-sfmono)" }}
+                    >
+                      {cert.fields.provider}
+                    </a>
+                  </Tag>
+                </CertificationItemTitle>
+
+                <SectionDate>{cert.fields.date}</SectionDate>
+
+                <TextBlock>
+                  {cert.fields.description}{" "}
+                  <SectionLink href={cert.fields.link}>View</SectionLink>
+                </TextBlock>
+              </CertificationItem>
+            ))}
+          </Certification>
+        )}
+
+        {resume.projects?.length > 0 && (
+          <Projects>
+            <ResumeSectionTitle>Projects</ResumeSectionTitle>
+            <ProjectsGrid>
+              {resume.projects.map((project, i) => (
+                <ProjectItem key={i}>
+                  <SectionRow>
+                    <ProjectItemTitle href={project.fields.link}>
+                      {project.fields.name}
+                    </ProjectItemTitle>
+                    {project.fields.repository && (
+                      <SectionLink href={project.fields.repository}>
+                        GitHub
+                      </SectionLink>
+                    )}
+                  </SectionRow>
+
+                  <TextBlock>{project.fields.description}</TextBlock>
+
+                  {project.fields.loginInfo && (
+                    <TextBlock>{project.fields.loginInfo}</TextBlock>
+                  )}
+
+                  <ul className="flex flex-wrap gap-[0.25rem] p-0 list-none mt-1">
+                    {project.fields.techStack.map((tech, i2) => (
+                      <Tag
+                        key={i2}
+                        className="text-[0.75rem] bg-[#f3f4f6] text-[#111827]"
+                      >
+                        {tech}
+                      </Tag>
+                    ))}
+                  </ul>
+                </ProjectItem>
+              ))}
+            </ProjectsGrid>
+          </Projects>
+        )}
+      </section>
     </>
   );
 }

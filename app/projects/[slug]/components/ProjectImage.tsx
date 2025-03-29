@@ -15,10 +15,12 @@ export default function ProjectImage({
   height = 450,
   className = "",
 }: ProjectImageProps) {
+  const normalizedSrc = src.startsWith("//") ? `https:${src}` : src;
+
   return (
     <div className="relative overflow-hidden rounded w-full max-w-4xl">
       <Image
-        src={src}
+        src={normalizedSrc}
         alt={alt}
         width={width}
         height={height}

@@ -7,3 +7,4 @@ export { default as Tabs } from "@/app/projects/[slug]/components/Tabs";
 export { default as TabsList } from "@/app/projects/[slug]/components/TabsList";
 export { default as TabsPanel } from "@/app/projects/[slug]/components/TabsPanel";
 export { default as TabsTrigger } from "@/app/projects/[slug]/components/TabsTrigger";
+export { default as UserJourneyTabs } from "@/app/projects/[slug]/components/UserJourneyTabs";

@@ -9,6 +9,7 @@ type Size = "sm" | "md" | "lg";
 
 type ButtonProps = {
   children?: ReactNode;
+  loadingChildren?: ReactNode;
   onClick?: () => void;
   variant?: Variant | Variant[];
   size?: Size;
@@ -45,7 +46,7 @@ export default function Button({
       className={combinedClass}
       disabled={disabled || isLoading}
     >
-      {isLoading ? "Loading..." : children}
+      {children}
     </button>
   );
 }
