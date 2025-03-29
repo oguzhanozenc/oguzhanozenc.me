@@ -15,12 +15,6 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import { TbTopologyComplex } from "react-icons/tb";
 import { FaCheck } from "react-icons/fa6";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
 export default async function ProjectPage({
   params,
 }: {
