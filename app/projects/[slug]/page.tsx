@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { getProjectEntries } from "@/lib/contentful/getProject";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import type { PageProps } from "next";
 
 import { SectionTitle } from "@/components/SectionTitle";
 import {
@@ -16,9 +15,11 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import { TbTopologyComplex } from "react-icons/tb";
 import { FaCheck } from "react-icons/fa6";
 
-type Props = PageProps<{
-  slug: string;
-}>;
+type Props = {
+  params: {
+    slug: string;
+  };
+};
 
 export default async function ProjectPage({ params }: Props) {
   const allProjects = await getProjectEntries();
