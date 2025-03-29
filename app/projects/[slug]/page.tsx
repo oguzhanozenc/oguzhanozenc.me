@@ -159,4 +159,11 @@ export default async function ProjectPage({ params }: Props) {
       )}
     </section>
   );
+  
+}
+export async function generateStaticParams() {
+  const projects = await getProjectEntries();
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
 }
