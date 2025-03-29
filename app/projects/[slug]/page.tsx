@@ -21,18 +21,22 @@ type Props = {
   };
 };
 
-// trigger clean deploy
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
-export default async function ProjectPage({ params }: Props) {
   const allProjects = await getProjectEntries();
-  const project = allProjects.find((p) => p.slug === params.slug);
+  const project = allProjects.find((p) => p.slug === slug);
 
   if (!project) return notFound();
 
   return (
     <section className="py-[4rem] sm:px-[5%] max-sm:px-0">
       {/* Navigation */}
-      <ProjectNav slug={params.slug} projects={allProjects} />
+      <ProjectNav slug={slug} projects={allProjects} />
 
       {/* Header */}
       <div className="bg-white border border-[rgb(230,230,230)] rounded-[0.75rem] p-6 text-justify mb-20">
@@ -81,7 +85,7 @@ export default async function ProjectPage({ params }: Props) {
         </ProjectGrid>
       </div>
 
-      {/* User Journey (Media) */}
+      {/* User Journey */}
       {project.userJourney && project.userJourney.length > 0 && (
         <div>
           <SectionTitle size="medium">User Journey</SectionTitle>
@@ -104,6 +108,7 @@ export default async function ProjectPage({ params }: Props) {
           </ProjectGrid>
         </div>
       )}
+
       {/* Challenges & Solutions */}
       {project.projectChallenges && (
         <div className="mb-20">
@@ -140,8 +145,7 @@ export default async function ProjectPage({ params }: Props) {
       {project.futurePlans && (
         <div className="mb-20">
           <SectionTitle size="medium">Future Plans</SectionTitle>
-
-          {project.futurePlans?.map((plan, index) => (
+          {project.futurePlans.map((plan, index) => (
             <ProjectCard key={index} title={plan.fields.title}>
               <p className="text-sm">{plan.fields.description}</p>
             </ProjectCard>
@@ -152,7 +156,6 @@ export default async function ProjectPage({ params }: Props) {
       {/* Contact / Feedback */}
       {project.contactFeedback && (
         <div className="mb-20">
-          {" "}
           <SectionTitle size="medium">Contact or Feedback</SectionTitle>
           <ProjectCard>
             <p className="text-base">{project.contactFeedback}</p>
@@ -162,6 +165,7 @@ export default async function ProjectPage({ params }: Props) {
     </section>
   );
 }
+
 export async function generateStaticParams() {
   const projects = await getProjectEntries();
   return projects.map((project) => ({
