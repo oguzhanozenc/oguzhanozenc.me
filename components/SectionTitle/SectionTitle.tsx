@@ -1,13 +1,12 @@
 "use client";
 
-import { ReactNode, ElementType } from "react";
+import { ReactNode } from "react";
 import clsx from "clsx";
 
 type SectionTitleProps = {
   children: ReactNode;
   size?: "small" | "medium" | "large";
   align?: "left" | "center" | "right";
-  as?: ElementType;
   className?: string;
 };
 
@@ -15,7 +14,6 @@ export default function SectionTitle({
   children,
   size = "large",
   align = "left",
-  as: Tag = "h2",
   className,
 }: SectionTitleProps) {
   const sizeClasses = {
@@ -31,7 +29,7 @@ export default function SectionTitle({
   };
 
   return (
-    <Tag
+    <h1
       className={clsx(
         "mb-4 font-semibold text-[#373737] tracking-tight",
         sizeClasses[size],
@@ -40,6 +38,6 @@ export default function SectionTitle({
       )}
     >
       {children}
-    </Tag>
+    </h1>
   );
 }

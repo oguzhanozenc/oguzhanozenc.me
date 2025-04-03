@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Tabs,
   TabsList,
   TabsTrigger,
   TabsPanel,
-  ProjectImage,
+  ProjectMedia,
 } from "@/app/projects/[slug]/components";
 
 type Props = {
@@ -15,6 +15,7 @@ type Props = {
       title?: string;
       file: {
         url: string;
+        contentType?: string;
       };
       description?: string;
     };
@@ -22,13 +23,9 @@ type Props = {
 };
 
 export default function UserJourneyTabs({ userJourney }: Props) {
-  const [activeTab, setActiveTab] = useState("");
-
-  useEffect(() => {
-    if (userJourney.length > 0) {
-      setActiveTab(`stage-1`);
-    }
-  }, [userJourney]);
+  const [activeTab, setActiveTab] = useState(
+    userJourney.length > 0 ? `stage-1` : ""
+  );
 
   return (
     <div className="mb-20">
@@ -46,21 +43,29 @@ export default function UserJourneyTabs({ userJourney }: Props) {
           ))}
         </TabsList>
 
-        {userJourney.map((userJourney, i) => (
-          <TabsPanel key={i} value={`stage-${i + 1}`} activeTab={activeTab}>
-            <div className="flex flex-col gap-6 p-6">
-              <ProjectImage
-                src={userJourney.fields.file.url}
-                alt={userJourney.fields.title || `Stage ${i + 1}`}
-              />
-              {userJourney.fields.description && (
-                <p className="text-base text-gray-700 dark:text-gray-300">
-                  {userJourney.fields.description}
-                </p>
-              )}
-            </div>
-          </TabsPanel>
-        ))}
+        {userJourney.map((journey, i) => {
+          const { file, title, description } = journey.fields;
+          const normalizedSrc = file.url.startsWith("//")
+            ? `https:${file.url}`
+            : file.url;
+
+          return (
+            <TabsPanel key={i} value={`stage-${i + 1}`} activeTab={activeTab}>
+              <div className="flex flex-col gap-6 p-6">
+                <ProjectMedia
+                  src={normalizedSrc}
+                  alt={title || `Stage ${i + 1}`}
+                  contentType={file.contentType}
+                />
+                {description && (
+                  <p className="text-base text-gray-700 dark:text-gray-300">
+                    {description}
+                  </p>
+                )}
+              </div>
+            </TabsPanel>
+          );
+        })}
       </Tabs>
     </div>
   );

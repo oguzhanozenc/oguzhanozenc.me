@@ -1,6 +1,6 @@
 export { default as ProjectCard } from "@/app/projects/[slug]/components/ProjectCard";
 export { default as ProjectGrid } from "@/app/projects/[slug]/components/ProjectGrid";
-export { default as ProjectImage } from "@/app/projects/[slug]/components/ProjectImage";
+export { default as ProjectMedia } from "@/app/projects/[slug]/components/ProjectMedia";
 export { default as ProjectNav } from "@/app/projects/[slug]/components/ProjectNav";
 export { default as ProjectStack } from "@/app/projects/[slug]/components/ProjectStack";
 export { default as Tabs } from "@/app/projects/[slug]/components/Tabs";

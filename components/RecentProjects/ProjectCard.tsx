@@ -10,7 +10,6 @@ type ProjectCardProps = {
   slug: string;
   featuredText: string;
   featuredimg: string;
-  featuredimgMobile: string;
   enableHover?: boolean;
   maxLength?: number;
 };
@@ -20,7 +19,6 @@ export default function ProjectCard({
   slug,
   featuredText,
   featuredimg,
-  featuredimgMobile,
   enableHover = true,
   maxLength = 150,
 }: ProjectCardProps) {
@@ -63,30 +61,19 @@ export default function ProjectCard({
 
           <div
             className={clsx(
-              "relative grid grid-cols-[75%_25%] w-full h-[10rem] transition-all duration-300 ease-in-out",
+              "relative w-full h-[10rem] transition-all duration-300 ease-in-out",
               isHovered
                 ? "clip-path-[inset(0_0_0_0)] transform -translate-y-[45%] opacity-100"
                 : "opacity-100"
             )}
           >
-            <div className="col-span-1">
+            <div>
               <Image
                 src={featuredimg}
                 alt={title}
                 width={500}
                 height={300}
-                className="w-full h-auto object-cover rounded-lg transition-all duration-300"
-                priority
-              />
-            </div>
-
-            <div className="col-span-1 flex justify-end">
-              <Image
-                src={featuredimgMobile}
-                alt={`${title} mobile`}
-                width={120}
-                height={120}
-                className="h-auto w-auto max-w-[80px] md:max-w-[100px] rounded-lg transition-all duration-300"
+                className="w-full h-auto object-cover rounded-lg transition-all duration-300 rounded-xl"
                 priority
               />
             </div>

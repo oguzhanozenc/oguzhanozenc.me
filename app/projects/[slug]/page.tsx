@@ -140,9 +140,11 @@ export default async function ProjectPage({
         <div className="mb-20">
           <SectionTitle size="medium">Future Plans</SectionTitle>
           {project.futurePlans.map((plan, index) => (
-            <ProjectCard key={index} title={plan.fields.title}>
-              <p className="text-sm">{plan.fields.description}</p>
-            </ProjectCard>
+            <div className="mb-2" key={index}>
+              <ProjectCard key={index} title={plan.fields.title}>
+                <p className="text-sm">{plan.fields.description}</p>
+              </ProjectCard>
+            </div>
           ))}
         </div>
       )}

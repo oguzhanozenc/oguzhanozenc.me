@@ -15,10 +15,6 @@ export default async function RecentProjects() {
             ? `https:${project.featuredImage.fields.file.url}`
             : "";
 
-          const mobileImage = project.featuredImageMobile?.fields?.file?.url
-            ? `https:${project.featuredImageMobile.fields.file.url}`
-            : "";
-
           return (
             <ProjectCard
               key={project.slug}
@@ -26,7 +22,6 @@ export default async function RecentProjects() {
               slug={project.slug}
               featuredText={project.featuredText}
               featuredimg={desktopImage}
-              featuredimgMobile={mobileImage}
               enableHover={true}
             />
           );

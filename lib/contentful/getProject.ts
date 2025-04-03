@@ -13,13 +13,6 @@ export type ProjectItem = {
       };
     };
   };
-  featuredImageMobile?: {
-    fields: {
-      file: {
-        url: string;
-      };
-    };
-  };
   techStack: string[];
   overview: Document;
   role: Document;
@@ -42,6 +35,7 @@ export type ProjectItem = {
     fields: {
       file: {
         url: string;
+        contentType?: string;
       };
       title?: string;
       description?: string;
@@ -60,7 +54,7 @@ export type ProjectItem = {
 export async function getProjectEntries(): Promise<ProjectItem[]> {
   const res = await client.getEntries({
     content_type: "project",
-    order: ["fields.title"],
+    order: ["fields.order"],
     include: 2,
   });
 
