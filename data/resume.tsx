@@ -4,7 +4,7 @@ import { LuMail, LuGlobe } from "react-icons/lu";
 const resume = {
   name: "Oğuzhan Özenç",
   title: "Front-end Developer",
-  photo: "/profilepic.jpg",
+  photo: "/oguzhanozenc.jpg",
   location: {
     city: "Istanbul",
     country: "Turkey",

@@ -1,5 +1,3 @@
-"use client";
-
 type TabsProps = {
   children: React.ReactNode;
 };

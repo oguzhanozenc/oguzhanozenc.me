@@ -1,5 +1,3 @@
-"use client";
-
 import LetsWorkTogether from "@/components/Footer/LetsWorkTogether";
 import {
   AboutItem,
@@ -9,6 +7,36 @@ import {
 import { SectionTitle } from "@/components/SectionTitle";
 import { Avatar, AvatarImage } from "@/components/Avatar";
 
+export const metadata = {
+  title: "About – Oguzhan Ozenc",
+  description:
+    "Oguzhan Ozenc is a front-end developer who blends thoughtful design with solid structure to build intuitive, scalable interfaces using React, Next.js, and Tailwind CSS.",
+  openGraph: {
+    title: "About – Oguzhan Ozenc",
+    description:
+      "Front-end developer with a product-first mindset — focused on building structured, reusable components and polished UIs with React, Next.js, and Tailwind CSS.",
+    url: "https://oguzhanozenc.me/about",
+    siteName: "Oguzhan Ozenc",
+    images: [
+      {
+        url: "https://oguzhanozenc.me/branding/oguzhanozenc.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Oguzhan Ozenc – Front-End Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About – Oguzhan Ozenc",
+    description:
+      "Building front-end systems with clarity, structure, and thoughtful design.",
+    images: ["https://oguzhanozenc.me/branding/oguzhanozenc.jpg"],
+  },
+};
+
 export default function AboutPage() {
   return (
     <section className="flex flex-col container mx-auto py-16 max-sm:py-8 max-sm:px-4 md:px-12 gap-4">
@@ -17,14 +45,17 @@ export default function AboutPage() {
         <div className="flex-1">
           <SectionTitle>Hey there!</SectionTitle>
           <AboutDescription className="text-lg text-gray-600 leading-relaxed tracking-tight text-justify">
-            I am Oguzhan, a Front-End Developer with a strong foundation in
-            HTML, CSS, JavaScript, and React, driven by a passion for front-end
-            development. I have always been drawn to projects that tell stories
-            and make a meaningful impact. Software development allows me to
-            transform ideas into reality, and I find the entire process from
-            concept to application incredibly rewarding. My goal is to bridge
-            the gap between design and development, leveraging my skills to
-            create cohesive and impactful projects.
+            I am Oguzhan, a front-end developer who blends thoughtful design
+            with solid structure to build interfaces that feel intuitive and
+            cohesive. My approach is shaped by a product-first mindset — one
+            that values clarity, usability, and maintainability just as much as
+            visual polish. Whether I’m building an AI-assisted meal planner like
+            Plateful or crafting an immersive e-commerce experience like
+            Homebody, I focus on how each part fits into the bigger picture. For
+            me, great frontend work comes from understanding the product — its
+            purpose, its users, and the flow behind every interaction. I care
+            about creating systems that are not only visually consistent but
+            also scalable, accessible, and easy to work with.
           </AboutDescription>
         </div>
 
@@ -46,51 +77,53 @@ export default function AboutPage() {
 
         <div className="bg-[#f8f8f8] rounded-xl p-6 flex flex-col gap-6">
           <AboutItem>
-            <AboutSubtitle>👨‍💻 Current Role</AboutSubtitle>
+            <AboutSubtitle>👨‍💻 What I’m Working On</AboutSubtitle>
             <AboutDescription>
-              I am currently spearheading the front-end and full-stack
-              development of Offbeat Security, a cutting-edge blockchain
-              security business. Utilizing React for dynamic and responsive user
-              interfaces, I aim to develop an engaging web application with
-              seamless navigation. I integrated and customized a CMS for
-              efficient content management and seamless deployment, enhancing
-              user engagement with dynamic blog posts.
+              I currently lead the front-end development of multiple real-world
+              projects, including Plateful, an AI-powered meal planning
+              assistant, and Offbeat Security, a blockchain web app. I
+              specialize in React, Next.js 15, Tailwind CSS, and shadcn/ui,
+              focusing on building structured, scalable, and polished interfaces
+              that feel great to use. Across all projects, I prioritize clean
+              architecture, reusability, and a strong sense of user flow.
             </AboutDescription>
           </AboutItem>
 
           <AboutItem>
-            <AboutSubtitle>🎓 Educational Background </AboutSubtitle>
+            <AboutSubtitle>🧠 My Approach</AboutSubtitle>
             <AboutDescription>
-              With a background in Engineering from Istanbul Technical
-              University and ongoing studies in Management Information Systems
-              at Anadolu University, I have gained skills that have enabled me
-              to tackle complex problems and deliver innovative solutions.
+              I take a product-first mindset into every build — solving real UX
+              problems with thoughtful, maintainable code. I care about every
+              layer of the frontend: how a UI looks, how it behaves, and how it
+              scales. I often refactor or componentize layouts for clarity, and
+              I love translating real user needs into structured, flexible code
+              systems. Whether it is syncing a cart across sessions or
+              integrating AI for meal generation, I make sure each screen feels
+              intentional and cohesive.
             </AboutDescription>
           </AboutItem>
 
           <AboutItem>
-            <AboutSubtitle>🌌 Journey into Tech</AboutSubtitle>
+            <AboutSubtitle>🎓 Background & Learning</AboutSubtitle>
             <AboutDescription>
-              I have always been passionate about a career that would allow me
-              to become more creative, and my journey into software development
-              was a perfect opportunity for me. During my time at Beko
-              Corporate, I applied agile methodologies for sustainable product
-              development, researched emerging technologies, and established
-              strategic collaborations, contributing to impactful innovation
-              initiatives.
+              I hold a degree in Engineering from Istanbul Technical University
+              and am currently studying Management Information Systems at
+              Anadolu University. My background helps me approach development
+              with analytical thinking, system design, and user empathy. I am
+              always trying to learn more about the latest technologies and
+              trends — recently expanding into areas like Generative AI,
+              Contentful integration, and custom component libraries.
             </AboutDescription>
           </AboutItem>
 
           <AboutItem>
-            <AboutSubtitle>💻 Technical Focus</AboutSubtitle>
+            <AboutSubtitle>🌱 Looking Ahead</AboutSubtitle>
             <AboutDescription>
-              I am particularly focused on React and aiming to incorporate
-              Generative AI technologies into my journey. I am excited to join a
-              forward-thinking team where I can contribute to innovative
-              projects that tell a story and make human life easier. My ideal
-              role involves working with cutting-edge technologies in a
-              collaborative environment that values creativity, user experience,
-              and impactful solutions.
+              I am continuing to expand my work in Generative AI integration,
+              thoughtful UI design, and component libraries. I am especially
+              interested in joining a team that values quality, clean code, good
+              design systems, and real user impact — somewhere I can build with
+              intention, and grow alongside other product-minded developers.
             </AboutDescription>
           </AboutItem>
         </div>

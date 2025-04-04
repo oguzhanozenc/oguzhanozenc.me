@@ -12,7 +12,7 @@
   <img src="/public/featuredImg.png" alt="Portfolio Preview" />
 </a>
 
-This is my personal portfolio website — built with **Next.js**, **Tailwind CSS**, and **Contentful CMS**. It serves as a dynamic, modular, and visually consistent platform to showcase my projects, journey, and resume. The design is inspired by modern SaaS products and optimized for scalability, accessibility, and performance.
+This is my personal portfolio website — built with **Next.js**, **Tailwind CSS**, and **Contentful CMS**. It serves as a dynamic, modular, and visually consistent platform to showcase my projects, journey, and resume. The design is inspired by modern apps and optimized for scalability, accessibility, and performance.
 
 ## Features
 

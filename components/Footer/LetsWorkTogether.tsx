@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { TbMessageChatbot } from "react-icons/tb";
 import { Button, CopyButton } from "@/components/Button";

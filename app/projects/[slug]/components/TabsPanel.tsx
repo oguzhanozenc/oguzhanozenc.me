@@ -1,5 +1,3 @@
-"use client";
-
 type TabsPanelProps = {
   value: string;
   activeTab: string;
