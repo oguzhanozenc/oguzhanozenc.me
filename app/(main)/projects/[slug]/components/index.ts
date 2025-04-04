@@ -1,0 +1,10 @@
+export { default as ProjectCard } from "@/app/(main)/projects/[slug]/components/ProjectCard";
+export { default as ProjectGrid } from "@/app/(main)/projects/[slug]/components/ProjectGrid";
+export { default as ProjectMedia } from "@/app/(main)/projects/[slug]/components/ProjectMedia";
+export { default as ProjectNav } from "@/app/(main)/projects/[slug]/components/ProjectNav";
+export { default as ProjectStack } from "@/app/(main)/projects/[slug]/components/ProjectStack";
+export { default as Tabs } from "@/app/(main)/projects/[slug]/components/Tabs";
+export { default as TabsList } from "@/app/(main)/projects/[slug]/components/TabsList";
+export { default as TabsPanel } from "@/app/(main)/projects/[slug]/components/TabsPanel";
+export { default as TabsTrigger } from "@/app/(main)/projects/[slug]/components/TabsTrigger";
+export { default as UserJourneyTabs } from "@/app/(main)/projects/[slug]/components/UserJourneyTabs";

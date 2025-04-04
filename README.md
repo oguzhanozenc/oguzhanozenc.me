@@ -1,6 +1,6 @@
 # oguzhanozenc.me – Portfolio Website
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-2E3440?logo=tailwindcss)](https://tailwindcss.com/)
 [![Contentful](https://img.shields.io/badge/Contentful-CMS-blue?logo=contentful)](https://www.contentful.com/)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/)
@@ -18,57 +18,57 @@ This is my personal portfolio website — built with **Next.js**, **Tailwind CSS
 
 - 🧠 **Modular Components** with reusable UI (e.g., `ProjectCard`, `ExperienceItem`, `Avatar`, etc.)
 - 📖 **CMS-Driven Content** via Contentful for Projects, Journey, Resume
-- 🧾 **Dynamic Routing** with Next.js App Router + Layouts
+- 🗞 **Print-Optimized Resume** with scoped styling and `@media print` support
+- 🔀 **Route Groups** for separating layouts across main site and resume section
 - 🌐 **SEO-Optimized** with structured metadata per page
-- 🧰 **Developer-Friendly Architecture** for future scalability
+- ⚡ **Fast, Client-Friendly Animations** using `PageTransition`
 - 📈 **Vercel Deploy Hooks** for auto-builds triggered by Contentful
 - 🖼 **Featured Image** on homepage and project thumbnails
 
 ## Tech Stack
 
-- **Framework:** Next.js (with TypeScript)
-- **Routing:** Next.js App Router
+- **Framework:** Next.js 15 (App Router, Server Components)
+- **Routing:** Route groups (e.g., `(main)`, `(resume)`)
 - **Styling:** Tailwind CSS
 - **CMS:** Contentful
 - **Deployment:** Vercel + Deploy Hooks
-- **Fonts:** Inter, Roboto Mono (via Next.js fonts)
+- **Fonts:** Inter, Roboto Mono (via Next.js font loader)
 
 ## Folder Structure
 
 ```bash
 oguzhanozenc.me/
-├── app/                   # App Router entry
-│   ├── layout.tsx         # Global layout
-│   ├── page.tsx           # Home
-│   ├── about/page.tsx     # About page
-│   ├── journey/page.tsx   # Career timeline
-│   ├── projects/page.tsx  # Portfolio grid
-│   ├── project/[slug]/page.tsx # Project detail page
-│   ├── resume/page.tsx    # Resume
-│   ├── contact/page.tsx   # Contact form
-│   └── not-found.tsx      # 404 page
+├── app/                         # App Router root
+│   ├── (main)/                  # Main pages and layout
+│   │   ├── layout.tsx           # Main layout (Navbar, Footer)
+│   │   ├── page.tsx             # Home
+│   │   ├── about/               # About section
+│   │   ├── journey/             # Career timeline
+│   │   ├── projects/            # Portfolio grid and details
+│   │   └── contact/             # Contact form
+│   ├── (resume)/                # Resume section
+│   │   ├── layout.tsx           # Print-optimized resume layout
+│   │   ├── resume/page.tsx      # Resume entry point
+│   │   └── components/          # Modular resume components
 │
-├── components/            # Reusable UI components
-├── data/                  # Local static config and types
-├── lib/                   # Contentful client + helpers
-├── public/                # Static assets (images, favicons)
-├── styles/                # Tailwind global styles
+├── components/                 # Global reusable components
+├── lib/                        # Contentful client + helpers
+├── public/                     # Static assets
+├── styles/                     # Tailwind + print styles
 ├── .gitignore
-├── eslint.config.mjs
-├── next.config.ts
+├── README.md
 ├── package.json
-├── postcss.config.mjs
 ├── tailwind.config.ts
 ├── tsconfig.json
-└── README.md
+└── next.config.ts
 ```
 
 ## Getting Started
 
 ```bash
 # 1. Clone the repo
-$ git clone https://github.com/oguzhanozenc/oguzhanozenc.me.git
-$ cd oguzhanozenc.me
+git clone https://github.com/oguzhanozenc/oguzhanozenc.me.git
+cd oguzhanozenc.me
 
 # 2. Install dependencies
 yarn install

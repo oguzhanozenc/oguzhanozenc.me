@@ -15,28 +15,13 @@ button {
   font-family: inherit;
 }
 
-.default-body {
-  font-family: var(--font-inter);
-  @apply flex justify-center items-center text-[#090e14] bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,180,170,0.13)_0,rgba(0,180,170,0)_50%,rgba(0,180,170,0)_100%)] w-[70%] mx-auto;
-}
-
 .resume-body {
   font-family: var(--font-roboto-mono);
   @apply flex justify-start items-start bg-white text-black w-full p-0;
 }
 
-.app-container {
-  @apply flex flex-col items-center w-full;
-}
-
 .resume-container {
   @apply flex flex-col items-center w-full  mx-auto p-8;
-}
-
-.main-content {
-  @apply bg-white w-full my-32 rounded-2xl border border-gray-200 p-8;
-  box-shadow: 0 1.2px 1.2px rgba(10, 10, 10, 0.06),
-    0 5px 10px rgba(10, 10, 10, 0.04);
 }
 
 .resume-content {
@@ -67,13 +52,7 @@ a {
 }
 
 @media (max-width: 1200px) {
-  .default-body {
-    @apply w-[90%];
-  }
   .resume-body {
     @apply w-full;
-  }
-  .main-content {
-    @apply p-4;
   }
 }
