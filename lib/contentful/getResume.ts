@@ -49,6 +49,7 @@ export type ResumeItem = {
       date: string;
       type: string;
       position: string;
+      experienceSummary: string;
       responsibilities: string[];
       achievements?: string[];
       techStack: string[];

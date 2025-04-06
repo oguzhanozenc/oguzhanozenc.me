@@ -7,7 +7,7 @@ export default function ExperienceItemPosition({
 }) {
   return (
     <p
-      className="text-[#030712] font-semibold my-2 text-[0.9rem] text-justify"
+      className="text-[#030712] font-semibold my-1 text-[0.9rem] text-justify"
       style={{ fontFamily: "var(--font-sfmono)" }}
     >
       {children}

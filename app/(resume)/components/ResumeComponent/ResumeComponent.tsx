@@ -16,10 +16,13 @@ import {
   ResumeSkillItem,
   Experience,
   ExperienceItem,
+  ExperienceSummary,
   ExperienceItemTitle,
   ExperienceItemPosition,
+  AchievementItem,
   Education,
   EducationItem,
+  EducationItemTitle,
   EducationItemInstitution,
   Projects,
   ProjectsGrid,
@@ -35,6 +38,7 @@ import {
   SectionLink,
   ResumeSectionTitle,
   ResumeDownloadButton,
+  EducationItemCourses,
 } from "@/app/(resume)/components";
 
 import { FaMapPin, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -68,15 +72,11 @@ export default async function ResumeComponent() {
             <ResumeTitle>{resume.title}</ResumeTitle>
             <ResumeLocation>
               <FaMapPin className="inline-block text-black mr-1" />
-              <a
-                href={resume.locationMapLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-                style={{ fontFamily: "var(--font-sfmono)" }}
-              >
+
+              <SectionLink href={resume.locationMapLink}>
                 {resume.locationCity}, {resume.locationCountry}
-              </a>
+              </SectionLink>
+
               {resume.remote && " – Open to remote work worldwide."}
             </ResumeLocation>
 
@@ -146,38 +146,30 @@ export default async function ResumeComponent() {
               <ExperienceItem key={i}>
                 <SectionRow>
                   <ExperienceItemTitle>
-                    {exp.fields.company}
-                    <Tag className="ml-2 bg-[#f3f4f6] text-[#111827] font-bold">
+                    {exp.fields.company} -{" "}
+                    <Tag className="ml-1 bg-[#f3f4f6] text-[#111827] font-bold rounded-lg">
                       {exp.fields.type}
-                    </Tag>
+                    </Tag>{" "}
+                    <ExperienceItemPosition>
+                      {exp.fields.position}
+                    </ExperienceItemPosition>
                   </ExperienceItemTitle>
                   <SectionDate>{exp.fields.date}</SectionDate>
                 </SectionRow>
 
-                <ExperienceItemPosition>
-                  {exp.fields.position}
-                </ExperienceItemPosition>
+                {exp.fields.experienceSummary && (
+                  <ExperienceSummary>
+                    <TextBlock>{exp.fields.experienceSummary}</TextBlock>
+                  </ExperienceSummary>
+                )}
 
                 {exp.fields.responsibilities?.map((desc, i2) => (
                   <TextBlock key={i2}>- {desc}</TextBlock>
                 ))}
 
                 {exp.fields.achievements?.map((ach, i2) => (
-                  <TextBlock key={`ach-${i2}`}>• {ach}</TextBlock>
+                  <AchievementItem key={i2}>{ach}</AchievementItem>
                 ))}
-
-                {exp.fields.techStack?.length > 0 && (
-                  <ul className="flex flex-wrap gap-[0.25rem] p-0 list-none mt-1">
-                    {exp.fields.techStack.map((tech, i3) => (
-                      <Tag
-                        key={i3}
-                        className="bg-[#111827cc] text-[#f9fafb] text-[0.85rem]"
-                      >
-                        {tech}
-                      </Tag>
-                    ))}
-                  </ul>
-                )}
               </ExperienceItem>
             ))}
           </Experience>
@@ -189,21 +181,19 @@ export default async function ResumeComponent() {
             {resume.education.map((edu, i) => (
               <EducationItem key={i}>
                 <SectionRow>
-                  <EducationItemInstitution>
-                    {edu.fields.title}
-                  </EducationItemInstitution>
+                  <EducationItemTitle>{edu.fields.title}</EducationItemTitle>
                   <SectionDate>{edu.fields.date}</SectionDate>
                 </SectionRow>
-
-                <TextBlock>{edu.fields.degree}</TextBlock>
-
+                <EducationItemInstitution>
+                  {edu.fields.provider}
+                </EducationItemInstitution>
+                {edu.fields.degree && (
+                  <TextBlock>{edu.fields.degree}</TextBlock>
+                )}
                 {edu.fields.relevantCourses && (
-                  <p
-                    className="text-[0.7rem] text-[#666]"
-                    style={{ fontFamily: "var(--font-sfmono)" }}
-                  >
-                    Relevant Courses: {edu.fields.relevantCourses}
-                  </p>
+                  <EducationItemCourses>
+                    Key topics: {edu.fields.relevantCourses}
+                  </EducationItemCourses>
                 )}
               </EducationItem>
             ))}
@@ -215,25 +205,25 @@ export default async function ResumeComponent() {
             <ResumeSectionTitle>Certification</ResumeSectionTitle>
             {(resume.certifications ?? []).map((cert, i) => (
               <CertificationItem key={i}>
-                <CertificationItemTitle>
-                  {cert.fields.title} –{" "}
-                  <Tag className="bg-[#e5e7eb] text-black">
-                    <a
-                      href={cert.fields.providerLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ fontFamily: "var(--font-sfmono)" }}
-                    >
-                      {cert.fields.provider}
-                    </a>
-                  </Tag>
-                </CertificationItemTitle>
+                <SectionRow>
+                  <CertificationItemTitle>
+                    {cert.fields.title} –{" "}
+                    <SectionLink href={cert.fields.providerLink}>
+                      <Tag className="text-[0.75rem] bg-[#f3f4f6] text-[#111827]">
+                        {cert.fields.provider}
+                      </Tag>
+                    </SectionLink>
+                  </CertificationItemTitle>
 
-                <SectionDate>{cert.fields.date}</SectionDate>
-
+                  <SectionDate>{cert.fields.date}</SectionDate>
+                </SectionRow>
                 <TextBlock>
                   {cert.fields.description}{" "}
-                  <SectionLink href={cert.fields.link}>View</SectionLink>
+                  <SectionLink href={cert.fields.link}>
+                    <Tag className="text-[0.75rem] bg-[#f3f4f6] text-[#111827]">
+                      View Certificate
+                    </Tag>
+                  </SectionLink>
                 </TextBlock>
               </CertificationItem>
             ))}

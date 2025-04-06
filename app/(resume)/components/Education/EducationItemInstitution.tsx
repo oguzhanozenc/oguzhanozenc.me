@@ -5,5 +5,7 @@ export default function EducationItemInstitution({
 }: {
   children: ReactNode;
 }) {
-  return <p className="text-[1rem] font-semibold">{children}</p>;
+  return (
+    <p className="text-sm font-semibold text-muted-foreground">{children}</p>
+  );
 }

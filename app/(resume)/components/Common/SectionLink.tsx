@@ -12,7 +12,7 @@ export default function SectionLink({ href, children }: Props) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-black bg-[#e5e7eb] no-underline px-1 rounded hover:underline"
+      className="text-black no-underline px-1 rounded hover:underline"
       style={{ fontFamily: "var(--font-sfmono)" }}
     >
       {children} <HiOutlineExternalLink className="inline-block" />
