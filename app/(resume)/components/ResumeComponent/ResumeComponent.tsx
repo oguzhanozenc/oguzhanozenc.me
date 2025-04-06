@@ -42,13 +42,14 @@ import {
 } from "@/app/(resume)/components";
 
 import { FaMapPin, FaGithub, FaLinkedin } from "react-icons/fa";
-import { LuGlobe, LuMail } from "react-icons/lu";
+import { LuGlobe, LuMail, LuPhone } from "react-icons/lu";
 import { notFound } from "next/navigation";
 
 const iconMap = {
   FaGithub,
   FaLinkedin,
   LuMail,
+  LuPhone,
   LuGlobe,
 };
 
