@@ -83,18 +83,17 @@ export default async function ResumeComponent() {
 
             <ResumeSocialLinks>
               {resume.socialLinks?.map((social, i) => {
-                const iconKey = social.fields.icon;
-                const Icon = iconMap[iconKey as keyof typeof iconMap];
+                const fields = social?.fields;
+                if (!fields || !fields.icon || !fields.url) return null;
+
+                const Icon = iconMap[fields.icon as keyof typeof iconMap];
+                if (!Icon) return null;
 
                 return (
-                  <ResumeSocialLink
-                    key={i}
-                    href={social.fields.url}
-                    icon={<Icon />}
-                  >
+                  <ResumeSocialLink key={i} href={fields.url} icon={<Icon />}>
                     {!["linkedin", "github"].includes(
-                      social.fields.title.toLowerCase()
-                    ) && social.fields.shorturl}
+                      fields.title.toLowerCase()
+                    ) && fields.shorturl}
                   </ResumeSocialLink>
                 );
               })}
