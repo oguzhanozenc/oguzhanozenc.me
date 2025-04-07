@@ -1,9 +1,7 @@
-"use client";
-
 import { Inter, Roboto_Mono } from "next/font/google";
+import "@/styles/global.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import "@/styles/global.css";
 import PageTransition from "@/components/Navbar/PageTransition";
 
 const inter = Inter({
@@ -18,6 +16,39 @@ const robotoMono = Roboto_Mono({
   display: "swap",
 });
 
+export const metadata = {
+  title: "Oguzhan Ozenc",
+  description:
+    "Oguzhan Ozenc is a front-end developer who blends thoughtful design with solid structure to build intuitive, scalable interfaces using React, Next.js, and Tailwind CSS.",
+  icons: {
+    icon: "/branding/logo.png",
+  },
+  openGraph: {
+    title: "Oguzhan Ozenc",
+    description:
+      "Front-end developer with a product-first mindset — focused on building structured, reusable components and polished UIs with React, Next.js, and Tailwind CSS.",
+    url: "https://oguzhanozenc.me/",
+    siteName: "Oguzhan Ozenc",
+    images: [
+      {
+        url: "https://oguzhanozenc.me/branding/oguzhanozenc.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Oguzhan Ozenc – Front-End Developer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oguzhan Ozenc",
+    description:
+      "Building front-end systems with clarity, structure, and thoughtful design.",
+    images: ["https://oguzhanozenc.me/branding/oguzhanozenc.jpg"],
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -25,9 +56,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
-      <head>
-        <link rel="icon" type="image/png" href="/branding/logo.png" />
-      </head>
       <body
         style={{ fontFamily: "var(--font-inter)" }}
         className="flex justify-center items-center text-[#090e14] bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,180,170,0.13)_0,rgba(0,180,170,0)_50%,rgba(0,180,170,0)_100%)] w-[70%] mx-auto font-sans max-[1200px]:w-[90%]"
