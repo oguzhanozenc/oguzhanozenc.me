@@ -14,6 +14,8 @@ import {
   UserJourneyTabs,
 } from "@/app/(main)/projects/[slug]/components";
 
+type ProjectParams = Promise<{ slug: string }>;
+
 export async function generateStaticParams() {
   const projects = await getProjectEntries();
   return projects.map((project) => ({
@@ -24,17 +26,18 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: ProjectParams;
 }): Promise<Metadata> {
-  return getProjectMetadata(params.slug);
+  const { slug } = await params;
+  return getProjectMetadata(slug);
 }
 
 export default async function ProjectPage({
   params,
 }: {
-  params: { slug: string };
+  params: ProjectParams;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const allProjects = await getProjectEntries();
   const project = allProjects.find((p) => p.slug === slug);
