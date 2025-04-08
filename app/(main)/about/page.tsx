@@ -8,13 +8,13 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Avatar, AvatarImage } from "@/components/Avatar";
 
 export const metadata = {
-  title: "About – Oguzhan Ozenc | Front-End Developer",
+  title: "About – Oguzhan Ozenc | Frontend Developer",
   description:
-    "Learn more about Oguzhan Ozenc, a front-end developer specializing in React, Next.js, and Tailwind CSS. Discover his journey, experience, and design philosophy.",
+    "Get to know Oguzhan Ozenc — a frontend developer focused on scalable UI architecture, design systems, and product-first development using React and Next.js.",
   openGraph: {
-    title: "About – Oguzhan Ozenc | Front-End Developer",
+    title: "About – Oguzhan Ozenc | Frontend Developer",
     description:
-      "Explore the background and work of Oguzhan Ozenc — a front-end developer focused on modular design, scalable architecture, and polished UIs using React and Next.js.",
+      "Learn more about Oguzhan's background, process, and approach to building polished, scalable front-end systems with React and modern UI libraries.",
     url: "https://oguzhanozenc.me/about",
     siteName: "Oguzhan Ozenc",
     images: [
@@ -22,7 +22,7 @@ export const metadata = {
         url: "https://oguzhanozenc.me/branding/oguzhanozenc.jpg",
         width: 1200,
         height: 630,
-        alt: "Oguzhan Ozenc – Front-End Developer",
+        alt: "Oguzhan Ozenc – Frontend Developer",
       },
     ],
     locale: "en_US",
@@ -30,9 +30,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About – Oguzhan Ozenc | Front-End Developer",
+    title: "About – Oguzhan Ozenc | Frontend Developer",
     description:
-      "Discover Oguzhan's approach to building clean, intuitive front-end systems with React, Next.js, and Tailwind CSS.",
+      "Frontend developer with a focus on thoughtful UI design, structured code, and scalable front-end systems using React and Next.js.",
     images: ["https://oguzhanozenc.me/branding/oguzhanozenc.jpg"],
   },
 };

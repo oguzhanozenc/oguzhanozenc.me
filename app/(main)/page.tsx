@@ -21,9 +21,20 @@ export default function HomePage() {
           <div className="flex flex-col justify-center text-left lg:w-1/2 max-sm:w-full max-sm:my-4">
             <SectionTitle>I’m Oguzhan</SectionTitle>
             <p className="text-[1.125rem] text-gray-600 p-0 m-0 text-justify">
-              Front-End Developer based in Istanbul, Turkey. I build structured,
-              intuitive UIs using React, Next.js, and Tailwind CSS.
+              Front-End Developer based in Istanbul, Turkey.
             </p>
+
+            {/* SEO-friendly rich intro (visible on screen or screen readers) */}
+
+            <p className="sr-only">
+              I’m Oğuzhan Özenç, a front-end developer based in Istanbul,
+              Turkey. I specialize in building clean, scalable, and accessible
+              user interfaces using modern technologies like React, Next.js, and
+              TypeScript. My focus is on modular architecture, component
+              reusability, and user-centered design that supports growth and
+              maintainability.
+            </p>
+
             <div className="flex flex-row items-center mt-8 sm:mt-4 space-x-4">
               <Link href="/projects">
                 <Button variant="secondary">

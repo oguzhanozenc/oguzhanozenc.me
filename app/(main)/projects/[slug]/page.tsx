@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
 import { getProjectEntries } from "@/lib/contentful/getProject";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { getProjectMetadata } from "@/lib/metadata/projectMetadata";
 
 import { SectionTitle } from "@/components/SectionTitle";
 import {
@@ -11,16 +14,27 @@ import {
   UserJourneyTabs,
 } from "@/app/(main)/projects/[slug]/components";
 
-import { HiArrowLongRight } from "react-icons/hi2";
-import { TbTopologyComplex } from "react-icons/tb";
-import { FaCheck } from "react-icons/fa6";
+export async function generateStaticParams() {
+  const projects = await getProjectEntries();
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  return getProjectMetadata(params.slug);
+}
 
 export default async function ProjectPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = params;
 
   const allProjects = await getProjectEntries();
   const project = allProjects.find((p) => p.slug === slug);
@@ -29,10 +43,8 @@ export default async function ProjectPage({
 
   return (
     <section className="py-[4rem] sm:px-[5%] max-sm:px-0">
-      {/* Navigation */}
       <ProjectNav slug={slug} projects={allProjects} />
 
-      {/* Header */}
       <div className="bg-white border border-[rgb(230,230,230)] rounded-[0.75rem] p-6 text-justify mb-20">
         <SectionTitle size="large" align="center">
           {project.title}
@@ -65,7 +77,6 @@ export default async function ProjectPage({
         </div>
       </div>
 
-      {/* About Section */}
       <div className="mb-20">
         <SectionTitle size="medium">About</SectionTitle>
         <ProjectGrid columns={2}>
@@ -79,7 +90,6 @@ export default async function ProjectPage({
         </ProjectGrid>
       </div>
 
-      {/* User Journey */}
       {project.userJourney && project.userJourney.length > 0 && (
         <div>
           <SectionTitle size="medium">User Journey</SectionTitle>
@@ -87,7 +97,6 @@ export default async function ProjectPage({
         </div>
       )}
 
-      {/* Features */}
       {project.projectFeatures && (
         <div className="mb-20">
           <SectionTitle size="medium">Features</SectionTitle>
@@ -103,29 +112,29 @@ export default async function ProjectPage({
         </div>
       )}
 
-      {/* Challenges & Solutions */}
       {project.projectChallenges && (
         <div className="mb-20">
           <SectionTitle size="medium">Challenges and Solutions</SectionTitle>
           {(project.projectChallenges ?? []).map((item, index) => (
             <ProjectGrid key={index} columns={3}>
               <ProjectCard title={item.fields.challenge}>
-                <div className="flex items-center gap-2 mb-2 text-sm font-medium text-gray-700">
-                  <TbTopologyComplex /> Challenge
-                </div>
+                <p className="mb-2 flex items-center gap-2 text-sm font-medium text-gray-700">
+                  Challenge
+                </p>
                 <p className="text-sm">
                   {documentToReactComponents(item.fields.challengeDescription)}
                 </p>
               </ProjectCard>
 
+              {/* Arrow */}
               <div className="hidden lg:flex justify-center items-center text-[1.5rem] mx-auto text-muted-foreground">
-                <HiArrowLongRight />
+                →
               </div>
 
               <ProjectCard title={item.fields.solution}>
-                <div className="flex items-center gap-2 mb-2 text-sm font-medium text-gray-700">
-                  <FaCheck /> Solution
-                </div>
+                <p className="mb-2 flex items-center gap-2 text-sm font-medium text-gray-700">
+                  Solution
+                </p>
                 <p className="text-sm">
                   {documentToReactComponents(item.fields.solutionDescription)}
                 </p>
@@ -135,13 +144,12 @@ export default async function ProjectPage({
         </div>
       )}
 
-      {/* Future Plans */}
       {project.futurePlans && (
         <div className="mb-20">
           <SectionTitle size="medium">Future Plans</SectionTitle>
           {project.futurePlans.map((plan, index) => (
             <div className="mb-2" key={index}>
-              <ProjectCard key={index} title={plan.fields.title}>
+              <ProjectCard title={plan.fields.title}>
                 <p className="text-sm">{plan.fields.description}</p>
               </ProjectCard>
             </div>
@@ -149,7 +157,6 @@ export default async function ProjectPage({
         </div>
       )}
 
-      {/* Contact / Feedback */}
       {project.contactFeedback && (
         <div className="mb-20">
           <SectionTitle size="medium">Contact or Feedback</SectionTitle>
@@ -160,11 +167,4 @@ export default async function ProjectPage({
       )}
     </section>
   );
-}
-
-export async function generateStaticParams() {
-  const projects = await getProjectEntries();
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
 }

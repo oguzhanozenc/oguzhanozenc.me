@@ -18,9 +18,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
-  title: "Oguzhan Ozenc – Front-End Developer | React, Next.js",
+  title: "Oguzhan Ozenc – Frontend Developer | React, Next.js",
   description:
-    "Oguzhan Ozenc is a front-end developer who creates scalable, intuitive UIs using React, Next.js, and Tailwind CSS.",
+    "Frontend developer focused on building scalable, design-conscious web experiences using React, Next.js 15, and TypeScript.",
   icons: {
     icon: "/branding/logo.png",
   },
@@ -28,9 +28,9 @@ export const metadata = {
     canonical: "https://oguzhanozenc.me/",
   },
   openGraph: {
-    title: "Oguzhan Ozenc – Front-End Developer | React, Next.js",
+    title: "Oguzhan Ozenc – Frontend Developer | React, Next.js",
     description:
-      "Front-end developer with a product-first mindset — building reusable components and polished UIs with React, Next.js, and Tailwind CSS.",
+      "Frontend developer building modular, scalable interfaces with React, Next.js 15, and Tailwind CSS — focused on clean UI architecture and user flow.",
     url: "https://oguzhanozenc.me/",
     siteName: "Oguzhan Ozenc",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
         url: "https://oguzhanozenc.me/branding/oguzhanozenc.jpg",
         width: 1200,
         height: 630,
-        alt: "Oguzhan Ozenc – Front-End Developer",
+        alt: "Oguzhan Ozenc – Frontend Developer",
       },
     ],
     locale: "en_US",
@@ -46,9 +46,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oguzhan Ozenc – Front-End Developer | React, Next.js",
+    title: "Oguzhan Ozenc – Frontend Developer | React, Next.js",
     description:
-      "Building front-end systems with clarity, structure, and thoughtful design.",
+      "Frontend developer focused on modular systems, polished UIs, and product-first thinking.",
     images: ["https://oguzhanozenc.me/branding/oguzhanozenc.jpg"],
   },
 };
@@ -70,14 +70,15 @@ export default function RootLayout({
               "@type": "Person",
               name: "Oguzhan Ozenc",
               url: "https://oguzhanozenc.me",
-              jobTitle: "Front-End Developer",
+              jobTitle: "Frontend Developer",
               worksFor: {
                 "@type": "Organization",
-                name: "Freelance",
+                name: "Self-employed",
               },
               sameAs: [
                 "https://github.com/oguzhanozenc",
                 "https://linkedin.com/in/oguzhanozenc",
+                "https://x.com/oguzhanozencdev",
               ],
             }),
           }}
