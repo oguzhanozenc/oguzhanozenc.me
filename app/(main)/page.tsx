@@ -21,7 +21,8 @@ export default function HomePage() {
           <div className="flex flex-col justify-center text-left lg:w-1/2 max-sm:w-full max-sm:my-4">
             <SectionTitle>I’m Oguzhan</SectionTitle>
             <p className="text-[1.125rem] text-gray-600 p-0 m-0 text-justify">
-              Front-end developer based in Istanbul, Turkey.
+              Front-End Developer based in Istanbul, Turkey. I build structured,
+              intuitive UIs using React, Next.js, and Tailwind CSS.
             </p>
             <div className="flex flex-row items-center mt-8 sm:mt-4 space-x-4">
               <Link href="/projects">
@@ -89,9 +90,9 @@ export default function HomePage() {
 
       <div className="flex flex-col w-full gap-16 my-4">
         <div className="my-4">
-          <p className="text-2xl font-semibold text-left text-gray-800 py-4 mb-2">
+          <h2 className="text-2xl font-semibold text-left text-gray-800 py-4 mb-2">
             Projects
-          </p>
+          </h2>
           <RecentProjects />
         </div>
         <div className="my-4">

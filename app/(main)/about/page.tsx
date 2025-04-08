@@ -8,13 +8,13 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Avatar, AvatarImage } from "@/components/Avatar";
 
 export const metadata = {
-  title: "About – Oguzhan Ozenc",
+  title: "About – Oguzhan Ozenc | Front-End Developer",
   description:
-    "Oguzhan Ozenc is a front-end developer who blends thoughtful design with solid structure to build intuitive, scalable interfaces using React, Next.js, and Tailwind CSS.",
+    "Learn more about Oguzhan Ozenc, a front-end developer specializing in React, Next.js, and Tailwind CSS. Discover his journey, experience, and design philosophy.",
   openGraph: {
-    title: "About – Oguzhan Ozenc",
+    title: "About – Oguzhan Ozenc | Front-End Developer",
     description:
-      "Front-end developer with a product-first mindset — focused on building structured, reusable components and polished UIs with React, Next.js, and Tailwind CSS.",
+      "Explore the background and work of Oguzhan Ozenc — a front-end developer focused on modular design, scalable architecture, and polished UIs using React and Next.js.",
     url: "https://oguzhanozenc.me/about",
     siteName: "Oguzhan Ozenc",
     images: [
@@ -30,9 +30,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About – Oguzhan Ozenc",
+    title: "About – Oguzhan Ozenc | Front-End Developer",
     description:
-      "Building front-end systems with clarity, structure, and thoughtful design.",
+      "Discover Oguzhan's approach to building clean, intuitive front-end systems with React, Next.js, and Tailwind CSS.",
     images: ["https://oguzhanozenc.me/branding/oguzhanozenc.jpg"],
   },
 };

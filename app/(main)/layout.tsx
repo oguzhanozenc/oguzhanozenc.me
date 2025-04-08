@@ -1,4 +1,5 @@
 import { Inter, Roboto_Mono } from "next/font/google";
+import Head from "next/head";
 import "@/styles/global.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -17,16 +18,19 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
-  title: "Oguzhan Ozenc",
+  title: "Oguzhan Ozenc – Front-End Developer | React, Next.js",
   description:
-    "Oguzhan Ozenc is a front-end developer who blends thoughtful design with solid structure to build intuitive, scalable interfaces using React, Next.js, and Tailwind CSS.",
+    "Oguzhan Ozenc is a front-end developer who creates scalable, intuitive UIs using React, Next.js, and Tailwind CSS.",
   icons: {
     icon: "/branding/logo.png",
   },
+  alternates: {
+    canonical: "https://oguzhanozenc.me/",
+  },
   openGraph: {
-    title: "Oguzhan Ozenc",
+    title: "Oguzhan Ozenc – Front-End Developer | React, Next.js",
     description:
-      "Front-end developer with a product-first mindset — focused on building structured, reusable components and polished UIs with React, Next.js, and Tailwind CSS.",
+      "Front-end developer with a product-first mindset — building reusable components and polished UIs with React, Next.js, and Tailwind CSS.",
     url: "https://oguzhanozenc.me/",
     siteName: "Oguzhan Ozenc",
     images: [
@@ -42,7 +46,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oguzhan Ozenc",
+    title: "Oguzhan Ozenc – Front-End Developer | React, Next.js",
     description:
       "Building front-end systems with clarity, structure, and thoughtful design.",
     images: ["https://oguzhanozenc.me/branding/oguzhanozenc.jpg"],
@@ -56,6 +60,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
+      <Head>
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Oguzhan Ozenc",
+              url: "https://oguzhanozenc.me",
+              jobTitle: "Front-End Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelance",
+              },
+              sameAs: [
+                "https://github.com/oguzhanozenc",
+                "https://linkedin.com/in/oguzhanozenc",
+              ],
+            }),
+          }}
+        />
+      </Head>
+
       <body
         style={{ fontFamily: "var(--font-inter)" }}
         className="flex justify-center items-center text-[#090e14] bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,180,170,0.13)_0,rgba(0,180,170,0)_50%,rgba(0,180,170,0)_100%)] w-[70%] mx-auto font-sans max-[1200px]:w-[90%]"
