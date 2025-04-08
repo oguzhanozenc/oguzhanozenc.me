@@ -1,5 +1,4 @@
 import { Inter, Roboto_Mono } from "next/font/google";
-import Head from "next/head";
 import Script from "next/script";
 import "@/styles/global.css";
 import Navbar from "@/components/Navbar/Navbar";
