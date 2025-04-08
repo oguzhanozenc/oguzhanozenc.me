@@ -1,5 +1,6 @@
 import { Inter, Roboto_Mono } from "next/font/google";
 import Head from "next/head";
+import Script from "next/script";
 import "@/styles/global.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -60,30 +61,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
-      <Head>
-        {/* Schema.org Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Oguzhan Ozenc",
-              url: "https://oguzhanozenc.me",
-              jobTitle: "Frontend Developer",
-              worksFor: {
-                "@type": "Organization",
-                name: "Self-employed",
-              },
-              sameAs: [
-                "https://github.com/oguzhanozenc",
-                "https://linkedin.com/in/oguzhanozenc",
-                "https://x.com/oguzhanozencdev",
-              ],
-            }),
-          }}
-        />
-      </Head>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Oguzhan Ozenc",
+            url: "https://oguzhanozenc.me",
+            jobTitle: "Frontend Developer",
+            worksFor: {
+              "@type": "Organization",
+              name: "Self-employed",
+            },
+            sameAs: [
+              "https://github.com/oguzhanozenc",
+              "https://linkedin.com/in/oguzhanozenc",
+              "https://x.com/oguzhanozencdev",
+            ],
+          }),
+        }}
+      />
 
       <body
         style={{ fontFamily: "var(--font-inter)" }}
