@@ -5,6 +5,7 @@
 [![Contentful](https://img.shields.io/badge/Contentful-CMS-blue?logo=contentful)](https://www.contentful.com/)
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://vercel.com/)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<img src="https://img.shields.io/badge/Lighthouse-100%2F100%2F100%2F100-brightgreen" alt="Lighthouse 100 scores" />
 
 ## Overview
 
