@@ -82,7 +82,7 @@ export default function AboutPage() {
               I currently lead the front-end development of multiple real-world
               projects, including Plateful, an AI-powered meal planning
               assistant, and Offbeat Security, a blockchain web app. I
-              specialize in React, Next.js 15, Tailwind CSS, and shadcn/ui,
+              specialize in React, Next.js, Tailwind CSS, and shadcn/ui,
               focusing on building structured, scalable, and polished interfaces
               that feel great to use. Across all projects, I prioritize clean
               architecture, reusability, and a strong sense of user flow.
