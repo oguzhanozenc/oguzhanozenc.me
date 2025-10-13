@@ -160,7 +160,6 @@ export default async function ResumeComponent() {
                       {exp.fields.position}
                     </ExperienceItemPosition>
                   </div>
-
                   <SectionDate>{exp.fields.date}</SectionDate>
                 </SectionRow>
 
