@@ -46,6 +46,7 @@ export type ResumeItem = {
   workExperience: {
     fields: {
       company: string;
+      url: string;
       date: string;
       type: string;
       position: string;

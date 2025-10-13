@@ -145,7 +145,10 @@ export default async function ResumeComponent() {
             {resume.workExperience.map((exp, i) => (
               <ExperienceItem key={i}>
                 <SectionRow>
-                  <ExperienceItemTitle>
+                  <ExperienceItemTitle
+                    href={exp.fields.url ?? undefined}
+                    ariaLabel={`Open ${exp.fields.company}`}
+                  >
                     {exp.fields.company} -{" "}
                     <Tag className="ml-1 bg-[#f3f4f6] text-[#111827] font-bold rounded-lg">
                       {exp.fields.type}
