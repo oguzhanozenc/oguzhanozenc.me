@@ -8,7 +8,7 @@ import { LuLayers3 } from "react-icons/lu";
 import { HiOutlineMap } from "react-icons/hi2";
 import { TbSmartHome, TbUserCircle, TbMessageChatbot } from "react-icons/tb";
 
-import "@/styles/Navbar.css";
+import "./Navbar.css";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -46,26 +46,23 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 prefetch
-                className={`nav-link relative flex items-center justify-start p-2 mx-1 rounded-full transition-colors duration-300 ${
-                  isActive ? "bg-[#f0f0f0]" : ""
-                } hover:bg-[#f0f0f0]`}
+                className={`nav-link relative flex items-center justify-start p-2 mx-1 rounded-full transition-colors duration-300 ${isActive ? "bg-[#f0f0f0]" : ""
+                  } hover:bg-[#f0f0f0]`}
                 onMouseEnter={() => setHoveredLink(href)}
                 onMouseLeave={() => setHoveredLink(null)}
               >
                 <span
-                  className={`text-[1.75rem] transition-colors ${
-                    isActive ? "text-[#0a0a0a]" : "text-[#666]"
-                  }`}
+                  className={`text-[1.75rem] transition-colors ${isActive ? "text-[#0a0a0a]" : "text-[#666]"
+                    }`}
                 >
                   {icon}
                 </span>
 
                 <span
-                  className={`hovered-text ${
-                    isHovered
+                  className={`hovered-text ${isHovered
                       ? "animate-swipeIn"
                       : "opacity-0 pointer-events-none"
-                  }`}
+                    }`}
                 >
                   {label}
                 </span>

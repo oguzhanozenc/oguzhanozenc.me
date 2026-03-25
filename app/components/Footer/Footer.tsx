@@ -24,7 +24,7 @@ export default function Footer() {
                   alt="Oguzhan Ozenc Logo"
                   width={48}
                   height={48}
-                  className="w-12 h-auto object-contain"
+                  className="object-contain"
                 />
               </Link>
             </div>

@@ -7,10 +7,10 @@ type Props = {
 
 export default function Tag({ children, className = "" }: Props) {
   return (
-    <li
+    <span
       className={`inline-block text-[0.85rem] px-2 py-1 rounded ${className}`}
     >
       {children}
-    </li>
+    </span>
   );
 }

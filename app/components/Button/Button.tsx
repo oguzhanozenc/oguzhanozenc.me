@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import clsx from "clsx";
-import "@/styles/Button.css";
+import "./Button.css";
 
 type Variant = "default" | "outline" | "secondary" | "pulsating";
 type Size = "sm" | "md" | "lg";

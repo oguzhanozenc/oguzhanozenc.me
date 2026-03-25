@@ -1,4 +1,4 @@
-import "@/styles/ResumePrint.css";
+import "./ResumePrint.css";
 import Image from "next/image";
 import { getResumeEntry } from "@/lib/contentful/getResume";
 import {
@@ -107,7 +107,8 @@ export default async function ResumeComponent() {
                 alt={`${resume.name}'s photo`}
                 width={128}
                 height={128}
-                className="rounded-md object-cover"
+                priority
+                className="rounded-md object-cover w-32 h-32"
               />
             </ResumePhoto>
           )}
