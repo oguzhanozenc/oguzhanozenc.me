@@ -91,7 +91,12 @@ export default function HomePage() {
             <span className="italic">
               <Stagger text="&" by="word" start={1560} gap={0} />
             </span>{" "}
-            <Stagger text="Designer" by="word" start={1620} gap={0} />
+            <span className="whitespace-nowrap">
+              <Stagger text="Designer" by="word" start={1620} gap={0} />
+              <span aria-hidden className="bit sparkle" style={{ "--d": "2300ms" } as React.CSSProperties}>
+                ✨
+              </span>
+            </span>
           </span>
           <span className="block">
             <Stagger text="Folio ©2026" by="word" start={1760} gap={80} />{" "}

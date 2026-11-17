@@ -98,6 +98,50 @@ html {
   animation: pixel-in 0.16s steps(1, end) both;
 }
 
+/* Pixel glyphs that pop around Designer once Developer has rendered. */
+.sparkle {
+  display: inline-block;
+  font-size: 1.3em;
+  line-height: 0.5;
+  margin-left: 0.06em;
+  animation:
+    pop 0.45s steps(4, end) both,
+    twinkle 2.4s steps(1, end) infinite;
+  animation-delay: var(--d), calc(var(--d) + 0.6s + var(--t, 0s));
+}
+
+/* After popping in, each glyph blinks to a smaller step now and then, like a sprite. */
+@keyframes twinkle {
+  0%,
+  70% {
+    transform: scale(1);
+  }
+  71%,
+  80% {
+    transform: scale(0.6);
+  }
+  81%,
+  88% {
+    transform: scale(1.2);
+  }
+  89%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -146,7 +190,8 @@ html {
   .intro-name,
   .intro-late,
   .pixel-in,
-  .spin {
+  .spin,
+  .sparkle {
     animation: none;
   }
 }
