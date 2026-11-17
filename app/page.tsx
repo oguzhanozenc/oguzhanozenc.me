@@ -1,115 +1,63 @@
-import Link from "next/link";
-import { RecentProjects } from "@/app/components/RecentProjects";
-import { PiHandPeace, PiTelegramLogoBold } from "react-icons/pi";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { GoDotFill } from "react-icons/go";
-import { LuMail } from "react-icons/lu";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { RiTwitterXLine } from "react-icons/ri";
-import { Button } from "@/app/components/Button";
-import { Avatar, AvatarBadge, AvatarImage } from "@/app/components/Avatar";
-import { SocialLinks, SocialUnit } from "@/app/components/Socials";
-import { LetsWorkTogether } from "@/app/components/Footer";
-import { SectionTitle } from "@/app/components/SectionTitle";
+import Image from "next/image";
+
+const label = "font-mono text-[11px] uppercase leading-[1.35] tracking-[0.08em] text-muted";
+
+const step = (i: number) => ({ "--i": i }) as React.CSSProperties;
 
 export default function HomePage() {
   return (
-    <section className="flex flex-col container mx-auto py-16 max-sm:py-8 max-sm:px-4 md:px-12 gap-4">
-      <div className="flex flex-col justify-center items-stretch">
-        <div className="w-full flex flex-col-reverse lg:flex-row justify-center items-center rounded-md p-6 max-sm:p-0">
-          {/* Left Content */}
-          <div className="flex flex-col justify-center text-left lg:w-1/2 max-sm:w-full max-sm:my-4">
-            <SectionTitle>I’m Oguzhan</SectionTitle>
-            <p className="text-[1.125rem] text-gray-600 p-0 m-0 text-justify">
-              Front-End Developer based in Istanbul, Turkey.
-            </p>
+    <main className="relative flex min-h-svh flex-col px-5 py-5 sm:px-10 sm:py-8">
+      <header className="intro-late flex items-center justify-between" style={step(0)}>
+        <Image src="/branding/logo.png" alt="" width={571} height={659} priority className="h-6 w-auto" />
+        <a href="mailto:hello@oguzhanozenc.me" className={`${label} text-ink hover:text-muted`}>
+          Contact
+        </a>
+      </header>
 
-            {/* SEO-friendly rich intro (visible on screen or screen readers) */}
+      <section className="relative flex flex-1 items-center justify-center py-16">
+        <span className={`intro-late absolute left-0 top-1/2 hidden -translate-y-1/2 sm:block ${label}`} style={step(1)}>
+          Edition
+          <br />
+          026
+        </span>
 
-            <p className="sr-only">
-              I’m Oğuzhan Özenç, a front-end developer based in Istanbul,
-              Turkey. I specialize in building clean, scalable, and accessible
-              user interfaces using modern technologies like React, Next.js, and
-              TypeScript. My focus is on modular architecture, component
-              reusability, and user-centered design that supports growth and
-              maintainability.
-            </p>
+        <h1 className="char text-center text-[clamp(1.6rem,3.6vw,3.6rem)] font-normal uppercase leading-[1.04] tracking-[-0.01em]">
+          <span className="intro-name block">Oğuzhan Özenç</span>
+          <span className="sr-only">, </span>
+          <span className="intro-line block" style={step(0)}>
+            Creative <span className="accent">Developer</span>
+          </span>
+          <span className="intro-line block" style={step(1)}>
+            <span className="italic">&amp;</span> Designer
+          </span>
+          <span className="intro-line block" style={step(2)}>
+            Folio ©2026 <span className="accent">✳</span>
+          </span>
+        </h1>
 
-            <div className="flex flex-row items-center mt-8 sm:mt-4 space-x-4">
-              <Link href="/projects">
-                <Button variant="secondary">
-                  My Work <MdKeyboardDoubleArrowRight />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button
-                  variant="pulsating"
-                  className="transition-all duration-300 hover:-rotate-4"
-                >
-                  Say Hello! <PiHandPeace />
-                </Button>
-              </Link>
-            </div>
-          </div>
+        <span
+          className={`intro-late absolute right-0 top-1/2 hidden -translate-y-1/2 text-right sm:block ${label}`}
+          style={step(2)}
+        >
+          Selected work
+          <br />
+          Coming soon
+        </span>
+      </section>
 
-          {/* Right Content */}
-          <div className="flex flex-row max-sm:flex-col items-center justify-center lg:w-1/2 gap-3 max-sm:my-4">
-            <Avatar>
-              <AvatarImage
-                src="/branding/me.png"
-                alt="Oguzhan Ozenc"
-                className="hover:rotate-6 transition-all duration-300 ease-in-out"
-              />
-              <AvatarBadge>
-                <GoDotFill className="mr-1" />
-                AVAILABLE FOR WORK
-              </AvatarBadge>
-            </Avatar>
-
-            {/* Social Media Links */}
-            <div className="flex flex-col justify-center items-center mt-4 ">
-              <SocialLinks className="flex max-sm:flex-row flex-col gap-1.5">
-                <SocialUnit href="mailto:hello@oguzhanozenc.me" label="Email">
-                  <LuMail />
-                </SocialUnit>
-                <SocialUnit
-                  href="https://linkedin.com/in/oguzhanozenc"
-                  label="LinkedIn"
-                >
-                  <FaLinkedin />
-                </SocialUnit>
-                <SocialUnit
-                  href="https://github.com/oguzhanozenc"
-                  label="GitHub"
-                >
-                  <FaGithub />
-                </SocialUnit>
-                <SocialUnit href="https://t.me/oguzhanozenc" label="Telegram">
-                  <PiTelegramLogoBold />
-                </SocialUnit>
-                <SocialUnit
-                  href="https://x.com/oguzhanozencdev"
-                  label="Twitter"
-                >
-                  <RiTwitterXLine />
-                </SocialUnit>
-              </SocialLinks>
-            </div>
-          </div>
+      <footer className="intro-late grid gap-6 sm:grid-cols-12 sm:items-end" style={step(3)}>
+        <p className="max-w-[42ch] text-[15px] leading-[1.45] tracking-[-0.005em] sm:col-span-6">
+          Most websites explain a business. The good ones make you feel something about it first. I build the
+          second kind, with identity, story and motion coming from one person.
+        </p>
+        <div className={`flex justify-between sm:col-span-6 sm:justify-end sm:gap-10 ${label}`}>
+          <span className="sm:hidden">Edition 026</span>
+          <span>
+            <span className="mr-2 inline-block size-[7px] translate-y-[-1px] rounded-full bg-ink align-middle" />
+            New site in progress
+          </span>
         </div>
-      </div>
-
-      <div className="flex flex-col w-full gap-16 my-4">
-        <div className="my-4">
-          <h2 className="text-2xl font-semibold text-left text-gray-800 py-4 mb-2">
-            Projects
-          </h2>
-          <RecentProjects />
-        </div>
-        <div className="my-4">
-          <LetsWorkTogether />
-        </div>
-      </div>
-    </section>
+      </footer>
+    </main>
   );
 }

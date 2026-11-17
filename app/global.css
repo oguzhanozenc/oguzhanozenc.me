@@ -2,35 +2,71 @@
 
 @theme {
   --font-sans: var(--font-neue-montreal), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --color-paper: #eeece7;
+  --color-ink: #111110;
+  --color-muted: #6e6c66;
 }
 
-a,
-button {
-  font-family: inherit;
+/* Character face; swap for the Adobe Fonts family once the kit is in. */
+:root {
+  --font-char: "Bodoni Moda Variable", serif;
 }
 
-.resume-body {
-  @apply flex justify-start items-start bg-white text-black w-full p-0;
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.resume-container {
-  @apply flex flex-col items-center w-full mx-auto p-8;
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
 }
 
-.resume-content {
-  @apply bg-transparent shadow-none border-none p-0;
+.char {
+  font-family: var(--font-char);
 }
 
-.sectiontitle {
-  @apply text-[2.25rem] text-left my-4 text-[#373737] font-semibold tracking-tight;
+/* Sans counter-voice, sized to the serif's cap height. */
+.accent {
+  font-family: var(--font-sans);
+  font-size: 0.93em;
+  font-weight: 400;
+  letter-spacing: -0.015em;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* Intro: the name arrives alone and small, then the block opens around it. */
+@keyframes name-in {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5em) scale(0.55);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(1.5em) scale(0.55);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-@keyframes fadeIn {
+@keyframes line-in {
+  from {
+    opacity: 0;
+    clip-path: inset(-0.1em -0.3em 100% -0.3em);
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(-0.1em -0.3em -0.3em -0.3em);
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
   from {
     opacity: 0;
   }
@@ -39,12 +75,25 @@ a {
   }
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.5s ease-in-out;
+.intro-name {
+  transform-origin: 50% 50%;
+  animation: name-in 1.7s cubic-bezier(0.7, 0, 0.15, 1) both;
 }
 
-@media (max-width: 1200px) {
-  .resume-body {
-    @apply w-full;
+.intro-line {
+  animation: line-in 0.9s cubic-bezier(0.2, 0.7, 0.1, 1) both;
+  animation-delay: calc(1.25s + var(--i, 0) * 110ms);
+}
+
+.intro-late {
+  animation: fade-in 0.8s ease-out both;
+  animation-delay: calc(1.75s + var(--i, 0) * 90ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-name,
+  .intro-line,
+  .intro-late {
+    animation: none;
   }
 }
