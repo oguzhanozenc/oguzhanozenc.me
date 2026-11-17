@@ -13,6 +13,12 @@ const neueMontreal = localFont({
   display: "swap",
 });
 
+const mondwest = localFont({
+  src: "./fonts/Bitmap Font Pack/PPMondwest-Regular.otf",
+  variable: "--font-bit",
+  display: "swap",
+});
+
 const title = "Oğuzhan Özenç, Creative Developer & Designer";
 const description =
   "Brand-led websites where identity, story and motion come from one person, from the first sketch to production code.";
@@ -49,7 +55,7 @@ const structuredData = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={neueMontreal.variable}>
+    <html lang="en" className={`${neueMontreal.variable} ${mondwest.variable}`}>
       <body>
         <script
           type="application/ld+json"

@@ -6,8 +6,31 @@ const label = "font-mono text-[11px] uppercase leading-[1.35] tracking-[0.08em] 
 const step = (i: number) => ({ "--i": i }) as React.CSSProperties;
 
 /* Splits text into units that rise into place one after another. */
-function Stagger({ text, by, start, gap }: { text: string; by: "char" | "word"; start: number; gap: number }) {
+function Stagger({
+  text,
+  by,
+  start,
+  gap,
+  pixel = false,
+}: {
+  text: string;
+  by: "char" | "word";
+  start: number;
+  gap: number;
+  pixel?: boolean;
+}) {
   const parts = by === "char" ? Array.from(text) : text.split(" ");
+  if (pixel) {
+    return (
+      <>
+        {parts.map((part, i) => (
+          <span key={i} className="pixel-in inline-block" style={{ animationDelay: `${start + i * gap}ms` }}>
+            {part}
+          </span>
+        ))}
+      </>
+    );
+  }
   return (
     <>
       {parts.map((part, i) => (
@@ -29,9 +52,19 @@ export default function HomePage() {
     <main className="relative flex min-h-svh flex-col px-5 py-5 sm:px-10 sm:py-8">
       <header className="intro-late flex items-center justify-between" style={step(0)}>
         <Image src="/branding/logo.png" alt="" width={571} height={659} priority className="h-6 w-auto" />
-        <a href="mailto:hello@oguzhanozenc.me" className={`${label} text-ink hover:text-muted`}>
-          Contact
-        </a>
+        <nav className={`flex gap-6 ${label}`}>
+          <a
+            href="https://www.upwork.com/freelancers/~012774b90a6c2bfb8f"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ink hover:text-muted"
+          >
+            Upwork
+          </a>
+          <a href="mailto:hello@oguzhanozenc.me" className="text-ink hover:text-muted">
+            Contact
+          </a>
+        </nav>
       </header>
 
       <section className="relative flex flex-1 items-center justify-center py-16">
@@ -41,7 +74,7 @@ export default function HomePage() {
           026
         </span>
 
-        <h1 className="char text-center text-[clamp(1.6rem,3.6vw,3.6rem)] font-normal uppercase leading-[1.04] tracking-[-0.01em]">
+        <h1 className="char text-center text-[clamp(1.6rem,3.6vw,3.6rem)] font-normal uppercase leading-[1.12] tracking-[-0.01em]">
           <span className="intro-name block" aria-label="Oğuzhan Özenç">
             <span aria-hidden>
               <Stagger text="Oğuzhan Özenç" by="char" start={100} gap={45} />
@@ -50,8 +83,8 @@ export default function HomePage() {
           <span className="sr-only">, </span>
           <span className="block">
             <Stagger text="Creative" by="word" start={1350} gap={0} />{" "}
-            <span className="accent">
-              <Stagger text="Developer" by="char" start={1430} gap={28} />
+            <span className="bit">
+              <Stagger text="Developer" by="char" start={1450} gap={70} pixel />
             </span>
           </span>
           <span className="block">

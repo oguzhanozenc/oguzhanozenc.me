@@ -33,6 +33,20 @@ html {
   font-weight: 500;
 }
 
+.bit {
+  font-family: var(--font-bit), monospace;
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.93;
+}
+
+/* Mondwest sits high against the serif; drop it onto the shared baseline. */
+.bit {
+  position: relative;
+  top: 0.025em;
+}
+
 /* Sans counter-voice, sized to the serif's cap height. */
 .accent {
   font-family: var(--font-sans);
@@ -59,6 +73,29 @@ html {
   100% {
     transform: none;
   }
+}
+
+/* Each pixel letter is drawn as a solid block first, then resolves. */
+@keyframes pixel-in {
+  0% {
+    opacity: 0;
+  }
+  1%,
+  55% {
+    opacity: 1;
+    background: var(--color-ink);
+    color: transparent;
+  }
+  56%,
+  100% {
+    opacity: 1;
+    background: transparent;
+    color: inherit;
+  }
+}
+
+.pixel-in {
+  animation: pixel-in 0.16s steps(1, end) both;
 }
 
 @keyframes fade-in {
@@ -108,6 +145,7 @@ html {
   .focus-in,
   .intro-name,
   .intro-late,
+  .pixel-in,
   .spin {
     animation: none;
   }
