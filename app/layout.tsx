@@ -1,122 +1,61 @@
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
+import "@fontsource-variable/bodoni-moda/opsz.css";
+import "@fontsource-variable/bodoni-moda/opsz-italic.css";
 import "./global.css";
-import Navbar from "@/app/components/Navbar/Navbar";
-import Footer from "@/app/components/Footer/Footer";
-import PageTransition from "@/app/components/Navbar/PageTransition";
 
 const neueMontreal = localFont({
   src: [
-    {
-      path: "./fonts/PP Neue Montreal/PPNeueMontreal-Thin.woff2",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "./fonts/PP Neue Montreal/PPNeueMontreal-Book.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/PP Neue Montreal/PPNeueMontreal-Italic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "./fonts/PP Neue Montreal/PPNeueMontreal-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/PP Neue Montreal/PPNeueMontreal-SemiBolditalic.woff2",
-      weight: "600",
-      style: "italic",
-    },
-    {
-      path: "./fonts/PP Neue Montreal/PPNeueMontreal-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
+    { path: "./fonts/PP Neue Montreal/PPNeueMontreal-Book.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/PP Neue Montreal/PPNeueMontreal-Medium.woff2", weight: "500", style: "normal" },
   ],
   variable: "--font-neue-montreal",
   display: "swap",
 });
 
-export const metadata = {
-  title: "Oguzhan Ozenc – Frontend Developer | React, Next.js",
-  description:
-    "Frontend developer focused on building scalable, design-conscious web experiences using React, Next.js 15, and TypeScript.",
-  icons: {
-    icon: "/branding/logo.png",
-  },
-  alternates: {
-    canonical: "https://oguzhanozenc.me/",
-  },
+const title = "Oğuzhan Özenç, Creative Developer & Designer";
+const description =
+  "Brand-led websites where identity, story and motion come from one person, from the first sketch to production code.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://oguzhanozenc.me"),
+  title,
+  description,
+  icons: { icon: "/branding/logo.png" },
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Oguzhan Ozenc – Frontend Developer | React, Next.js",
-    description:
-      "Frontend developer building modular, scalable interfaces with React, Next.js 15, and Tailwind CSS — focused on clean UI architecture and user flow.",
-    url: "https://oguzhanozenc.me/",
-    siteName: "Oguzhan Ozenc",
-    images: [
-      {
-        url: "https://oguzhanozenc.me/branding/oguzhanozenc.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Oguzhan Ozenc – Frontend Developer",
-      },
-    ],
+    title,
+    description,
+    url: "/",
+    siteName: "Oğuzhan Özenç",
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Oguzhan Ozenc – Frontend Developer | React, Next.js",
-    description:
-      "Frontend developer focused on modular systems, polished UIs, and product-first thinking.",
-    images: ["https://oguzhanozenc.me/branding/oguzhanozenc.jpg"],
-  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const viewport: Viewport = {
+  themeColor: "#eeece7",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Oğuzhan Özenç",
+  url: "https://oguzhanozenc.me",
+  jobTitle: "Creative Developer & Designer",
+  email: "mailto:hello@oguzhanozenc.me",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={neueMontreal.variable}>
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Oguzhan Ozenc",
-            url: "https://oguzhanozenc.me",
-            jobTitle: "Frontend Developer",
-            worksFor: {
-              "@type": "Organization",
-              name: "Self-employed",
-            },
-            sameAs: [
-              "https://github.com/oguzhanozenc",
-              "https://linkedin.com/in/oguzhanozenc",
-              "https://x.com/oguzhanozencdev",
-            ],
-          }),
-        }}
-      />
-
-      <body className="flex justify-center items-center text-[#090e14] bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,180,170,0.13)_0,rgba(0,180,170,0)_50%,rgba(0,180,170,0)_100%)] w-[70%] mx-auto font-sans max-[1200px]:w-[90%]">
-        <div className="flex flex-col items-center w-full">
-          <Navbar />
-          <div className="bg-white w-full my-32 rounded-2xl border border-gray-200 p-8 shadow-[0_1.2px_1.2px_rgba(10,10,10,0.06),0_5px_10px_rgba(10,10,10,0.04)] max-[1200px]:p-4">
-            <PageTransition>{children}</PageTransition>
-            <Footer />
-          </div>
-        </div>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        {children}
       </body>
     </html>
   );

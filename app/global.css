@@ -27,6 +27,10 @@ html {
 
 .char {
   font-family: var(--font-char);
+  /* Bodoni's display cut thins its hairlines to nothing at this size; pin the sturdier text cut. */
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" 11;
+  font-weight: 500;
 }
 
 /* Sans counter-voice, sized to the serif's cap height. */
@@ -37,31 +41,22 @@ html {
   letter-spacing: -0.015em;
 }
 
-/* Intro: the name arrives alone and small, then the block opens around it. */
-@keyframes name-in {
-  0% {
-    opacity: 0;
-    transform: translateY(1.5em) scale(0.55);
+/* Intro: the name rises in letter by letter while small, then settles to size; the rest follows. */
+@keyframes focus-in {
+  from {
+    transform: translateY(140%);
   }
-  35% {
-    opacity: 1;
-    transform: translateY(1.5em) scale(0.55);
-  }
-  100% {
-    opacity: 1;
+  to {
     transform: none;
   }
 }
 
-@keyframes line-in {
-  from {
-    opacity: 0;
-    clip-path: inset(-0.1em -0.3em 100% -0.3em);
-    transform: translateY(0.35em);
+@keyframes name-settle {
+  0%,
+  45% {
+    transform: translateY(1.5em) scale(0.6);
   }
-  to {
-    opacity: 1;
-    clip-path: inset(-0.1em -0.3em -0.3em -0.3em);
+  100% {
     transform: none;
   }
 }
@@ -75,25 +70,45 @@ html {
   }
 }
 
-.intro-name {
-  transform-origin: 50% 50%;
-  animation: name-in 1.7s cubic-bezier(0.7, 0, 0.15, 1) both;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.intro-line {
-  animation: line-in 0.9s cubic-bezier(0.2, 0.7, 0.1, 1) both;
-  animation-delay: calc(1.25s + var(--i, 0) * 110ms);
+.focus-in {
+  animation: focus-in 0.9s cubic-bezier(0.2, 0.7, 0.1, 1) both;
+}
+
+/* Each unit rises out of its own line box. */
+.mask {
+  display: inline-block;
+  overflow: clip;
+  overflow-clip-margin: 0.06em;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+.intro-name {
+  transform-origin: 50% 50%;
+  animation: name-settle 1.9s cubic-bezier(0.75, 0, 0.15, 1) both;
 }
 
 .intro-late {
-  animation: fade-in 0.8s ease-out both;
-  animation-delay: calc(1.75s + var(--i, 0) * 90ms);
+  animation: fade-in 0.9s ease-out both;
+  animation-delay: calc(2.1s + var(--i, 0) * 90ms);
+}
+
+.spin {
+  animation: spin 14s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .focus-in,
   .intro-name,
-  .intro-line,
-  .intro-late {
+  .intro-late,
+  .spin {
     animation: none;
   }
 }

@@ -1,8 +1,28 @@
+import { Fragment } from "react";
 import Image from "next/image";
 
 const label = "font-mono text-[11px] uppercase leading-[1.35] tracking-[0.08em] text-muted";
 
 const step = (i: number) => ({ "--i": i }) as React.CSSProperties;
+
+/* Splits text into units that rise into place one after another. */
+function Stagger({ text, by, start, gap }: { text: string; by: "char" | "word"; start: number; gap: number }) {
+  const parts = by === "char" ? Array.from(text) : text.split(" ");
+  return (
+    <>
+      {parts.map((part, i) => (
+        <Fragment key={i}>
+          <span className="mask">
+            <span className="focus-in inline-block" style={{ animationDelay: `${start + i * gap}ms` } as React.CSSProperties}>
+              {part === " " ? "\u00a0" : part}
+            </span>
+          </span>
+          {by === "word" && i < parts.length - 1 ? " " : null}
+        </Fragment>
+      ))}
+    </>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -22,16 +42,31 @@ export default function HomePage() {
         </span>
 
         <h1 className="char text-center text-[clamp(1.6rem,3.6vw,3.6rem)] font-normal uppercase leading-[1.04] tracking-[-0.01em]">
-          <span className="intro-name block">Oğuzhan Özenç</span>
+          <span className="intro-name block" aria-label="Oğuzhan Özenç">
+            <span aria-hidden>
+              <Stagger text="Oğuzhan Özenç" by="char" start={100} gap={45} />
+            </span>
+          </span>
           <span className="sr-only">, </span>
-          <span className="intro-line block" style={step(0)}>
-            Creative <span className="accent">Developer</span>
+          <span className="block">
+            <Stagger text="Creative" by="word" start={1350} gap={0} />{" "}
+            <span className="accent">
+              <Stagger text="Developer" by="char" start={1430} gap={28} />
+            </span>
           </span>
-          <span className="intro-line block" style={step(1)}>
-            <span className="italic">&amp;</span> Designer
+          <span className="block">
+            <span className="italic">
+              <Stagger text="&" by="word" start={1560} gap={0} />
+            </span>{" "}
+            <Stagger text="Designer" by="word" start={1620} gap={0} />
           </span>
-          <span className="intro-line block" style={step(2)}>
-            Folio ©2026 <span className="accent">✳</span>
+          <span className="block">
+            <Stagger text="Folio ©2026" by="word" start={1760} gap={80} />{" "}
+            <span className="mask">
+              <span className="focus-in inline-block" style={{ animationDelay: "1950ms" }}>
+                <span className="accent spin inline-block">✳</span>
+              </span>
+            </span>
           </span>
         </h1>
 

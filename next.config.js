@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.ctfassets.net",
-      },
-    ],
+  async redirects() {
+    return ["/projects/:path*", "/journey", "/resume", "/contact", "/about"].map((source) => ({
+      source,
+      destination: "/",
+      permanent: false,
+    }));
   },
 };
 
