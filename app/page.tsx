@@ -12,19 +12,25 @@ function Stagger({
   start,
   gap,
   pixel = false,
+  spark = false,
 }: {
   text: string;
   by: "char" | "word";
   start: number;
   gap: number;
   pixel?: boolean;
+  spark?: boolean;
 }) {
   const parts = by === "char" ? Array.from(text) : text.split(" ");
-  if (pixel) {
+  if (pixel || spark) {
     return (
       <>
         {parts.map((part, i) => (
-          <span key={i} className="pixel-in inline-block" style={{ animationDelay: `${start + i * gap}ms` }}>
+          <span
+            key={i}
+            className={`${spark ? "spark-in" : "pixel-in"} inline-block`}
+            style={{ animationDelay: `${start + i * gap}ms` }}
+          >
             {part}
           </span>
         ))}
@@ -91,9 +97,9 @@ export default function HomePage() {
             <span className="italic">
               <Stagger text="&" by="word" start={1560} gap={0} />
             </span>{" "}
-            <span className="whitespace-nowrap">
-              <Stagger text="Designer" by="word" start={1620} gap={0} />
-              <span aria-hidden className="bit sparkle" style={{ "--d": "2300ms" } as React.CSSProperties}>
+            <span className="relative inline-block">
+              <Stagger text="Designer" by="char" start={2150} gap={70} spark />
+              <span aria-hidden className="bit wand" style={{ "--d": "2150ms" } as React.CSSProperties}>
                 ✨
               </span>
             </span>

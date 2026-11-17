@@ -98,47 +98,45 @@ html {
   animation: pixel-in 0.16s steps(1, end) both;
 }
 
-/* Pixel glyphs that pop around Designer once Developer has rendered. */
-.sparkle {
-  display: inline-block;
-  font-size: 1.3em;
-  line-height: 0.5;
-  margin-left: 0.06em;
-  animation:
-    pop 0.45s steps(4, end) both,
-    twinkle 2.4s steps(1, end) infinite;
-  animation-delay: var(--d), calc(var(--d) + 0.6s + var(--t, 0s));
+/* One pixel sparkle sweeps across Designer; each letter appears as it passes. */
+.spark-in {
+  animation: letter-on 0.01s linear both;
 }
 
-/* After popping in, each glyph blinks to a smaller step now and then, like a sprite. */
-@keyframes twinkle {
-  0%,
-  70% {
-    transform: scale(1);
+@keyframes letter-on {
+  from {
+    opacity: 0;
   }
-  71%,
-  80% {
-    transform: scale(0.6);
-  }
-  81%,
-  88% {
-    transform: scale(1.2);
-  }
-  89%,
-  100% {
-    transform: scale(1);
+  to {
+    opacity: 1;
   }
 }
 
-@keyframes pop {
+.wand {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-size: 1.1em;
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: wand 0.56s steps(8, end) forwards;
+  animation-delay: var(--d);
+}
+
+@keyframes wand {
   0% {
-    transform: scale(0);
+    left: 0;
+    opacity: 1;
   }
-  60% {
-    transform: scale(1.35);
+  99% {
+    left: 100%;
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
+    left: 100%;
+    opacity: 0;
   }
 }
 
@@ -191,7 +189,8 @@ html {
   .intro-late,
   .pixel-in,
   .spin,
-  .sparkle {
+  .spark-in,
+  .wand {
     animation: none;
   }
 }
